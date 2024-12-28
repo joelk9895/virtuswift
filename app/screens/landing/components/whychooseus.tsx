@@ -168,7 +168,10 @@ const WhyChooseUs = () => {
                   viewBox="0 0 24 24"
                   className="w-24 h-24"
                 >
-                  <path d={pathD || content[activeCard].path} fill="orange" />
+                  <path
+                    d={pathD || content[activeCard].path}
+                    fill="rgb(234 88 12)"
+                  />
                 </svg>
               </div>
             </div>
