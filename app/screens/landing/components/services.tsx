@@ -1,4 +1,3 @@
-import { svg } from "framer-motion/client";
 import Image from "next/image";
 const solutions = [
   {
@@ -39,7 +38,7 @@ const Solutions = () => (
     <div className="container mx-auto px-4">
       <div className="text-center mb-12">
         <h2 className="text-3xl font-black text-black mb-4">
-          Unlock Your Business's Potential
+          Unlock Your Business&apos;s Potential
         </h2>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
           At VirtuSwift, our foundation is built on the principles of Trust,

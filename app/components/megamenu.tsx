@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
-import { motion, AnimatePresence, delay } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { Instrument_Serif } from "next/font/google";
 import Logo from "./logo";
@@ -491,7 +491,8 @@ const MegaMenu: React.FC = () => {
                     }}
                     className="bg-[#000000cc] shadow-2xl border-b border-gray-100 overflow-hidden flex justify-center"
                     onClick={() => {
-                      setIsHovered(false), setActiveMenu(null);
+                      setIsHovered(false);
+                      setActiveMenu(null);
                     }}
                   >
                     <motion.div
