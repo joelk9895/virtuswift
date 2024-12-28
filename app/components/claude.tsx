@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Solutions from "../screens/landing/components/services";
 import WhyChooseUs from "../screens/landing/components/whychooseus";
+import Logo from "./logo";
 
 // components/Solutions.jsx
 const solutions = [
@@ -54,7 +55,8 @@ const Footer = () => (
     <div className="container mx-auto px-4">
       <div className="grid md:grid-cols-4 gap-8">
         <div>
-          <h3 className="text-xl font-bold mb-4">YourCompany</h3>
+          <h3 className="text-xl font-bold mb-4">VirtuSwift</h3>
+          <Logo isHovered />
           <p className="text-gray-400">
             Transforming businesses through technology
           </p>
