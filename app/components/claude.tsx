@@ -1,8 +1,9 @@
-// components/Header.jsx
+"use client";
 import Link from "next/link";
 import Solutions from "../screens/landing/components/services";
 import WhyChooseUs from "../screens/landing/components/whychooseus";
 import Logo from "./logo";
+import { motion } from "framer-motion";
 
 // components/Solutions.jsx
 const solutions = [
@@ -26,23 +27,62 @@ const insights = [
 ];
 
 const LatestInsights = () => (
-  <section className="py-36 bg-gray-50 h-screen">
-    <div className="container mx-auto px-4">
-      <h2 className="text-3xl font-bold text-center mb-12 text-indigo-800">
+  <section className="relative py-36 bg-indigo-50 h-screen overflow-hidden">
+    {/* Background decoration */}
+    <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute -top-40 -right-40 w-80 h-80 bg-orange-500 rounded-full blur-[100px] opacity-20"></div>
+      <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-indigo-500 rounded-full blur-[100px] opacity-20"></div>
+    </div>
+
+    <div className="container mx-auto px-4 relative z-10">
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-black to-black/50 bg-clip-text text-transparent"
+      >
         Latest Insights
-      </h2>
-      <div className="grid md:grid-cols-2 gap-8">
+      </motion.h2>
+
+      <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
         {insights.map((post, index) => (
-          <div key={index} className="bg-white p-6 rounded-lg shadow">
-            <h3 className="text-xl font-semibold mb-2">{post.title}</h3>
-            <p className="text-gray-600 mb-4">{post.excerpt}</p>
-            <Link
-              href="#"
-              className="text-orange-500 hover:text-orange-600 font-medium"
-            >
-              Read More →
-            </Link>
-          </div>
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.2 }}
+            whileHover={{ y: -5, scale: 1.02 }}
+            className="backdrop-blur-xl bg-white/10 p-8 rounded-2xl border border-white/10 shadow-xl hover:shadow-2xl transition-all duration-300"
+          >
+            <div className="flex flex-col h-full">
+              <span className="text-orange-400 text-sm font-medium mb-4">
+                {post.date}
+              </span>
+              <h3 className="text-2xl font-semibold mb-4 text-black">
+                {post.title}
+              </h3>
+              <p className="text-gray-900 mb-6 flex-grow">{post.excerpt}</p>
+              <Link
+                href="#"
+                className="inline-flex items-center text-black hover:text-orange-400 font-medium transition-colors duration-200"
+              >
+                <span>Read More</span>
+                <svg
+                  className="w-4 h-4 ml-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </Link>
+            </div>
+          </motion.div>
         ))}
       </div>
     </div>
@@ -56,7 +96,7 @@ const Footer = () => (
       <div className="grid md:grid-cols-4 gap-8">
         <div>
           <h3 className="text-xl font-bold mb-4">VirtuSwift</h3>
-          <Logo isHovered />
+          <Logo isHovered={false} isScrolled={false} />
           <p className="text-gray-400">
             Transforming businesses through technology
           </p>

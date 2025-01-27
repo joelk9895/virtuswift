@@ -111,9 +111,12 @@ const WhyChooseUs = () => {
   }, [activeCard]);
 
   return (
-    <section className="bg-indigo-800 relative" ref={ref}>
-      <div className="sticky top-10 left-0 right-0 z-10 bg-gradient-to-b from-indigo-800 via-indigo-800 to-transparent py-16 flex flex-col items-center">
-        <h2 className="text-3xl font-bold text-center text-white">
+    <section
+      className="bg-gradient-to-br from-gray-900 to-indigo-900 relative"
+      ref={ref}
+    >
+      <div className="sticky top-10 left-0 right-0 z-10 bg-gradient-to-b from-gray-900 via-gray-900 to-transparent py-16 flex flex-col items-center">
+        <h2 className="text-4xl font-extrabold text-center text-white">
           Why Partner with VirtuSwift?
         </h2>
       </div>
@@ -125,7 +128,7 @@ const WhyChooseUs = () => {
               backgroundColor:
                 backgroundColors[activeCard % backgroundColors.length],
             }}
-            className="relative flex flex-col lg:flex-row justify-between items-start gap-[200px] min-h-[90vh]"
+            className="relative flex flex-col lg:flex-row justify-between items-start gap-16 min-h-[90vh] p-8 rounded-lg shadow-lg"
           >
             <div className="lg:w-1/2 sticky top-32">
               <div className="max-w-2xl">
@@ -137,7 +140,7 @@ const WhyChooseUs = () => {
                         opacity: activeCard === index ? 1 : 0,
                         scale: activeCard === index ? 1 : 0.8,
                       }}
-                      className="text-2xl font-bold text-slate-100"
+                      className="text-3xl font-bold text-white"
                     >
                       {item.title}
                     </motion.h2>
@@ -147,7 +150,7 @@ const WhyChooseUs = () => {
                         opacity: activeCard === index ? 1 : 0,
                         scale: activeCard === index ? 1 : 0.9,
                       }}
-                      className="text-lg text-slate-300 max-w-sm mt-10"
+                      className="text-lg text-gray-300 max-w-sm mt-6"
                     >
                       {item.description}
                     </motion.p>
@@ -156,10 +159,10 @@ const WhyChooseUs = () => {
               </div>
             </div>
 
-            <div className="sticky top-[50vh] translate-y-[-50%] bg-white shadow-2xl rounded-sm">
+            <div className="sticky top-[50vh] translate-y-[-50%] bg-white shadow-2xl rounded-lg">
               <div
                 style={{ background: backgroundGradient }}
-                className="h-60 w-96 rounded-md overflow-hidden mx-auto flex items-center justify-center"
+                className="h-60 w-96 rounded-lg overflow-hidden mx-auto flex items-center justify-center"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

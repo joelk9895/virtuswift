@@ -27,13 +27,36 @@ type NavigationColumn = {
 
 type NavigationMenu = {
   title: string;
+  description?: string;
+  image?: string;
   columns: NavigationColumn[];
 };
 
 const navigationData: NavigationMenu[] = [
   {
     title: "Products",
+    description:
+      "Explore our latest products and tools, including cutting-edge logistics automation, real-time tracking solutions, and advanced SAP integration tools designed to optimize your business operations.",
+    image:
+      "https://images.pexels.com/photos/886521/pexels-photo-886521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     columns: [
+      {
+        title: "Latest",
+        items: [
+          {
+            name: "End-to-End Logistics and Warehouse Automation",
+            href: "/services/logistics-automation",
+          },
+          {
+            name: "Real-Time Freight Tracking Solutions",
+            href: "/services/freight-tracking",
+          },
+          {
+            name: "Cross-Border Logistics Compliance",
+            href: "/services/logistics-compliance",
+          },
+        ],
+      },
       {
         title: "Cloud Platforms & Tools",
         items: [
@@ -95,7 +118,28 @@ const navigationData: NavigationMenu[] = [
   },
   {
     title: "Solutions",
+    description:
+      "Discover our comprehensive solutions tailored to meet the unique needs of various industries, from cloud transformation to workforce optimization.",
+    image:
+      "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     columns: [
+      {
+        title: "Latest",
+        items: [
+          {
+            name: "End-to-End Logistics and Warehouse Automation",
+            href: "/services/logistics-automation",
+          },
+          {
+            name: "Real-Time Freight Tracking Solutions",
+            href: "/services/freight-tracking",
+          },
+          {
+            name: "Cross-Border Logistics Compliance",
+            href: "/services/logistics-compliance",
+          },
+        ],
+      },
       {
         title: "Cloud Transformation Solutions",
         items: [
@@ -168,7 +212,28 @@ const navigationData: NavigationMenu[] = [
   },
   {
     title: "Services",
+    description:
+      "Our range of services are designed to help you achieve your business goals with efficiency and precision.",
+    image:
+      "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     columns: [
+      {
+        title: "Latest",
+        items: [
+          {
+            name: "End-to-End Logistics and Warehouse Automation",
+            href: "/services/logistics-automation",
+          },
+          {
+            name: "Real-Time Freight Tracking Solutions",
+            href: "/services/freight-tracking",
+          },
+          {
+            name: "Cross-Border Logistics Compliance",
+            href: "/services/logistics-compliance",
+          },
+        ],
+      },
       {
         title: "Cloud & SAP Transformation Services",
         items: [
@@ -241,7 +306,28 @@ const navigationData: NavigationMenu[] = [
   },
   {
     title: "Industries",
+    description:
+      "We cater to a wide range of industries, providing specialized solutions to meet the unique challenges of each sector.",
+    image:
+      "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     columns: [
+      {
+        title: "Latest",
+        items: [
+          {
+            name: "End-to-End Logistics and Warehouse Automation",
+            href: "/services/logistics-automation",
+          },
+          {
+            name: "Real-Time Freight Tracking Solutions",
+            href: "/services/freight-tracking",
+          },
+          {
+            name: "Cross-Border Logistics Compliance",
+            href: "/services/logistics-compliance",
+          },
+        ],
+      },
       {
         title: "Manufacturing & Supply Chain",
         items: [
@@ -311,7 +397,28 @@ const navigationData: NavigationMenu[] = [
   },
   {
     title: "Resources",
+    description:
+      "Access a wealth of resources including webinars, case studies, and expert insights to stay ahead in your industry.",
+    image:
+      "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     columns: [
+      {
+        title: "Latest",
+        items: [
+          {
+            name: "End-to-End Logistics and Warehouse Automation",
+            href: "/services/logistics-automation",
+          },
+          {
+            name: "Real-Time Freight Tracking Solutions",
+            href: "/services/freight-tracking",
+          },
+          {
+            name: "Cross-Border Logistics Compliance",
+            href: "/services/logistics-compliance",
+          },
+        ],
+      },
       {
         title: "Learning Hub",
         items: [
@@ -372,15 +479,19 @@ const MegaMenu: React.FC = () => {
   const [activeMenu, setActiveMenu] = useState<number | null>(null);
   const [isHovered, setIsHovered] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         setActiveMenu(null);
         setIsHovered(false);
       }
     };
-
+    window.addEventListener("scroll", handleScroll);
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
@@ -401,7 +512,9 @@ const MegaMenu: React.FC = () => {
     <nav
       ref={menuRef}
       className={`fixed top-0 left-0 w-screen bg-transparent z-50 border-y-[0.5px] transition-colors duration-300 ${
-        isHovered ? "border-grey" : "border-[#ffffff]"
+        isHovered || isScrolled || activeMenu != null
+          ? "border-grey"
+          : "border-[#ffffff]"
       }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -410,7 +523,7 @@ const MegaMenu: React.FC = () => {
         className="mx-auto flex items-center justify-between h-[72px]"
         animate={{
           backgroundColor:
-            isHovered || activeMenu !== null
+            isHovered || activeMenu !== null || isScrolled
               ? "rgba(255, 255, 255, 1)"
               : "rgba(255, 255, 255, 0.1)",
           backdropFilter:
@@ -424,10 +537,12 @@ const MegaMenu: React.FC = () => {
         <Link
           href="/"
           className={`text-2xl font-bold text-white flex h-full items-center px-6 border-r transition-colors duration-300 ${
-            isHovered ? "border-grey" : "border-[#ffffff30]"
+            isHovered || isScrolled || activeMenu != null
+              ? "border-grey"
+              : "border-[#ffffff30]"
           }`}
         >
-          <Logo isHovered={isHovered} />
+          <Logo isHovered={isHovered} isScrolled={isScrolled} />
         </Link>
 
         {/* Main Navigation */}
@@ -436,10 +551,12 @@ const MegaMenu: React.FC = () => {
             <div
               key={index}
               className={`flex flex-col items-center h-full transition-colors duration-300 ${
-                isHovered ? "border-grey" : "border-[#ffffff30]"
+                isHovered || isScrolled || activeMenu != null
+                  ? "border-grey"
+                  : "border-[#ffffff30]"
               } border-r ${
                 index === 0
-                  ? isHovered
+                  ? isHovered || isScrolled || activeMenu !== null
                     ? "border-l border-grey"
                     : "border-l border-[#ffffff30]"
                   : ""
@@ -449,7 +566,9 @@ const MegaMenu: React.FC = () => {
             >
               <button
                 className={`flex items-center px-6 h-full relative ${
-                  isHovered ? "text-black" : "text-white"
+                  isHovered || activeMenu !== null || isScrolled
+                    ? "text-black"
+                    : "text-white"
                 } hover:text-indigo-800 transition-colors`}
               >
                 {menu.title}
@@ -622,7 +741,8 @@ const MegaMenu: React.FC = () => {
                                 instrumentSerif.className
                               }
                             >
-                              About<span className="text-orange-500">.</span>
+                              {menu.title}
+                              <span className="text-orange-500">.</span>
                             </motion.h3>
 
                             <motion.div
@@ -631,18 +751,14 @@ const MegaMenu: React.FC = () => {
                               transition={{ duration: 0.5, delay: 0.2 }}
                             >
                               <Image
-                                src={
-                                  "https://images.pexels.com/photos/886521/pexels-photo-886521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                                }
+                                src={menu.image || ""}
                                 alt="Image of plant"
                                 className="mb-4"
                                 width={200}
                                 height={200}
                               />
                               <p className="text-gray-600 leading-6">
-                                This section provides additional context, such
-                                as detailed descriptions, images, or promotional
-                                messages specific to the selected menu category.
+                                {menu.description}
                               </p>
                             </motion.div>
                           </div>
@@ -659,13 +775,15 @@ const MegaMenu: React.FC = () => {
         {/* Action Buttons */}
         <div
           className={`flex space-x-4 p-0 h-full items-center border-l transition-colors duration-300 ${
-            isHovered ? "border-grey" : "border-[#ffffff30]"
+            isHovered || isScrolled || activeMenu != null
+              ? "border-grey"
+              : "border-[#ffffff30]"
           }`}
         >
           <Link
             href="/signup"
             className={`px-4 py-2 transition-colors ${
-              isHovered || activeMenu !== null
+              isHovered || activeMenu !== null || isScrolled
                 ? "text-black hover:text-purple-950"
                 : "text-white hover:text-blue-300"
             }`}
