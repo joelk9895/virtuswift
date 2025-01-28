@@ -483,15 +483,23 @@ const MegaMenu: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
+      if (window.location.pathname !== "/") {
+        setIsScrolled(true);
+        return;
+      }
       setIsScrolled(window.scrollY > 0);
     };
     const handleClickOutside = (event: MouseEvent) => {
+      if (window.location.pathname !== "/") {
+        return;
+      }
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         setActiveMenu(null);
         setIsHovered(false);
       }
     };
     window.addEventListener("scroll", handleScroll);
+    handleScroll();
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);

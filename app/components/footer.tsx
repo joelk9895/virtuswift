@@ -11,8 +11,8 @@ const solutions = [
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white py-12">
-      <div className="container mx-auto px-4">
+    <footer className="bg-black text-white py-12 min-w-full">
+      <div className="px-10">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4">VirtuSwift</h3>
@@ -80,4 +80,4 @@ export default function Footer() {
       </div>
     </footer>
   );
-} 
+}
