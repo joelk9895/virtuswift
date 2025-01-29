@@ -12,14 +12,14 @@ import {
 import MegaMenu from "@/app/components/megamenu";
 import Footer from "@/app/components/footer";
 import {
-  Users,
-  HeartHandshake,
-  Star,
-  Rocket,
-  Shield,
   BarChart3,
   Globe,
-  ThumbsUp,
+  Activity,
+  Database,
+  Truck,
+  AlertCircle,
+  Shield,
+  Layers,
 } from "lucide-react";
 
 const fadeIn = {
@@ -34,7 +34,7 @@ const cardStyles = {
   feature: "bg-gradient-to-br from-white to-blue-50 hover:shadow-lg transition-all duration-300",
 };
 
-const OnboardingRetentionPrograms = () => {
+const SupplyChainAnalytics = () => {
   return (
     <div className="min-w-screen bg-slate-50 flex flex-col items-center">
       <MegaMenu />
@@ -46,48 +46,44 @@ const OnboardingRetentionPrograms = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight">
-            Onboarding & Retention Programs
+            Real-Time Analytics for Supply Chain Visibility
           </h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            **Engage, retain, and empower** your workforce with world-class onboarding and retention strategies.
+            **Unleash the power of real-time insights** to optimize logistics, reduce risks, and enhance efficiency across your supply chain.
           </p>
           <p className="text-gray-600">
-            Build a high-performing team with **seamless onboarding experiences** and **proven retention solutions** that drive success.
+            Gain full **end-to-end visibility** with advanced data analytics, predictive intelligence, and seamless automation.
           </p>
         </motion.section>
 
         {/* Why Choose Our Solution */}
         <motion.section className="space-y-8" {...fadeIn}>
           <h2 className="text-3xl font-bold text-slate-900 text-center">
-            Why Choose Our Onboarding & Retention Programs?
+            Why Choose Our Supply Chain Analytics?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "Faster Employee Integration",
-                content:
-                  "Get new hires **fully productive in record time** with structured onboarding workflows.",
+                title: "Real-Time Monitoring",
+                content: "Track shipments, inventory, and operations in real time for **instant decision-making.**",
                 style: cardStyles.primary,
-                icon: <Rocket className="w-8 h-8 text-blue-600 mb-4" />,
+                icon: <Activity className="w-8 h-8 text-blue-600 mb-4" />,
               },
               {
-                title: "Higher Retention Rates",
-                content:
-                  "Reduce turnover by **enhancing job satisfaction** and building long-term engagement.",
+                title: "Predictive Analytics",
+                content: "Leverage AI-powered insights to **forecast demand, reduce risks, and optimize logistics.**",
                 style: cardStyles.secondary,
-                icon: <HeartHandshake className="w-8 h-8 text-green-600 mb-4" />,
+                icon: <BarChart3 className="w-8 h-8 text-green-600 mb-4" />,
               },
               {
-                title: "Data-Driven Workforce Insights",
-                content:
-                  "Leverage **advanced analytics** to understand trends and proactively retain top talent.",
+                title: "Data-Driven Optimization",
+                content: "Utilize **big data analytics** to enhance supply chain efficiency and reduce operational costs.",
                 style: cardStyles.primary,
-                icon: <BarChart3 className="w-8 h-8 text-blue-600 mb-4" />,
+                icon: <Database className="w-8 h-8 text-blue-600 mb-4" />,
               },
               {
-                title: "Scalable & Customizable Solutions",
-                content:
-                  "Adapt onboarding and retention programs **to your business size and industry needs.**",
+                title: "Global Supply Chain Control",
+                content: "Seamlessly manage **multi-region supply chains** with cloud-based visibility solutions.",
                 style: cardStyles.secondary,
                 icon: <Globe className="w-8 h-8 text-green-600 mb-4" />,
               },
@@ -124,25 +120,24 @@ const OnboardingRetentionPrograms = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "Automated Onboarding",
-                content: "Streamline HR processes with **digital workflows and self-service portals.**",
-                icon: <Users className="w-8 h-8 text-blue-600 mb-4" />,
+                title: "Fleet & Logistics Tracking",
+                content: "Monitor shipments and **minimize delays** with AI-powered tracking.",
+                icon: <Truck className="w-8 h-8 text-blue-600 mb-4" />,
               },
               {
-                title: "AI-Powered Employee Engagement",
-                content: "**Personalized training, mentorship, and real-time feedback** for continuous improvement.",
-                icon: <Star className="w-8 h-8 text-green-600 mb-4" />,
+                title: "Risk & Disruption Alerts",
+                content: "Get real-time alerts for **supply chain disruptions and bottlenecks.**",
+                icon: <AlertCircle className="w-8 h-8 text-green-600 mb-4" />,
               },
               {
-                title: "Retention-Boosting Recognition",
-                content:
-                  "Increase loyalty with **custom incentives, rewards, and appreciation programs.**",
-                icon: <ThumbsUp className="w-8 h-8 text-blue-600 mb-4" />,
+                title: "Automated Compliance & Security",
+                content: "Ensure regulatory compliance and **secure data across all operations.**",
+                icon: <Shield className="w-8 h-8 text-blue-600 mb-4" />,
               },
               {
-                title: "Predictive Analytics & Insights",
-                content: "Use **AI-driven data** to anticipate workforce trends and prevent attrition.",
-                icon: <Shield className="w-8 h-8 text-green-600 mb-4" />,
+                title: "Seamless ERP Integration",
+                content: "Sync effortlessly with **SAP, Oracle, and other ERP platforms.**",
+                icon: <Layers className="w-8 h-8 text-green-600 mb-4" />,
               },
             ].map((feature, index) => (
               <Card key={index} className={cardStyles.feature}>
@@ -166,19 +161,16 @@ const OnboardingRetentionPrograms = () => {
           <Accordion type="single" collapsible className="space-y-4 w-full max-w-3xl mx-auto">
             {[
               {
-                question: "How does AI improve employee onboarding?",
-                answer:
-                  "AI automates paperwork, facilitates personalized training, and **enhances engagement through interactive modules.**",
+                question: "How does real-time analytics improve supply chain efficiency?",
+                answer: "By providing **instant insights** into logistics, inventory, and demand forecasting, enabling proactive decision-making.",
               },
               {
-                question: "What makes a successful retention program?",
-                answer:
-                  "A strong mix of **mentorship, career growth opportunities, and employee recognition** helps drive retention.",
+                question: "Can this integrate with my existing ERP system?",
+                answer: "Yes, our solution integrates with **SAP, Oracle, Microsoft Dynamics, and other ERP platforms.**",
               },
               {
-                question: "Can your solutions be tailored to our company size?",
-                answer:
-                  "Yes! Our onboarding and retention programs are **customizable for startups, mid-sized businesses, and enterprises.**",
+                question: "What security measures are in place for data protection?",
+                answer: "We employ **end-to-end encryption, AI-driven fraud detection, and secure cloud storage** to protect your data.",
               },
             ].map((faq, index) => (
               <AccordionItem key={index} className="border-gray-200 shadow-md" value={""}>
@@ -194,17 +186,14 @@ const OnboardingRetentionPrograms = () => {
         {/* CTA Section */}
         <motion.section className="text-center space-y-8 bg-gradient-to-br from-white to-blue-50 rounded-2xl p-12 shadow-lg" {...fadeIn}>
           <h2 className="text-3xl font-bold text-gray-900">
-            Create a Workforce That Stays & Thrives
+            Transform Your Supply Chain with Real-Time Insights
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            **Improve employee retention, enhance engagement, and drive workforce success** with our onboarding and retention solutions.
+            **Gain end-to-end visibility, reduce risks, and maximize efficiency** with our AI-powered analytics solutions.
           </p>
           <div className="space-x-4">
             <Button className="bg-gradient-to-r from-green-400 to-green-600 text-white px-6 py-3 shadow-lg">
-              Get a Free Consultation
-            </Button>
-            <Button className="bg-gradient-to-r from-blue-400 to-blue-600 text-white px-6 py-3 shadow-lg">
-              Get Started
+              Request a Demo
             </Button>
           </div>
         </motion.section>
@@ -214,4 +203,4 @@ const OnboardingRetentionPrograms = () => {
   );
 };
 
-export default OnboardingRetentionPrograms;
+export default SupplyChainAnalytics;

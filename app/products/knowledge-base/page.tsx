@@ -12,14 +12,14 @@ import {
 import MegaMenu from "@/app/components/megamenu";
 import Footer from "@/app/components/footer";
 import {
-  Users,
-  HeartHandshake,
-  Star,
-  Rocket,
-  Shield,
+  Cloud,
+  Database,
+  Truck,
+  FileText,
   BarChart3,
+  Lightbulb,
   Globe,
-  ThumbsUp,
+  Layers,
 } from "lucide-react";
 
 const fadeIn = {
@@ -29,12 +29,12 @@ const fadeIn = {
 };
 
 const cardStyles = {
-  primary: "bg-gradient-to-br from-blue-50 to-blue-100",
-  secondary: "bg-gradient-to-br from-green-50 to-green-100",
+  primary: "bg-gradient-to-br from-indigo-50 to-indigo-100",
+  secondary: "bg-gradient-to-br from-yellow-50 to-yellow-100",
   feature: "bg-gradient-to-br from-white to-blue-50 hover:shadow-lg transition-all duration-300",
 };
 
-const OnboardingRetentionPrograms = () => {
+const KnowledgeBase = () => {
   return (
     <div className="min-w-screen bg-slate-50 flex flex-col items-center">
       <MegaMenu />
@@ -46,50 +46,46 @@ const OnboardingRetentionPrograms = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight">
-            Onboarding & Retention Programs
+            SAP, Cloud, and Logistics Knowledge Base
           </h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            **Engage, retain, and empower** your workforce with world-class onboarding and retention strategies.
+            **Your ultimate resource hub** for **SAP, cloud computing, and logistics**. Stay updated with expert insights, best practices, and cutting-edge trends.
           </p>
           <p className="text-gray-600">
-            Build a high-performing team with **seamless onboarding experiences** and **proven retention solutions** that drive success.
+            Explore in-depth articles, technical guides, and exclusive resources to **enhance operational efficiency and streamline business processes.**
           </p>
         </motion.section>
 
-        {/* Why Choose Our Solution */}
+        {/* Why Choose Our Knowledge Base? */}
         <motion.section className="space-y-8" {...fadeIn}>
           <h2 className="text-3xl font-bold text-slate-900 text-center">
-            Why Choose Our Onboarding & Retention Programs?
+            Why Choose Our Knowledge Base?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "Faster Employee Integration",
-                content:
-                  "Get new hires **fully productive in record time** with structured onboarding workflows.",
+                title: "Comprehensive SAP Insights",
+                content: "Stay ahead with the latest **SAP updates, ERP solutions, and digital transformation strategies.**",
                 style: cardStyles.primary,
-                icon: <Rocket className="w-8 h-8 text-blue-600 mb-4" />,
+                icon: <Database className="w-8 h-8 text-indigo-600 mb-4" />,
               },
               {
-                title: "Higher Retention Rates",
-                content:
-                  "Reduce turnover by **enhancing job satisfaction** and building long-term engagement.",
+                title: "Cloud Mastery",
+                content: "Learn how to **leverage cloud computing** to optimize business operations and drive innovation.",
                 style: cardStyles.secondary,
-                icon: <HeartHandshake className="w-8 h-8 text-green-600 mb-4" />,
+                icon: <Cloud className="w-8 h-8 text-yellow-600 mb-4" />,
               },
               {
-                title: "Data-Driven Workforce Insights",
-                content:
-                  "Leverage **advanced analytics** to understand trends and proactively retain top talent.",
+                title: "Logistics & Supply Chain",
+                content: "Enhance **supply chain efficiency** with expert knowledge in logistics, automation, and best practices.",
                 style: cardStyles.primary,
-                icon: <BarChart3 className="w-8 h-8 text-blue-600 mb-4" />,
+                icon: <Truck className="w-8 h-8 text-indigo-600 mb-4" />,
               },
               {
-                title: "Scalable & Customizable Solutions",
-                content:
-                  "Adapt onboarding and retention programs **to your business size and industry needs.**",
+                title: "Exclusive Whitepapers",
+                content: "Access **research-backed whitepapers** that provide deep insights into **emerging tech trends.**",
                 style: cardStyles.secondary,
-                icon: <Globe className="w-8 h-8 text-green-600 mb-4" />,
+                icon: <FileText className="w-8 h-8 text-yellow-600 mb-4" />,
               },
             ].map((card, index) => (
               <motion.div
@@ -119,30 +115,29 @@ const OnboardingRetentionPrograms = () => {
         {/* Key Features Section */}
         <motion.section className="space-y-8" {...fadeIn}>
           <h2 className="text-3xl font-bold text-slate-900 text-center">
-            Key Features
+            Key Features of Our Knowledge Base
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "Automated Onboarding",
-                content: "Streamline HR processes with **digital workflows and self-service portals.**",
-                icon: <Users className="w-8 h-8 text-blue-600 mb-4" />,
+                title: "Real-Time Analytics",
+                content: "**Access industry analytics** to make data-driven business decisions.",
+                icon: <BarChart3 className="w-8 h-8 text-indigo-600 mb-4" />,
               },
               {
-                title: "AI-Powered Employee Engagement",
-                content: "**Personalized training, mentorship, and real-time feedback** for continuous improvement.",
-                icon: <Star className="w-8 h-8 text-green-600 mb-4" />,
+                title: "Expert Thought Leadership",
+                content: "Insights from **industry veterans and technology leaders.**",
+                icon: <Lightbulb className="w-8 h-8 text-yellow-600 mb-4" />,
               },
               {
-                title: "Retention-Boosting Recognition",
-                content:
-                  "Increase loyalty with **custom incentives, rewards, and appreciation programs.**",
-                icon: <ThumbsUp className="w-8 h-8 text-blue-600 mb-4" />,
+                title: "Cloud & SAP Integration",
+                content: "Learn **how to seamlessly integrate SAP with cloud platforms.**",
+                icon: <Layers className="w-8 h-8 text-indigo-600 mb-4" />,
               },
               {
-                title: "Predictive Analytics & Insights",
-                content: "Use **AI-driven data** to anticipate workforce trends and prevent attrition.",
-                icon: <Shield className="w-8 h-8 text-green-600 mb-4" />,
+                title: "Global Knowledge Sharing",
+                content: "**Connect with experts worldwide** and share valuable insights.",
+                icon: <Globe className="w-8 h-8 text-yellow-600 mb-4" />,
               },
             ].map((feature, index) => (
               <Card key={index} className={cardStyles.feature}>
@@ -166,19 +161,16 @@ const OnboardingRetentionPrograms = () => {
           <Accordion type="single" collapsible className="space-y-4 w-full max-w-3xl mx-auto">
             {[
               {
-                question: "How does AI improve employee onboarding?",
-                answer:
-                  "AI automates paperwork, facilitates personalized training, and **enhances engagement through interactive modules.**",
+                question: "Is the knowledge base free to access?",
+                answer: "Yes! Our knowledge base provides **free and premium content** for businesses and professionals.",
               },
               {
-                question: "What makes a successful retention program?",
-                answer:
-                  "A strong mix of **mentorship, career growth opportunities, and employee recognition** helps drive retention.",
+                question: "Can I download whitepapers?",
+                answer: "Absolutely! Register to **download exclusive whitepapers and research reports.**",
               },
               {
-                question: "Can your solutions be tailored to our company size?",
-                answer:
-                  "Yes! Our onboarding and retention programs are **customizable for startups, mid-sized businesses, and enterprises.**",
+                question: "Who contributes to the knowledge base?",
+                answer: "Industry leaders, SAP consultants, cloud engineers, and logistics experts share their insights.",
               },
             ].map((faq, index) => (
               <AccordionItem key={index} className="border-gray-200 shadow-md" value={""}>
@@ -194,16 +186,13 @@ const OnboardingRetentionPrograms = () => {
         {/* CTA Section */}
         <motion.section className="text-center space-y-8 bg-gradient-to-br from-white to-blue-50 rounded-2xl p-12 shadow-lg" {...fadeIn}>
           <h2 className="text-3xl font-bold text-gray-900">
-            Create a Workforce That Stays & Thrives
+            Access the Knowledge Base Today
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            **Improve employee retention, enhance engagement, and drive workforce success** with our onboarding and retention solutions.
+            Unlock expert insights, **stay informed, and gain a competitive edge** in SAP, cloud, and logistics.
           </p>
           <div className="space-x-4">
-            <Button className="bg-gradient-to-r from-green-400 to-green-600 text-white px-6 py-3 shadow-lg">
-              Get a Free Consultation
-            </Button>
-            <Button className="bg-gradient-to-r from-blue-400 to-blue-600 text-white px-6 py-3 shadow-lg">
+            <Button className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-white px-6 py-3 shadow-lg">
               Get Started
             </Button>
           </div>
@@ -214,4 +203,4 @@ const OnboardingRetentionPrograms = () => {
   );
 };
 
-export default OnboardingRetentionPrograms;
+export default KnowledgeBase;

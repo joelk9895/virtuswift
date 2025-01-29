@@ -12,14 +12,14 @@ import {
 import MegaMenu from "@/app/components/megamenu";
 import Footer from "@/app/components/footer";
 import {
-  Users,
-  HeartHandshake,
-  Star,
-  Rocket,
-  Shield,
+  MessageSquare,
+  Bot,
+  UserCheck,
+  Smile,
   BarChart3,
-  Globe,
-  ThumbsUp,
+  Headphones,
+  Layers,
+  Rocket,
 } from "lucide-react";
 
 const fadeIn = {
@@ -29,12 +29,12 @@ const fadeIn = {
 };
 
 const cardStyles = {
-  primary: "bg-gradient-to-br from-blue-50 to-blue-100",
-  secondary: "bg-gradient-to-br from-green-50 to-green-100",
-  feature: "bg-gradient-to-br from-white to-blue-50 hover:shadow-lg transition-all duration-300",
+  primary: "bg-gradient-to-br from-indigo-50 to-indigo-100",
+  secondary: "bg-gradient-to-br from-teal-50 to-teal-100",
+  feature: "bg-gradient-to-br from-white to-indigo-50 hover:shadow-lg transition-all duration-300",
 };
 
-const OnboardingRetentionPrograms = () => {
+const CustomerExperienceAutomation = () => {
   return (
     <div className="min-w-screen bg-slate-50 flex flex-col items-center">
       <MegaMenu />
@@ -46,50 +46,51 @@ const OnboardingRetentionPrograms = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight">
-            Onboarding & Retention Programs
+            Customer Experience Automation Solutions
           </h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            **Engage, retain, and empower** your workforce with world-class onboarding and retention strategies.
+            **Revolutionize customer engagement with AI-driven automation.**  
+            Deliver seamless, personalized experiences across all touchpoints with **smart chatbots, predictive analytics, and AI-powered support.**
           </p>
           <p className="text-gray-600">
-            Build a high-performing team with **seamless onboarding experiences** and **proven retention solutions** that drive success.
+            **Boost satisfaction, enhance loyalty, and optimize support operations** with next-gen automation tools designed for modern businesses.
           </p>
         </motion.section>
 
         {/* Why Choose Our Solution */}
         <motion.section className="space-y-8" {...fadeIn}>
           <h2 className="text-3xl font-bold text-slate-900 text-center">
-            Why Choose Our Onboarding & Retention Programs?
+            Why Choose Our CX Automation Solutions?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "Faster Employee Integration",
+                title: "AI-Powered Chatbots",
                 content:
-                  "Get new hires **fully productive in record time** with structured onboarding workflows.",
+                  "Automate customer interactions with **24/7 AI-driven chatbots** that resolve queries instantly.",
                 style: cardStyles.primary,
-                icon: <Rocket className="w-8 h-8 text-blue-600 mb-4" />,
+                icon: <Bot className="w-8 h-8 text-indigo-600 mb-4" />,
               },
               {
-                title: "Higher Retention Rates",
+                title: "Omnichannel Engagement",
                 content:
-                  "Reduce turnover by **enhancing job satisfaction** and building long-term engagement.",
+                  "Unify customer interactions across **email, social media, chat, and voice** for a seamless experience.",
                 style: cardStyles.secondary,
-                icon: <HeartHandshake className="w-8 h-8 text-green-600 mb-4" />,
+                icon: <MessageSquare className="w-8 h-8 text-teal-600 mb-4" />,
               },
               {
-                title: "Data-Driven Workforce Insights",
+                title: "Personalized Customer Journeys",
                 content:
-                  "Leverage **advanced analytics** to understand trends and proactively retain top talent.",
+                  "Leverage **data-driven insights** to create hyper-personalized customer experiences.",
                 style: cardStyles.primary,
-                icon: <BarChart3 className="w-8 h-8 text-blue-600 mb-4" />,
+                icon: <UserCheck className="w-8 h-8 text-indigo-600 mb-4" />,
               },
               {
-                title: "Scalable & Customizable Solutions",
+                title: "Faster Resolutions",
                 content:
-                  "Adapt onboarding and retention programs **to your business size and industry needs.**",
+                  "Enhance support with **AI-powered self-service portals** that improve response times and efficiency.",
                 style: cardStyles.secondary,
-                icon: <Globe className="w-8 h-8 text-green-600 mb-4" />,
+                icon: <Headphones className="w-8 h-8 text-teal-600 mb-4" />,
               },
             ].map((card, index) => (
               <motion.div
@@ -124,25 +125,25 @@ const OnboardingRetentionPrograms = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "Automated Onboarding",
-                content: "Streamline HR processes with **digital workflows and self-service portals.**",
-                icon: <Users className="w-8 h-8 text-blue-600 mb-4" />,
+                title: "Automated Ticketing",
+                content: "Streamline support with **AI-powered ticket management and prioritization.**",
+                icon: <Layers className="w-8 h-8 text-indigo-600 mb-4" />,
               },
               {
-                title: "AI-Powered Employee Engagement",
-                content: "**Personalized training, mentorship, and real-time feedback** for continuous improvement.",
-                icon: <Star className="w-8 h-8 text-green-600 mb-4" />,
+                title: "Predictive Analytics",
+                content: "**Use AI-driven insights** to anticipate customer needs and reduce churn.",
+                icon: <BarChart3 className="w-8 h-8 text-teal-600 mb-4" />,
               },
               {
-                title: "Retention-Boosting Recognition",
+                title: "Proactive Customer Engagement",
                 content:
-                  "Increase loyalty with **custom incentives, rewards, and appreciation programs.**",
-                icon: <ThumbsUp className="w-8 h-8 text-blue-600 mb-4" />,
+                  "**Trigger automated responses** based on user behavior, boosting engagement rates.",
+                icon: <Smile className="w-8 h-8 text-indigo-600 mb-4" />,
               },
               {
-                title: "Predictive Analytics & Insights",
-                content: "Use **AI-driven data** to anticipate workforce trends and prevent attrition.",
-                icon: <Shield className="w-8 h-8 text-green-600 mb-4" />,
+                title: "Seamless CRM Integration",
+                content: "Integrate with **Salesforce, HubSpot, and other CRM tools** for a unified customer view.",
+                icon: <Rocket className="w-8 h-8 text-teal-600 mb-4" />,
               },
             ].map((feature, index) => (
               <Card key={index} className={cardStyles.feature}>
@@ -166,19 +167,19 @@ const OnboardingRetentionPrograms = () => {
           <Accordion type="single" collapsible className="space-y-4 w-full max-w-3xl mx-auto">
             {[
               {
-                question: "How does AI improve employee onboarding?",
+                question: "How can automation improve my customer service?",
                 answer:
-                  "AI automates paperwork, facilitates personalized training, and **enhances engagement through interactive modules.**",
+                  "By using AI-driven automation, you can **resolve queries instantly, personalize interactions, and reduce workload on human agents.**",
               },
               {
-                question: "What makes a successful retention program?",
+                question: "Can these solutions integrate with my existing tools?",
                 answer:
-                  "A strong mix of **mentorship, career growth opportunities, and employee recognition** helps drive retention.",
+                  "Yes! Our automation solutions seamlessly **integrate with CRM, ERP, and other business platforms.**",
               },
               {
-                question: "Can your solutions be tailored to our company size?",
+                question: "What industries can benefit from CX automation?",
                 answer:
-                  "Yes! Our onboarding and retention programs are **customizable for startups, mid-sized businesses, and enterprises.**",
+                  "**Retail, finance, healthcare, SaaS, and telecom** are just a few industries seeing massive improvements in CX efficiency.",
               },
             ].map((faq, index) => (
               <AccordionItem key={index} className="border-gray-200 shadow-md" value={""}>
@@ -192,19 +193,16 @@ const OnboardingRetentionPrograms = () => {
         </motion.section>
 
         {/* CTA Section */}
-        <motion.section className="text-center space-y-8 bg-gradient-to-br from-white to-blue-50 rounded-2xl p-12 shadow-lg" {...fadeIn}>
+        <motion.section className="text-center space-y-8 bg-gradient-to-br from-white to-indigo-50 rounded-2xl p-12 shadow-lg" {...fadeIn}>
           <h2 className="text-3xl font-bold text-gray-900">
-            Create a Workforce That Stays & Thrives
+            Automate & Elevate Customer Experiences
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            **Improve employee retention, enhance engagement, and drive workforce success** with our onboarding and retention solutions.
+            **Reduce costs, enhance engagement, and optimize operations** with AI-powered CX automation.
           </p>
           <div className="space-x-4">
-            <Button className="bg-gradient-to-r from-green-400 to-green-600 text-white px-6 py-3 shadow-lg">
-              Get a Free Consultation
-            </Button>
-            <Button className="bg-gradient-to-r from-blue-400 to-blue-600 text-white px-6 py-3 shadow-lg">
-              Get Started
+            <Button className="bg-gradient-to-r from-teal-400 to-teal-600 text-white px-6 py-3 shadow-lg">
+              Get a Free Demo
             </Button>
           </div>
         </motion.section>
@@ -214,4 +212,4 @@ const OnboardingRetentionPrograms = () => {
   );
 };
 
-export default OnboardingRetentionPrograms;
+export default CustomerExperienceAutomation;

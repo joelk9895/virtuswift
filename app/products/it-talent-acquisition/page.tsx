@@ -13,13 +13,13 @@ import MegaMenu from "@/app/components/megamenu";
 import Footer from "@/app/components/footer";
 import {
   Users,
-  HeartHandshake,
-  Star,
-  Rocket,
-  Shield,
+  Briefcase,
   BarChart3,
+  Shield,
+  Rocket,
   Globe,
-  ThumbsUp,
+  ClipboardCheck,
+  UserCheck,
 } from "lucide-react";
 
 const fadeIn = {
@@ -34,7 +34,7 @@ const cardStyles = {
   feature: "bg-gradient-to-br from-white to-blue-50 hover:shadow-lg transition-all duration-300",
 };
 
-const OnboardingRetentionPrograms = () => {
+const ITTalentAcquisition = () => {
   return (
     <div className="min-w-screen bg-slate-50 flex flex-col items-center">
       <MegaMenu />
@@ -46,48 +46,48 @@ const OnboardingRetentionPrograms = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight">
-            Onboarding & Retention Programs
+            Expert IT Talent Acquisition
           </h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            **Engage, retain, and empower** your workforce with world-class onboarding and retention strategies.
+            **Hire top-tier IT professionals with precision and speed.** Our AI-driven recruitment solutions connect you with the best talent worldwide.
           </p>
           <p className="text-gray-600">
-            Build a high-performing team with **seamless onboarding experiences** and **proven retention solutions** that drive success.
+            From software engineers to cloud architects, we help you **build elite IT teams** that drive innovation and success.
           </p>
         </motion.section>
 
         {/* Why Choose Our Solution */}
         <motion.section className="space-y-8" {...fadeIn}>
           <h2 className="text-3xl font-bold text-slate-900 text-center">
-            Why Choose Our Onboarding & Retention Programs?
+            Why Choose Our IT Talent Acquisition Services?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "Faster Employee Integration",
+                title: "AI-Powered Recruitment",
                 content:
-                  "Get new hires **fully productive in record time** with structured onboarding workflows.",
+                  "Leverage **machine learning** to identify, screen, and match the best candidates for your IT roles.",
                 style: cardStyles.primary,
                 icon: <Rocket className="w-8 h-8 text-blue-600 mb-4" />,
               },
               {
-                title: "Higher Retention Rates",
+                title: "Industry-Specific Experts",
                 content:
-                  "Reduce turnover by **enhancing job satisfaction** and building long-term engagement.",
+                  "We specialize in sourcing IT professionals **tailored to your industry needs.**",
                 style: cardStyles.secondary,
-                icon: <HeartHandshake className="w-8 h-8 text-green-600 mb-4" />,
+                icon: <Briefcase className="w-8 h-8 text-green-600 mb-4" />,
               },
               {
-                title: "Data-Driven Workforce Insights",
+                title: "Faster Hiring Process",
                 content:
-                  "Leverage **advanced analytics** to understand trends and proactively retain top talent.",
+                  "Reduce hiring time with **pre-vetted candidates** ready to make an immediate impact.",
                 style: cardStyles.primary,
-                icon: <BarChart3 className="w-8 h-8 text-blue-600 mb-4" />,
+                icon: <UserCheck className="w-8 h-8 text-blue-600 mb-4" />,
               },
               {
-                title: "Scalable & Customizable Solutions",
+                title: "Global Talent Network",
                 content:
-                  "Adapt onboarding and retention programs **to your business size and industry needs.**",
+                  "Access **top IT talent worldwide**, including remote, contract, and full-time hires.",
                 style: cardStyles.secondary,
                 icon: <Globe className="w-8 h-8 text-green-600 mb-4" />,
               },
@@ -124,25 +124,25 @@ const OnboardingRetentionPrograms = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "Automated Onboarding",
-                content: "Streamline HR processes with **digital workflows and self-service portals.**",
-                icon: <Users className="w-8 h-8 text-blue-600 mb-4" />,
+                title: "AI-Driven Candidate Matching",
+                content: "**Identify the best talent instantly** using data-driven insights.",
+                icon: <BarChart3 className="w-8 h-8 text-blue-600 mb-4" />,
               },
               {
-                title: "AI-Powered Employee Engagement",
-                content: "**Personalized training, mentorship, and real-time feedback** for continuous improvement.",
-                icon: <Star className="w-8 h-8 text-green-600 mb-4" />,
+                title: "End-to-End Hiring Support",
+                content: "From sourcing to onboarding, we handle the entire **recruitment lifecycle.**",
+                icon: <ClipboardCheck className="w-8 h-8 text-green-600 mb-4" />,
               },
               {
-                title: "Retention-Boosting Recognition",
+                title: "Cybersecurity & Compliance",
                 content:
-                  "Increase loyalty with **custom incentives, rewards, and appreciation programs.**",
-                icon: <ThumbsUp className="w-8 h-8 text-blue-600 mb-4" />,
+                  "**Secure hiring practices** that align with GDPR and data protection laws.",
+                icon: <Shield className="w-8 h-8 text-blue-600 mb-4" />,
               },
               {
-                title: "Predictive Analytics & Insights",
-                content: "Use **AI-driven data** to anticipate workforce trends and prevent attrition.",
-                icon: <Shield className="w-8 h-8 text-green-600 mb-4" />,
+                title: "Flexible Hiring Models",
+                content: "Choose from **contract, full-time, and remote hiring solutions**.",
+                icon: <Users className="w-8 h-8 text-green-600 mb-4" />,
               },
             ].map((feature, index) => (
               <Card key={index} className={cardStyles.feature}>
@@ -166,19 +166,19 @@ const OnboardingRetentionPrograms = () => {
           <Accordion type="single" collapsible className="space-y-4 w-full max-w-3xl mx-auto">
             {[
               {
-                question: "How does AI improve employee onboarding?",
+                question: "How fast can we hire IT professionals?",
                 answer:
-                  "AI automates paperwork, facilitates personalized training, and **enhances engagement through interactive modules.**",
+                  "With our **AI-powered matching system**, most companies fill roles **within days, not weeks.**",
               },
               {
-                question: "What makes a successful retention program?",
+                question: "Can you source specialized IT roles?",
                 answer:
-                  "A strong mix of **mentorship, career growth opportunities, and employee recognition** helps drive retention.",
+                  "Yes! We specialize in **software development, cloud engineering, cybersecurity, DevOps, and more.**",
               },
               {
-                question: "Can your solutions be tailored to our company size?",
+                question: "Do you offer contract and remote hiring?",
                 answer:
-                  "Yes! Our onboarding and retention programs are **customizable for startups, mid-sized businesses, and enterprises.**",
+                  "Absolutely! We provide **contract, remote, and permanent hiring options** tailored to your needs.",
               },
             ].map((faq, index) => (
               <AccordionItem key={index} className="border-gray-200 shadow-md" value={""}>
@@ -194,14 +194,14 @@ const OnboardingRetentionPrograms = () => {
         {/* CTA Section */}
         <motion.section className="text-center space-y-8 bg-gradient-to-br from-white to-blue-50 rounded-2xl p-12 shadow-lg" {...fadeIn}>
           <h2 className="text-3xl font-bold text-gray-900">
-            Create a Workforce That Stays & Thrives
+            Hire IT Experts with Confidence
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            **Improve employee retention, enhance engagement, and drive workforce success** with our onboarding and retention solutions.
+            **Find and hire the best IT talent faster.** Let’s build your dream team today!
           </p>
           <div className="space-x-4">
             <Button className="bg-gradient-to-r from-green-400 to-green-600 text-white px-6 py-3 shadow-lg">
-              Get a Free Consultation
+              Request a Consultation
             </Button>
             <Button className="bg-gradient-to-r from-blue-400 to-blue-600 text-white px-6 py-3 shadow-lg">
               Get Started
@@ -214,4 +214,4 @@ const OnboardingRetentionPrograms = () => {
   );
 };
 
-export default OnboardingRetentionPrograms;
+export default ITTalentAcquisition;

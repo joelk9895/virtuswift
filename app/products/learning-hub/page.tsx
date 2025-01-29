@@ -12,14 +12,14 @@ import {
 import MegaMenu from "@/app/components/megamenu";
 import Footer from "@/app/components/footer";
 import {
-  Users,
-  HeartHandshake,
-  Star,
-  Rocket,
-  Shield,
+  Video,
+  BookOpen,
+  FileText,
   BarChart3,
+  Lightbulb,
+  Users,
   Globe,
-  ThumbsUp,
+  Bookmark,
 } from "lucide-react";
 
 const fadeIn = {
@@ -30,11 +30,11 @@ const fadeIn = {
 
 const cardStyles = {
   primary: "bg-gradient-to-br from-blue-50 to-blue-100",
-  secondary: "bg-gradient-to-br from-green-50 to-green-100",
+  secondary: "bg-gradient-to-br from-yellow-50 to-yellow-100",
   feature: "bg-gradient-to-br from-white to-blue-50 hover:shadow-lg transition-all duration-300",
 };
 
-const OnboardingRetentionPrograms = () => {
+const LearningResources = () => {
   return (
     <div className="min-w-screen bg-slate-50 flex flex-col items-center">
       <MegaMenu />
@@ -46,50 +46,46 @@ const OnboardingRetentionPrograms = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight">
-            Onboarding & Retention Programs
+            Webinars, Tutorials, and Whitepapers
           </h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            **Engage, retain, and empower** your workforce with world-class onboarding and retention strategies.
+            **Stay ahead of the curve** with expert-led **webinars, in-depth tutorials, and exclusive whitepapers** designed to empower your business.
           </p>
           <p className="text-gray-600">
-            Build a high-performing team with **seamless onboarding experiences** and **proven retention solutions** that drive success.
+            Gain insights from industry leaders, master cutting-edge technologies, and access valuable resources that drive innovation and success.
           </p>
         </motion.section>
 
-        {/* Why Choose Our Solution */}
+        {/* Why Choose Our Learning Resources? */}
         <motion.section className="space-y-8" {...fadeIn}>
           <h2 className="text-3xl font-bold text-slate-900 text-center">
-            Why Choose Our Onboarding & Retention Programs?
+            Why Choose Our Learning Resources?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "Faster Employee Integration",
-                content:
-                  "Get new hires **fully productive in record time** with structured onboarding workflows.",
+                title: "Expert-Led Webinars",
+                content: "Gain **exclusive access** to thought leaders and industry experts sharing game-changing insights.",
                 style: cardStyles.primary,
-                icon: <Rocket className="w-8 h-8 text-blue-600 mb-4" />,
+                icon: <Video className="w-8 h-8 text-blue-600 mb-4" />,
               },
               {
-                title: "Higher Retention Rates",
-                content:
-                  "Reduce turnover by **enhancing job satisfaction** and building long-term engagement.",
+                title: "Step-by-Step Tutorials",
+                content: "Hands-on **learning modules** covering the latest trends and best practices in your industry.",
                 style: cardStyles.secondary,
-                icon: <HeartHandshake className="w-8 h-8 text-green-600 mb-4" />,
+                icon: <BookOpen className="w-8 h-8 text-yellow-600 mb-4" />,
               },
               {
-                title: "Data-Driven Workforce Insights",
-                content:
-                  "Leverage **advanced analytics** to understand trends and proactively retain top talent.",
+                title: "Exclusive Whitepapers",
+                content: "Deep-dive into **market trends, research reports, and future-ready strategies.**",
                 style: cardStyles.primary,
-                icon: <BarChart3 className="w-8 h-8 text-blue-600 mb-4" />,
+                icon: <FileText className="w-8 h-8 text-blue-600 mb-4" />,
               },
               {
-                title: "Scalable & Customizable Solutions",
-                content:
-                  "Adapt onboarding and retention programs **to your business size and industry needs.**",
+                title: "Global Learning Community",
+                content: "Engage with **like-minded professionals** and stay updated with the latest industry shifts.",
                 style: cardStyles.secondary,
-                icon: <Globe className="w-8 h-8 text-green-600 mb-4" />,
+                icon: <Users className="w-8 h-8 text-yellow-600 mb-4" />,
               },
             ].map((card, index) => (
               <motion.div
@@ -119,30 +115,29 @@ const OnboardingRetentionPrograms = () => {
         {/* Key Features Section */}
         <motion.section className="space-y-8" {...fadeIn}>
           <h2 className="text-3xl font-bold text-slate-900 text-center">
-            Key Features
+            Key Features of Our Learning Hub
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "Automated Onboarding",
-                content: "Streamline HR processes with **digital workflows and self-service portals.**",
-                icon: <Users className="w-8 h-8 text-blue-600 mb-4" />,
+                title: "On-Demand Webinars",
+                content: "**Watch anytime, anywhere** with our library of past and upcoming webinar sessions.",
+                icon: <Bookmark className="w-8 h-8 text-blue-600 mb-4" />,
               },
               {
-                title: "AI-Powered Employee Engagement",
-                content: "**Personalized training, mentorship, and real-time feedback** for continuous improvement.",
-                icon: <Star className="w-8 h-8 text-green-600 mb-4" />,
+                title: "Interactive Learning",
+                content: "**Live Q&A sessions, hands-on labs, and real-world case studies.**",
+                icon: <Lightbulb className="w-8 h-8 text-yellow-600 mb-4" />,
               },
               {
-                title: "Retention-Boosting Recognition",
-                content:
-                  "Increase loyalty with **custom incentives, rewards, and appreciation programs.**",
-                icon: <ThumbsUp className="w-8 h-8 text-blue-600 mb-4" />,
+                title: "Industry-Specific Insights",
+                content: "Tailored content covering **technology, finance, healthcare, logistics, and more.**",
+                icon: <BarChart3 className="w-8 h-8 text-blue-600 mb-4" />,
               },
               {
-                title: "Predictive Analytics & Insights",
-                content: "Use **AI-driven data** to anticipate workforce trends and prevent attrition.",
-                icon: <Shield className="w-8 h-8 text-green-600 mb-4" />,
+                title: "Global Access",
+                content: "**Stay connected with experts worldwide** and network with industry professionals.",
+                icon: <Globe className="w-8 h-8 text-yellow-600 mb-4" />,
               },
             ].map((feature, index) => (
               <Card key={index} className={cardStyles.feature}>
@@ -166,19 +161,16 @@ const OnboardingRetentionPrograms = () => {
           <Accordion type="single" collapsible className="space-y-4 w-full max-w-3xl mx-auto">
             {[
               {
-                question: "How does AI improve employee onboarding?",
-                answer:
-                  "AI automates paperwork, facilitates personalized training, and **enhances engagement through interactive modules.**",
+                question: "Are the webinars free to access?",
+                answer: "Yes! We offer a mix of free and premium content. Sign up to explore our exclusive learning hub.",
               },
               {
-                question: "What makes a successful retention program?",
-                answer:
-                  "A strong mix of **mentorship, career growth opportunities, and employee recognition** helps drive retention.",
+                question: "Can I download the whitepapers?",
+                answer: "Absolutely! Once you register, you gain access to **downloadable PDFs** of all our whitepapers.",
               },
               {
-                question: "Can your solutions be tailored to our company size?",
-                answer:
-                  "Yes! Our onboarding and retention programs are **customizable for startups, mid-sized businesses, and enterprises.**",
+                question: "Do you provide certifications?",
+                answer: "Yes! Many of our tutorials come with **certifications** to help validate your skills and expertise.",
               },
             ].map((faq, index) => (
               <AccordionItem key={index} className="border-gray-200 shadow-md" value={""}>
@@ -194,17 +186,15 @@ const OnboardingRetentionPrograms = () => {
         {/* CTA Section */}
         <motion.section className="text-center space-y-8 bg-gradient-to-br from-white to-blue-50 rounded-2xl p-12 shadow-lg" {...fadeIn}>
           <h2 className="text-3xl font-bold text-gray-900">
-            Create a Workforce That Stays & Thrives
+            Start Learning Today
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            **Improve employee retention, enhance engagement, and drive workforce success** with our onboarding and retention solutions.
+            Unlock expert insights, **master new skills, and gain industry-leading knowledge.**  
+            Join now and explore **webinars, tutorials, and whitepapers!**
           </p>
           <div className="space-x-4">
-            <Button className="bg-gradient-to-r from-green-400 to-green-600 text-white px-6 py-3 shadow-lg">
-              Get a Free Consultation
-            </Button>
-            <Button className="bg-gradient-to-r from-blue-400 to-blue-600 text-white px-6 py-3 shadow-lg">
-              Get Started
+            <Button className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-white px-6 py-3 shadow-lg">
+              Register Now
             </Button>
           </div>
         </motion.section>
@@ -214,4 +204,4 @@ const OnboardingRetentionPrograms = () => {
   );
 };
 
-export default OnboardingRetentionPrograms;
+export default LearningResources;

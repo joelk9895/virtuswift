@@ -12,14 +12,14 @@ import {
 import MegaMenu from "@/app/components/megamenu";
 import Footer from "@/app/components/footer";
 import {
-  Users,
-  HeartHandshake,
-  Star,
-  Rocket,
   Shield,
+  Eye,
   BarChart3,
+  Cpu,
+  Lock,
+  Banknote,
+  Server,
   Globe,
-  ThumbsUp,
 } from "lucide-react";
 
 const fadeIn = {
@@ -31,10 +31,10 @@ const fadeIn = {
 const cardStyles = {
   primary: "bg-gradient-to-br from-blue-50 to-blue-100",
   secondary: "bg-gradient-to-br from-green-50 to-green-100",
-  feature: "bg-gradient-to-br from-white to-blue-50 hover:shadow-lg transition-all duration-300",
+  feature: "bg-gradient-to-br from-white to-green-50 hover:shadow-lg transition-all duration-300",
 };
 
-const OnboardingRetentionPrograms = () => {
+const AIFraudDetection = () => {
   return (
     <div className="min-w-screen bg-slate-50 flex flex-col items-center">
       <MegaMenu />
@@ -46,48 +46,45 @@ const OnboardingRetentionPrograms = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight">
-            Onboarding & Retention Programs
+            AI-Powered Fraud Detection Tools
           </h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            **Engage, retain, and empower** your workforce with world-class onboarding and retention strategies.
+            **Stop fraud before it happens.**  
+            Detect, analyze, and prevent fraudulent activities in real-time with advanced AI-driven detection tools.
           </p>
           <p className="text-gray-600">
-            Build a high-performing team with **seamless onboarding experiences** and **proven retention solutions** that drive success.
+            Leverage cutting-edge **machine learning algorithms, pattern recognition, and predictive analytics** to safeguard your business.
           </p>
         </motion.section>
 
-        {/* Why Choose Our Solution */}
+        {/* Why Choose Our AI Fraud Detection? */}
         <motion.section className="space-y-8" {...fadeIn}>
           <h2 className="text-3xl font-bold text-slate-900 text-center">
-            Why Choose Our Onboarding & Retention Programs?
+            Why Choose Our AI Fraud Detection Tools?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "Faster Employee Integration",
-                content:
-                  "Get new hires **fully productive in record time** with structured onboarding workflows.",
+                title: "Real-Time Threat Detection",
+                content: "AI-driven **real-time alerts and anomaly detection** to stop fraud instantly.",
                 style: cardStyles.primary,
-                icon: <Rocket className="w-8 h-8 text-blue-600 mb-4" />,
+                icon: <Eye className="w-8 h-8 text-blue-600 mb-4" />,
               },
               {
-                title: "Higher Retention Rates",
-                content:
-                  "Reduce turnover by **enhancing job satisfaction** and building long-term engagement.",
+                title: "Automated Fraud Prevention",
+                content: "**Predict, block, and respond** to threats with machine learning automation.",
                 style: cardStyles.secondary,
-                icon: <HeartHandshake className="w-8 h-8 text-green-600 mb-4" />,
+                icon: <Cpu className="w-8 h-8 text-green-600 mb-4" />,
               },
               {
-                title: "Data-Driven Workforce Insights",
-                content:
-                  "Leverage **advanced analytics** to understand trends and proactively retain top talent.",
+                title: "Enterprise-Grade Security",
+                content: "**Secure sensitive transactions** with advanced AI encryption models.",
                 style: cardStyles.primary,
-                icon: <BarChart3 className="w-8 h-8 text-blue-600 mb-4" />,
+                icon: <Lock className="w-8 h-8 text-blue-600 mb-4" />,
               },
               {
-                title: "Scalable & Customizable Solutions",
-                content:
-                  "Adapt onboarding and retention programs **to your business size and industry needs.**",
+                title: "Scalable Global Protection",
+                content: "**AI adapts** to evolving fraud tactics across multiple geographies.",
                 style: cardStyles.secondary,
                 icon: <Globe className="w-8 h-8 text-green-600 mb-4" />,
               },
@@ -119,30 +116,29 @@ const OnboardingRetentionPrograms = () => {
         {/* Key Features Section */}
         <motion.section className="space-y-8" {...fadeIn}>
           <h2 className="text-3xl font-bold text-slate-900 text-center">
-            Key Features
+            Key Features of Our AI Fraud Detection System
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "Automated Onboarding",
-                content: "Streamline HR processes with **digital workflows and self-service portals.**",
-                icon: <Users className="w-8 h-8 text-blue-600 mb-4" />,
+                title: "Machine Learning Algorithms",
+                content: "AI-powered learning that adapts to **new fraud patterns in real-time.**",
+                icon: <Cpu className="w-8 h-8 text-blue-600 mb-4" />,
               },
               {
-                title: "AI-Powered Employee Engagement",
-                content: "**Personalized training, mentorship, and real-time feedback** for continuous improvement.",
-                icon: <Star className="w-8 h-8 text-green-600 mb-4" />,
-              },
-              {
-                title: "Retention-Boosting Recognition",
-                content:
-                  "Increase loyalty with **custom incentives, rewards, and appreciation programs.**",
-                icon: <ThumbsUp className="w-8 h-8 text-blue-600 mb-4" />,
-              },
-              {
-                title: "Predictive Analytics & Insights",
-                content: "Use **AI-driven data** to anticipate workforce trends and prevent attrition.",
+                title: "Transaction Monitoring",
+                content: "**Continuous monitoring** of financial transactions for suspicious activity.",
                 icon: <Shield className="w-8 h-8 text-green-600 mb-4" />,
+              },
+              {
+                title: "Risk Scoring & Behavioral Analysis",
+                content: "Identify **high-risk transactions** with predictive risk assessment.",
+                icon: <BarChart3 className="w-8 h-8 text-blue-600 mb-4" />,
+              },
+              {
+                title: "Seamless API Integration",
+                content: "**Integrate effortlessly** with banking, fintech, and e-commerce platforms.",
+                icon: <Server className="w-8 h-8 text-green-600 mb-4" />,
               },
             ].map((feature, index) => (
               <Card key={index} className={cardStyles.feature}>
@@ -166,19 +162,16 @@ const OnboardingRetentionPrograms = () => {
           <Accordion type="single" collapsible className="space-y-4 w-full max-w-3xl mx-auto">
             {[
               {
-                question: "How does AI improve employee onboarding?",
-                answer:
-                  "AI automates paperwork, facilitates personalized training, and **enhances engagement through interactive modules.**",
+                question: "How does AI fraud detection work?",
+                answer: "AI detects fraud by analyzing transaction patterns, identifying anomalies, and predicting risks in real-time.",
               },
               {
-                question: "What makes a successful retention program?",
-                answer:
-                  "A strong mix of **mentorship, career growth opportunities, and employee recognition** helps drive retention.",
+                question: "Can your system integrate with my existing platform?",
+                answer: "Yes! Our API seamlessly integrates with banking, e-commerce, and fintech systems.",
               },
               {
-                question: "Can your solutions be tailored to our company size?",
-                answer:
-                  "Yes! Our onboarding and retention programs are **customizable for startups, mid-sized businesses, and enterprises.**",
+                question: "Is the system customizable for my business?",
+                answer: "Absolutely! Our AI models can be tailored to meet your industry-specific fraud detection needs.",
               },
             ].map((faq, index) => (
               <AccordionItem key={index} className="border-gray-200 shadow-md" value={""}>
@@ -194,17 +187,15 @@ const OnboardingRetentionPrograms = () => {
         {/* CTA Section */}
         <motion.section className="text-center space-y-8 bg-gradient-to-br from-white to-blue-50 rounded-2xl p-12 shadow-lg" {...fadeIn}>
           <h2 className="text-3xl font-bold text-gray-900">
-            Create a Workforce That Stays & Thrives
+            Stop Fraud Before It Happens
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            **Improve employee retention, enhance engagement, and drive workforce success** with our onboarding and retention solutions.
+            **Strengthen your fraud defenses** with cutting-edge AI-powered solutions.  
+            **Protect your transactions, customers, and business today.**
           </p>
           <div className="space-x-4">
             <Button className="bg-gradient-to-r from-green-400 to-green-600 text-white px-6 py-3 shadow-lg">
-              Get a Free Consultation
-            </Button>
-            <Button className="bg-gradient-to-r from-blue-400 to-blue-600 text-white px-6 py-3 shadow-lg">
-              Get Started
+              Request a Demo
             </Button>
           </div>
         </motion.section>
@@ -214,4 +205,4 @@ const OnboardingRetentionPrograms = () => {
   );
 };
 
-export default OnboardingRetentionPrograms;
+export default AIFraudDetection;

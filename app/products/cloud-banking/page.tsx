@@ -12,14 +12,14 @@ import {
 import MegaMenu from "@/app/components/megamenu";
 import Footer from "@/app/components/footer";
 import {
-  Users,
-  HeartHandshake,
-  Star,
-  Rocket,
+  Lock,
+  Bank,
   Shield,
   BarChart3,
+  Cloud,
+  CircleDollarSign,
+  Server,
   Globe,
-  ThumbsUp,
 } from "lucide-react";
 
 const fadeIn = {
@@ -31,10 +31,10 @@ const fadeIn = {
 const cardStyles = {
   primary: "bg-gradient-to-br from-blue-50 to-blue-100",
   secondary: "bg-gradient-to-br from-green-50 to-green-100",
-  feature: "bg-gradient-to-br from-white to-blue-50 hover:shadow-lg transition-all duration-300",
+  feature: "bg-gradient-to-br from-white to-green-50 hover:shadow-lg transition-all duration-300",
 };
 
-const OnboardingRetentionPrograms = () => {
+const SecureCloudBanking = () => {
   return (
     <div className="min-w-screen bg-slate-50 flex flex-col items-center">
       <MegaMenu />
@@ -46,48 +46,45 @@ const OnboardingRetentionPrograms = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight">
-            Onboarding & Retention Programs
+            Secure Cloud Solutions for Banking & Finance
           </h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            **Engage, retain, and empower** your workforce with world-class onboarding and retention strategies.
+            **Revolutionize your financial operations** with state-of-the-art, secure cloud solutions.  
+            Ensure **compliance, security, and scalability** while enhancing customer experience.
           </p>
           <p className="text-gray-600">
-            Build a high-performing team with **seamless onboarding experiences** and **proven retention solutions** that drive success.
+            Power your financial institution with **AI-driven fraud detection, automated compliance, and seamless digital transformation.**
           </p>
         </motion.section>
 
         {/* Why Choose Our Solution */}
         <motion.section className="space-y-8" {...fadeIn}>
           <h2 className="text-3xl font-bold text-slate-900 text-center">
-            Why Choose Our Onboarding & Retention Programs?
+            Why Choose Our Secure Cloud Solutions?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "Faster Employee Integration",
-                content:
-                  "Get new hires **fully productive in record time** with structured onboarding workflows.",
+                title: "Advanced Security",
+                content: "Enterprise-grade **encryption and AI-powered threat detection**.",
                 style: cardStyles.primary,
-                icon: <Rocket className="w-8 h-8 text-blue-600 mb-4" />,
+                icon: <Lock className="w-8 h-8 text-blue-600 mb-4" />,
               },
               {
-                title: "Higher Retention Rates",
-                content:
-                  "Reduce turnover by **enhancing job satisfaction** and building long-term engagement.",
+                title: "Regulatory Compliance",
+                content: "Built-in **GDPR, PCI DSS, and financial industry compliance**.",
                 style: cardStyles.secondary,
-                icon: <HeartHandshake className="w-8 h-8 text-green-600 mb-4" />,
+                icon: <Shield className="w-8 h-8 text-green-600 mb-4" />,
               },
               {
-                title: "Data-Driven Workforce Insights",
-                content:
-                  "Leverage **advanced analytics** to understand trends and proactively retain top talent.",
+                title: "Cost Efficiency",
+                content: "**Reduce IT overhead** with scalable cloud infrastructure.",
                 style: cardStyles.primary,
-                icon: <BarChart3 className="w-8 h-8 text-blue-600 mb-4" />,
+                icon: <CircleDollarSign className="w-8 h-8 text-blue-600 mb-4" />,
               },
               {
-                title: "Scalable & Customizable Solutions",
-                content:
-                  "Adapt onboarding and retention programs **to your business size and industry needs.**",
+                title: "Global Scalability",
+                content: "Expand operations with **high-performance cloud networks**.",
                 style: cardStyles.secondary,
                 icon: <Globe className="w-8 h-8 text-green-600 mb-4" />,
               },
@@ -124,25 +121,24 @@ const OnboardingRetentionPrograms = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "Automated Onboarding",
-                content: "Streamline HR processes with **digital workflows and self-service portals.**",
-                icon: <Users className="w-8 h-8 text-blue-600 mb-4" />,
+                title: "AI-Powered Fraud Detection",
+                content: "**Identify and prevent** fraudulent transactions in real-time.",
+                icon: <Bank className="w-8 h-8 text-blue-600 mb-4" />,
               },
               {
-                title: "AI-Powered Employee Engagement",
-                content: "**Personalized training, mentorship, and real-time feedback** for continuous improvement.",
-                icon: <Star className="w-8 h-8 text-green-600 mb-4" />,
+                title: "Secure Cloud Infrastructure",
+                content: "**Ensure data integrity** with highly secure cloud hosting.",
+                icon: <Cloud className="w-8 h-8 text-green-600 mb-4" />,
               },
               {
-                title: "Retention-Boosting Recognition",
-                content:
-                  "Increase loyalty with **custom incentives, rewards, and appreciation programs.**",
-                icon: <ThumbsUp className="w-8 h-8 text-blue-600 mb-4" />,
+                title: "Automated Compliance Monitoring",
+                content: "Real-time **audit logs and reporting for regulatory needs**.",
+                icon: <BarChart3 className="w-8 h-8 text-blue-600 mb-4" />,
               },
               {
-                title: "Predictive Analytics & Insights",
-                content: "Use **AI-driven data** to anticipate workforce trends and prevent attrition.",
-                icon: <Shield className="w-8 h-8 text-green-600 mb-4" />,
+                title: "Seamless Core Banking Integration",
+                content: "**Integrate effortlessly** with existing banking platforms.",
+                icon: <Server className="w-8 h-8 text-green-600 mb-4" />,
               },
             ].map((feature, index) => (
               <Card key={index} className={cardStyles.feature}>
@@ -166,19 +162,16 @@ const OnboardingRetentionPrograms = () => {
           <Accordion type="single" collapsible className="space-y-4 w-full max-w-3xl mx-auto">
             {[
               {
-                question: "How does AI improve employee onboarding?",
-                answer:
-                  "AI automates paperwork, facilitates personalized training, and **enhances engagement through interactive modules.**",
+                question: "How secure is cloud banking?",
+                answer: "We use **bank-grade encryption, multi-factor authentication, and AI-driven threat detection** to ensure maximum security.",
               },
               {
-                question: "What makes a successful retention program?",
-                answer:
-                  "A strong mix of **mentorship, career growth opportunities, and employee recognition** helps drive retention.",
+                question: "Can we integrate with existing banking systems?",
+                answer: "Yes! Our solutions support **core banking integration with leading financial platforms like Oracle, SAP, and Finastra.**",
               },
               {
-                question: "Can your solutions be tailored to our company size?",
-                answer:
-                  "Yes! Our onboarding and retention programs are **customizable for startups, mid-sized businesses, and enterprises.**",
+                question: "Do you provide disaster recovery options?",
+                answer: "Yes! We offer **geo-redundant backups and failover strategies** to keep your operations running 24/7.",
               },
             ].map((faq, index) => (
               <AccordionItem key={index} className="border-gray-200 shadow-md" value={""}>
@@ -194,17 +187,15 @@ const OnboardingRetentionPrograms = () => {
         {/* CTA Section */}
         <motion.section className="text-center space-y-8 bg-gradient-to-br from-white to-blue-50 rounded-2xl p-12 shadow-lg" {...fadeIn}>
           <h2 className="text-3xl font-bold text-gray-900">
-            Create a Workforce That Stays & Thrives
+            Transform Your Financial Institution Today
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            **Improve employee retention, enhance engagement, and drive workforce success** with our onboarding and retention solutions.
+            **Future-proof your banking infrastructure** with cutting-edge, secure cloud solutions.  
+            **Improve efficiency, security, and customer experience today.**
           </p>
           <div className="space-x-4">
             <Button className="bg-gradient-to-r from-green-400 to-green-600 text-white px-6 py-3 shadow-lg">
-              Get a Free Consultation
-            </Button>
-            <Button className="bg-gradient-to-r from-blue-400 to-blue-600 text-white px-6 py-3 shadow-lg">
-              Get Started
+              Schedule a Demo
             </Button>
           </div>
         </motion.section>
@@ -214,4 +205,4 @@ const OnboardingRetentionPrograms = () => {
   );
 };
 
-export default OnboardingRetentionPrograms;
+export default SecureCloudBanking;

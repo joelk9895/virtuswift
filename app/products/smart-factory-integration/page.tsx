@@ -12,14 +12,14 @@ import {
 import MegaMenu from "@/app/components/megamenu";
 import Footer from "@/app/components/footer";
 import {
-  Users,
-  HeartHandshake,
-  Star,
-  Rocket,
-  Shield,
+  Factory,
+  Server,
   BarChart3,
-  Globe,
-  ThumbsUp,
+  Shield,
+  Rocket,
+  Network,
+  Gear,
+  CheckCircle,
 } from "lucide-react";
 
 const fadeIn = {
@@ -29,12 +29,12 @@ const fadeIn = {
 };
 
 const cardStyles = {
-  primary: "bg-gradient-to-br from-blue-50 to-blue-100",
+  primary: "bg-gradient-to-br from-indigo-50 to-indigo-100",
   secondary: "bg-gradient-to-br from-green-50 to-green-100",
-  feature: "bg-gradient-to-br from-white to-blue-50 hover:shadow-lg transition-all duration-300",
+  feature: "bg-gradient-to-br from-white to-indigo-50 hover:shadow-lg transition-all duration-300",
 };
 
-const OnboardingRetentionPrograms = () => {
+const SmartFactorySAP = () => {
   return (
     <div className="min-w-screen bg-slate-50 flex flex-col items-center">
       <MegaMenu />
@@ -46,50 +46,51 @@ const OnboardingRetentionPrograms = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight">
-            Onboarding & Retention Programs
+            Smart Factory Integration with SAP Modules
           </h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            **Engage, retain, and empower** your workforce with world-class onboarding and retention strategies.
+            **Revolutionize your manufacturing operations** with SAP-powered Smart Factory solutions.  
+            Seamlessly integrate automation, real-time data intelligence, and enterprise-wide connectivity.
           </p>
           <p className="text-gray-600">
-            Build a high-performing team with **seamless onboarding experiences** and **proven retention solutions** that drive success.
+            Leverage **AI-driven analytics, IoT-enabled insights, and automated workflows** to optimize efficiency, reduce costs, and ensure precision manufacturing.
           </p>
         </motion.section>
 
         {/* Why Choose Our Solution */}
         <motion.section className="space-y-8" {...fadeIn}>
           <h2 className="text-3xl font-bold text-slate-900 text-center">
-            Why Choose Our Onboarding & Retention Programs?
+            Why Choose Our Smart Factory Integration?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "Faster Employee Integration",
+                title: "Seamless SAP Integration",
                 content:
-                  "Get new hires **fully productive in record time** with structured onboarding workflows.",
+                  "Synchronize your factory with **SAP S/4HANA, SAP MES, and ERP modules** for end-to-end automation.",
                 style: cardStyles.primary,
-                icon: <Rocket className="w-8 h-8 text-blue-600 mb-4" />,
+                icon: <Server className="w-8 h-8 text-indigo-600 mb-4" />,
               },
               {
-                title: "Higher Retention Rates",
+                title: "Real-Time Data Intelligence",
                 content:
-                  "Reduce turnover by **enhancing job satisfaction** and building long-term engagement.",
+                  "Leverage **AI-powered analytics and IoT sensors** for data-driven decision-making.",
                 style: cardStyles.secondary,
-                icon: <HeartHandshake className="w-8 h-8 text-green-600 mb-4" />,
+                icon: <BarChart3 className="w-8 h-8 text-green-600 mb-4" />,
               },
               {
-                title: "Data-Driven Workforce Insights",
+                title: "Predictive Maintenance",
                 content:
-                  "Leverage **advanced analytics** to understand trends and proactively retain top talent.",
+                  "Reduce downtime with **machine learning algorithms** that predict failures before they happen.",
                 style: cardStyles.primary,
-                icon: <BarChart3 className="w-8 h-8 text-blue-600 mb-4" />,
+                icon: <Gears className="w-8 h-8 text-indigo-600 mb-4" />,
               },
               {
-                title: "Scalable & Customizable Solutions",
+                title: "Enhanced Cybersecurity",
                 content:
-                  "Adapt onboarding and retention programs **to your business size and industry needs.**",
+                  "Protect your factory infrastructure with **SAP’s enterprise-grade security solutions.**",
                 style: cardStyles.secondary,
-                icon: <Globe className="w-8 h-8 text-green-600 mb-4" />,
+                icon: <Shield className="w-8 h-8 text-green-600 mb-4" />,
               },
             ].map((card, index) => (
               <motion.div
@@ -124,25 +125,25 @@ const OnboardingRetentionPrograms = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "Automated Onboarding",
-                content: "Streamline HR processes with **digital workflows and self-service portals.**",
-                icon: <Users className="w-8 h-8 text-blue-600 mb-4" />,
+                title: "Digital Twin Technology",
+                content: "Simulate real-world scenarios using **digital replicas of your factory** for testing and optimization.",
+                icon: <Network className="w-8 h-8 text-indigo-600 mb-4" />,
               },
               {
-                title: "AI-Powered Employee Engagement",
-                content: "**Personalized training, mentorship, and real-time feedback** for continuous improvement.",
-                icon: <Star className="w-8 h-8 text-green-600 mb-4" />,
+                title: "Automated Workflow Execution",
+                content: "**Eliminate manual processes** with AI-driven task automation across production lines.",
+                icon: <CheckCircle className="w-8 h-8 text-green-600 mb-4" />,
               },
               {
-                title: "Retention-Boosting Recognition",
+                title: "Cloud & Edge Computing",
                 content:
-                  "Increase loyalty with **custom incentives, rewards, and appreciation programs.**",
-                icon: <ThumbsUp className="w-8 h-8 text-blue-600 mb-4" />,
+                  "Integrate **SAP Edge Services** for faster data processing and cloud-based analytics.",
+                icon: <Server className="w-8 h-8 text-indigo-600 mb-4" />,
               },
               {
-                title: "Predictive Analytics & Insights",
-                content: "Use **AI-driven data** to anticipate workforce trends and prevent attrition.",
-                icon: <Shield className="w-8 h-8 text-green-600 mb-4" />,
+                title: "Supply Chain Synchronization",
+                content: "Connect suppliers, logistics, and production lines with **SAP Integrated Business Planning (IBP).**",
+                icon: <Factory className="w-8 h-8 text-green-600 mb-4" />,
               },
             ].map((feature, index) => (
               <Card key={index} className={cardStyles.feature}>
@@ -166,19 +167,19 @@ const OnboardingRetentionPrograms = () => {
           <Accordion type="single" collapsible className="space-y-4 w-full max-w-3xl mx-auto">
             {[
               {
-                question: "How does AI improve employee onboarding?",
+                question: "How long does SAP integration take?",
                 answer:
-                  "AI automates paperwork, facilitates personalized training, and **enhances engagement through interactive modules.**",
+                  "Integration timelines vary based on complexity, but our experts ensure a **seamless deployment** with minimal downtime.",
               },
               {
-                question: "What makes a successful retention program?",
+                question: "Can existing factory systems work with SAP?",
                 answer:
-                  "A strong mix of **mentorship, career growth opportunities, and employee recognition** helps drive retention.",
+                  "Yes! We provide **customized middleware solutions** to connect legacy systems with SAP modules.",
               },
               {
-                question: "Can your solutions be tailored to our company size?",
+                question: "What industries benefit from Smart Factory Integration?",
                 answer:
-                  "Yes! Our onboarding and retention programs are **customizable for startups, mid-sized businesses, and enterprises.**",
+                  "Industries including **automotive, aerospace, electronics, pharmaceuticals, and consumer goods** have successfully implemented SAP-powered smart factories.",
               },
             ].map((faq, index) => (
               <AccordionItem key={index} className="border-gray-200 shadow-md" value={""}>
@@ -192,19 +193,16 @@ const OnboardingRetentionPrograms = () => {
         </motion.section>
 
         {/* CTA Section */}
-        <motion.section className="text-center space-y-8 bg-gradient-to-br from-white to-blue-50 rounded-2xl p-12 shadow-lg" {...fadeIn}>
+        <motion.section className="text-center space-y-8 bg-gradient-to-br from-white to-indigo-50 rounded-2xl p-12 shadow-lg" {...fadeIn}>
           <h2 className="text-3xl font-bold text-gray-900">
-            Create a Workforce That Stays & Thrives
+            Transform Your Factory with SAP-Powered Intelligence
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            **Improve employee retention, enhance engagement, and drive workforce success** with our onboarding and retention solutions.
+            **Boost efficiency, enhance agility, and drive innovation** with end-to-end SAP integration for your smart factory.
           </p>
           <div className="space-x-4">
             <Button className="bg-gradient-to-r from-green-400 to-green-600 text-white px-6 py-3 shadow-lg">
-              Get a Free Consultation
-            </Button>
-            <Button className="bg-gradient-to-r from-blue-400 to-blue-600 text-white px-6 py-3 shadow-lg">
-              Get Started
+              Schedule a Demo
             </Button>
           </div>
         </motion.section>
@@ -214,4 +212,4 @@ const OnboardingRetentionPrograms = () => {
   );
 };
 
-export default OnboardingRetentionPrograms;
+export default SmartFactorySAP;

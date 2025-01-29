@@ -12,14 +12,14 @@ import {
 import MegaMenu from "@/app/components/megamenu";
 import Footer from "@/app/components/footer";
 import {
-  Users,
-  HeartHandshake,
-  Star,
-  Rocket,
+  Package,
+  Robot,
+  Truck,
+  Layers,
   Shield,
   BarChart3,
-  Globe,
-  ThumbsUp,
+  Rocket,
+  CircuitBoard,
 } from "lucide-react";
 
 const fadeIn = {
@@ -29,12 +29,12 @@ const fadeIn = {
 };
 
 const cardStyles = {
-  primary: "bg-gradient-to-br from-blue-50 to-blue-100",
+  primary: "bg-gradient-to-br from-indigo-50 to-indigo-100",
   secondary: "bg-gradient-to-br from-green-50 to-green-100",
-  feature: "bg-gradient-to-br from-white to-blue-50 hover:shadow-lg transition-all duration-300",
+  feature: "bg-gradient-to-br from-white to-indigo-50 hover:shadow-lg transition-all duration-300",
 };
 
-const OnboardingRetentionPrograms = () => {
+const WarehouseAutomation = () => {
   return (
     <div className="min-w-screen bg-slate-50 flex flex-col items-center">
       <MegaMenu />
@@ -46,50 +46,51 @@ const OnboardingRetentionPrograms = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight">
-            Onboarding & Retention Programs
+            Warehouse Robotics & Automation
           </h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            **Engage, retain, and empower** your workforce with world-class onboarding and retention strategies.
+            **Redefine logistics with AI-powered automation.**  
+            Improve speed, accuracy, and efficiency with state-of-the-art **robotics, automated sorting, and smart inventory management.**
           </p>
           <p className="text-gray-600">
-            Build a high-performing team with **seamless onboarding experiences** and **proven retention solutions** that drive success.
+            **Maximize operational excellence** with a fully integrated robotic system that accelerates order fulfillment and minimizes errors.
           </p>
         </motion.section>
 
         {/* Why Choose Our Solution */}
         <motion.section className="space-y-8" {...fadeIn}>
           <h2 className="text-3xl font-bold text-slate-900 text-center">
-            Why Choose Our Onboarding & Retention Programs?
+            Why Choose Our Warehouse Automation?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "Faster Employee Integration",
+                title: "End-to-End Automation",
                 content:
-                  "Get new hires **fully productive in record time** with structured onboarding workflows.",
+                  "Leverage **AI-driven robotics, conveyor belts, and smart picking systems** to reduce manual labor costs.",
                 style: cardStyles.primary,
-                icon: <Rocket className="w-8 h-8 text-blue-600 mb-4" />,
+                icon: <Robot className="w-8 h-8 text-indigo-600 mb-4" />,
               },
               {
-                title: "Higher Retention Rates",
+                title: "Faster Order Fulfillment",
                 content:
-                  "Reduce turnover by **enhancing job satisfaction** and building long-term engagement.",
+                  "Accelerate processing with **automated storage and retrieval systems (AS/RS)** for high-speed logistics.",
                 style: cardStyles.secondary,
-                icon: <HeartHandshake className="w-8 h-8 text-green-600 mb-4" />,
+                icon: <Package className="w-8 h-8 text-green-600 mb-4" />,
               },
               {
-                title: "Data-Driven Workforce Insights",
+                title: "Optimized Inventory Management",
                 content:
-                  "Leverage **advanced analytics** to understand trends and proactively retain top talent.",
+                  "Implement **real-time tracking and AI-powered analytics** to eliminate stockouts and overstocking.",
                 style: cardStyles.primary,
-                icon: <BarChart3 className="w-8 h-8 text-blue-600 mb-4" />,
+                icon: <Layers className="w-8 h-8 text-indigo-600 mb-4" />,
               },
               {
-                title: "Scalable & Customizable Solutions",
+                title: "Secure & Scalable",
                 content:
-                  "Adapt onboarding and retention programs **to your business size and industry needs.**",
+                  "Ensure seamless expansion with **enterprise-grade security and cloud-based control systems.**",
                 style: cardStyles.secondary,
-                icon: <Globe className="w-8 h-8 text-green-600 mb-4" />,
+                icon: <Shield className="w-8 h-8 text-green-600 mb-4" />,
               },
             ].map((card, index) => (
               <motion.div
@@ -124,25 +125,25 @@ const OnboardingRetentionPrograms = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "Automated Onboarding",
-                content: "Streamline HR processes with **digital workflows and self-service portals.**",
-                icon: <Users className="w-8 h-8 text-blue-600 mb-4" />,
+                title: "AI-Powered Robotics",
+                content: "Smart robotic arms and AGVs automate picking, packing, and sorting with **unparalleled precision.**",
+                icon: <CircuitBoard className="w-8 h-8 text-indigo-600 mb-4" />,
               },
               {
-                title: "AI-Powered Employee Engagement",
-                content: "**Personalized training, mentorship, and real-time feedback** for continuous improvement.",
-                icon: <Star className="w-8 h-8 text-green-600 mb-4" />,
+                title: "Seamless SAP Integration",
+                content: "**Integrate effortlessly with SAP EWM and WMS** for real-time warehouse insights.",
+                icon: <Rocket className="w-8 h-8 text-green-600 mb-4" />,
               },
               {
-                title: "Retention-Boosting Recognition",
+                title: "Automated Freight & Logistics",
                 content:
-                  "Increase loyalty with **custom incentives, rewards, and appreciation programs.**",
-                icon: <ThumbsUp className="w-8 h-8 text-blue-600 mb-4" />,
+                  "**AI-driven routing and drone-assisted delivery** ensure on-time shipments with optimized routes.",
+                icon: <Truck className="w-8 h-8 text-indigo-600 mb-4" />,
               },
               {
-                title: "Predictive Analytics & Insights",
-                content: "Use **AI-driven data** to anticipate workforce trends and prevent attrition.",
-                icon: <Shield className="w-8 h-8 text-green-600 mb-4" />,
+                title: "Predictive Maintenance",
+                content: "Reduce downtime with **IoT-enabled sensors** that predict maintenance needs before failures occur.",
+                icon: <BarChart3 className="w-8 h-8 text-green-600 mb-4" />,
               },
             ].map((feature, index) => (
               <Card key={index} className={cardStyles.feature}>
@@ -166,19 +167,19 @@ const OnboardingRetentionPrograms = () => {
           <Accordion type="single" collapsible className="space-y-4 w-full max-w-3xl mx-auto">
             {[
               {
-                question: "How does AI improve employee onboarding?",
+                question: "How quickly can we implement warehouse robotics?",
                 answer:
-                  "AI automates paperwork, facilitates personalized training, and **enhances engagement through interactive modules.**",
+                  "Timelines vary based on warehouse size and complexity, but we ensure a **fast-track implementation** with minimal disruption.",
               },
               {
-                question: "What makes a successful retention program?",
+                question: "Can robotics integrate with our existing WMS?",
                 answer:
-                  "A strong mix of **mentorship, career growth opportunities, and employee recognition** helps drive retention.",
+                  "Absolutely! Our systems are **fully compatible with SAP, Oracle, Microsoft Dynamics, and other major WMS platforms.**",
               },
               {
-                question: "Can your solutions be tailored to our company size?",
+                question: "What industries benefit from warehouse automation?",
                 answer:
-                  "Yes! Our onboarding and retention programs are **customizable for startups, mid-sized businesses, and enterprises.**",
+                  "**E-commerce, retail, pharmaceuticals, automotive, and logistics industries** all see significant efficiency gains from our robotic solutions.",
               },
             ].map((faq, index) => (
               <AccordionItem key={index} className="border-gray-200 shadow-md" value={""}>
@@ -192,19 +193,16 @@ const OnboardingRetentionPrograms = () => {
         </motion.section>
 
         {/* CTA Section */}
-        <motion.section className="text-center space-y-8 bg-gradient-to-br from-white to-blue-50 rounded-2xl p-12 shadow-lg" {...fadeIn}>
+        <motion.section className="text-center space-y-8 bg-gradient-to-br from-white to-indigo-50 rounded-2xl p-12 shadow-lg" {...fadeIn}>
           <h2 className="text-3xl font-bold text-gray-900">
-            Create a Workforce That Stays & Thrives
+            Automate Your Warehouse & Boost Efficiency
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            **Improve employee retention, enhance engagement, and drive workforce success** with our onboarding and retention solutions.
+            **Scale faster, cut costs, and optimize workflows** with cutting-edge warehouse automation.
           </p>
           <div className="space-x-4">
             <Button className="bg-gradient-to-r from-green-400 to-green-600 text-white px-6 py-3 shadow-lg">
-              Get a Free Consultation
-            </Button>
-            <Button className="bg-gradient-to-r from-blue-400 to-blue-600 text-white px-6 py-3 shadow-lg">
-              Get Started
+              Schedule a Demo
             </Button>
           </div>
         </motion.section>
@@ -214,4 +212,4 @@ const OnboardingRetentionPrograms = () => {
   );
 };
 
-export default OnboardingRetentionPrograms;
+export default WarehouseAutomation;
