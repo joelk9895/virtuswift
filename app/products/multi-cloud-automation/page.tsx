@@ -1,6 +1,8 @@
 "use client";
+
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import {
@@ -27,31 +29,30 @@ const fadeIn = {
 };
 
 const cardStyles = {
-  primary: "bg-gradient-to-br from-indigo-50 to-indigo-100",
-  secondary: "bg-gradient-to-br from-orange-50 to-orange-100",
+  primary: "bg-gradient-to-br from-indigo-50 to-indigo-100 border-none",
+  secondary: "bg-gradient-to-br from-orange-50 to-orange-100 border-none",
   feature:
-    "bg-gradient-to-br from-white to-orange-50 hover:shadow-lg transition-all duration-300",
+    "bg-gradient-to-br from-white to-slate-50 hover:shadow-lg transition-all duration-300 border-none",
 };
 
 const MultiCloudAutomationToolkit = () => {
   return (
-    <div className="min-w-screen bg-slate-50 flex flex-col items-center">
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       <MegaMenu />
-      <div className="flex flex-col pt-32 w-[60%] items-center px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+      <div className="container mx-auto px-4 lg:px-8 pt-32 pb-16 max-w-7xl">
         <motion.section
-          className="text-center space-y-8"
+          className="text-center space-y-8 mb-20"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight leading-tight">
             Multi-Cloud Automation Toolkit
           </h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            Supercharge your cloud strategy with **the Multi-Cloud Automation Toolkit.** Unify operations across AWS, Azure, Google Cloud, and private clouds with seamless orchestration and intelligent automation.
-          </p>
-          <p className="text-gray-600">
-            Empower your teams to focus on innovation by automating complex multi-cloud management tasks.
+            Supercharge your cloud strategy with the Multi-Cloud Automation
+            Toolkit. Unify operations across AWS, Azure, Google Cloud, and
+            private clouds with seamless orchestration.
           </p>
         </motion.section>
 
@@ -138,7 +139,7 @@ const MultiCloudAutomationToolkit = () => {
         </motion.section>
 
         {/* Key Features Section */}
-        <motion.section className="space-y-8" {...fadeIn}>
+        <motion.section className="space-y-8 mt-12" {...fadeIn}>
           <h2 className="text-3xl font-bold text-slate-900 text-center">
             Key Features of the Toolkit
           </h2>
@@ -183,8 +184,8 @@ const MultiCloudAutomationToolkit = () => {
         </motion.section>
 
         {/* FAQ Section */}
-        <motion.section className="space-y-8 w-full" {...fadeIn}>
-          <h2 className="text-3xl font-bold text-slate-900 text-center">
+        <motion.section className="space-y-8 w-full my-20" {...fadeIn}>
+          <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
             Frequently Asked Questions
           </h2>
           <Accordion
@@ -197,23 +198,32 @@ const MultiCloudAutomationToolkit = () => {
                 question: "Can this toolkit handle hybrid environments?",
                 answer:
                   "Yes, our toolkit seamlessly integrates on-premises systems and cloud environments.",
+                value: "item-1",
               },
               {
                 question: "Is this tool scalable for enterprise use?",
                 answer:
                   "Absolutely. The toolkit is designed for enterprises and scales with your business needs.",
+                value: "item-2",
               },
               {
                 question: "How does it ensure compliance?",
                 answer:
                   "Built-in compliance modules automatically track and report regulatory requirements.",
+                value: "item-3",
               },
             ].map((faq, index) => (
-              <AccordionItem key={index} className="border-gray-200 shadow-md" value={""}>
-                <AccordionTrigger className="text-lg font-semibold">
+              <AccordionItem
+                key={index}
+                value={faq.value}
+                className="bg-white rounded-lg shadow-sm border border-gray-100"
+              >
+                <AccordionTrigger className="px-6 py-4 text-lg font-semibold hover:no-underline">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent>{faq.answer}</AccordionContent>
+                <AccordionContent className="px-6 pb-4 text-gray-600">
+                  {faq.answer}
+                </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
@@ -221,22 +231,27 @@ const MultiCloudAutomationToolkit = () => {
 
         {/* CTA Section */}
         <motion.section
-          className="text-center space-y-8 bg-gradient-to-br from-white to-indigo-50 rounded-2xl p-12 shadow-lg"
+          className="text-center space-y-8 bg-gradient-to-br from-indigo-50 to-orange-50 rounded-2xl p-12 shadow-lg my-20"
           {...fadeIn}
         >
           <h2 className="text-3xl font-bold text-gray-900">
             Elevate Your Multi-Cloud Strategy
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Simplify operations and accelerate success with intelligent automation built for multi-cloud environments.
+            Simplify operations and accelerate success with intelligent
+            automation built for multi-cloud environments.
           </p>
-          <div className="space-x-4">
-            <Button className="bg-gradient-to-r from-orange-400 to-orange-600 text-white px-6 py-3 shadow-lg">
-              Get Started
-            </Button>
-            <Button className="bg-gradient-to-r from-indigo-400 to-indigo-600 text-white px-6 py-3 shadow-lg">
-              Request a Demo
-            </Button>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link href="/contact">
+              <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-6 rounded-lg text-lg font-medium transition-all duration-300 hover:shadow-xl w-full sm:w-auto">
+                Contact Sales
+              </Button>
+            </Link>
+            <Link href="/contact">
+              <Button className="bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 text-white px-8 py-6 rounded-lg text-lg font-medium transition-all duration-300 hover:shadow-xl w-full sm:w-auto">
+                Request Demo
+              </Button>
+            </Link>
           </div>
         </motion.section>
       </div>

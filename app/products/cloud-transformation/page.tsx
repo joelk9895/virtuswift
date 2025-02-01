@@ -25,32 +25,32 @@ import {
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 },
+  transition: { duration: 0.5, ease: "easeOut" },
 };
 
 const cardStyles = {
-  primary: "bg-gradient-to-br from-indigo-50 to-indigo-100 ",
-  secondary: "bg-gradient-to-br from-orange-50 to-orange-100",
-  feature:
-    "bg-gradient-to-br from-white to-orange-50 hover:shadow-lg transition-all duration-300",
+  primary: "bg-gradient-to-br from-indigo-50/80 to-indigo-100/80 backdrop-blur-sm",
+  secondary: "bg-gradient-to-br from-orange-50/80 to-orange-100/80 backdrop-blur-sm",
+  feature: "bg-gradient-to-br from-white/90 to-orange-50/90 backdrop-blur-sm hover:shadow-xl hover:scale-102 transition-all duration-300",
 };
 
 const CloudTransformationSolutions = () => {
   return (
-    <div className="min-w-screen bg-slate-50 flex flex-col items-center">
+    <div className="min-w-screen bg-gradient-to-br from-slate-50 to-white flex flex-col items-center">
       <MegaMenu />
-      <div className="flex flex-col pt-32 w-[60%] items-center px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+      <div className="flex flex-col pt-32 w-[80%] lg:w-[70%] xl:w-[60%] items-center px-4 sm:px-6 lg:px-8 py-12 space-y-20">
+        {/* Hero Section */}
         <motion.section
-          className="text-center space-y-8"
+          className="text-center space-y-10"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent tracking-tight">
             Cloud Transformation Solutions
           </h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            Unlock new possibilities with **game-changing cloud transformation solutions.** Transition seamlessly to the cloud to achieve unmatched agility, scalability, and resilience.
+            Unlock new possibilities with game-changing cloud transformation solutions. Transition seamlessly to the cloud to achieve unmatched agility, scalability, and resilience.
           </p>
           <p className="text-gray-600">
             Empower your organization to thrive in a digital-first world with innovative solutions tailored to your business needs.
@@ -58,7 +58,7 @@ const CloudTransformationSolutions = () => {
         </motion.section>
 
         {/* Why Choose Cloud Transformation Solutions */}
-        <motion.section className="space-y-8" {...fadeIn}>
+        <motion.section className="space-y-10 w-full" {...fadeIn}>
           <h2 className="text-3xl font-bold text-slate-900 text-center">
             Why Choose Our Cloud Transformation Solutions?
           </h2>
@@ -140,7 +140,7 @@ const CloudTransformationSolutions = () => {
         </motion.section>
 
         {/* Key Features Section */}
-        <motion.section className="space-y-8" {...fadeIn}>
+        <motion.section className="space-y-10 w-full" {...fadeIn}>
           <h2 className="text-3xl font-bold text-slate-900 text-center">
             Key Features of Our Cloud Solutions
           </h2>
@@ -183,7 +183,7 @@ const CloudTransformationSolutions = () => {
 
         {/* FAQ Section */}
         <motion.section className="space-y-8 w-full" {...fadeIn}>
-          <h2 className="text-3xl font-bold text-slate-900 text-center">
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent text-center">
             Frequently Asked Questions
           </h2>
           <Accordion
@@ -208,11 +208,17 @@ const CloudTransformationSolutions = () => {
                   "Our cloud solutions cater to a wide array of industries, including finance, healthcare, manufacturing, and more.",
               },
             ].map((faq, index) => (
-              <AccordionItem key={index} className="border-gray-200 shadow-md" value={""}>
-                <AccordionTrigger className="text-lg font-semibold">
+              <AccordionItem 
+                key={index} 
+                value={`item-${index}`} 
+                className="border border-gray-200 rounded-lg overflow-hidden bg-white/80 backdrop-blur-sm hover:shadow-md transition-all duration-300"
+              >
+                <AccordionTrigger className="px-6 py-4 text-lg font-semibold text-gray-800 hover:text-indigo-600 transition-colors duration-300">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent>{faq.answer}</AccordionContent>
+                <AccordionContent className="px-6 py-4 text-gray-600">
+                  {faq.answer}
+                </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
@@ -220,20 +226,20 @@ const CloudTransformationSolutions = () => {
 
         {/* CTA Section */}
         <motion.section
-          className="text-center space-y-8 bg-gradient-to-br from-white to-indigo-50 rounded-2xl p-12 shadow-lg"
+          className="text-center space-y-8 bg-gradient-to-br from-white/90 to-indigo-50/90 rounded-2xl p-12 shadow-xl backdrop-blur-sm w-full"
           {...fadeIn}
         >
-          <h2 className="text-3xl font-bold text-gray-900">
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
             Transform Your Business Today
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Accelerate your business growth with cloud solutions built for success. Let’s shape the future together.
           </p>
           <div className="space-x-4">
-            <Button className="bg-gradient-to-r from-orange-400 to-orange-600 text-white px-6 py-3 shadow-lg">
+            <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-6 shadow-lg hover:shadow-xl transition-all duration-300 text-lg">
               Contact Us
             </Button>
-            <Button className="bg-gradient-to-r from-indigo-400 to-indigo-600 text-white px-6 py-3 shadow-lg">
+            <Button className="bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 text-white px-8 py-6 shadow-lg hover:shadow-xl transition-all duration-300 text-lg">
               Get Started
             </Button>
           </div>

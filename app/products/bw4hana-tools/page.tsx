@@ -1,6 +1,6 @@
 "use client";
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import {
@@ -20,43 +20,73 @@ import {
   Globe,
 } from "lucide-react";
 
-const fadeIn = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 },
-};
-
 const cardStyles = {
-  primary: "bg-gradient-to-br from-indigo-50 to-indigo-100",
-  secondary: "bg-gradient-to-br from-orange-50 to-orange-100",
+  primary: "bg-gradient-to-br from-indigo-50 to-indigo-100 border-none",
+  secondary: "bg-gradient-to-br from-orange-50 to-orange-100 border-none",
   feature:
-    "bg-gradient-to-br from-white to-orange-50 hover:shadow-lg transition-all duration-300",
+    "bg-gradient-to-br from-white to-slate-50 border-none hover:shadow-xl transition-all duration-300",
 };
 
 const HANATransformationTool = () => {
+  const { scrollY } = useScroll();
+  const opacity = useTransform(scrollY, [0, 100], [1, 0]);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
-    <div className="min-w-screen bg-slate-50 flex flex-col items-center">
-      <MegaMenu />
-      <div className="flex flex-col pt-32 w-[60%] items-center px-4 sm:px-6 lg:px-8 py-12 space-y-16">
-        <motion.section
-          className="text-center space-y-8"
+    <div className="min-w-screen bg-gradient-to-b from-slate-50 to-white flex flex-col items-center">
+      <div className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
+        <MegaMenu />
+      </div>
+
+      {/* Hero Section with Enhanced Background */}
+      <div className="w-full bg-gradient-to-br from-indigo-900 via-purple-900 to-orange-800 min-h-[90vh] flex items-center justify-center">
+        <motion.div
+          className="text-center space-y-8 px-4 py-32"
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight">
+          <motion.h1
+            className="text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight"
+            style={{ opacity }}
+          >
             4HANA Transformation Tool
-          </h1>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            Revolutionize your SAP operations with **the ultimate 4HANA Transformation Tool.** Ensure seamless migrations, unparalleled performance, and future-ready innovation.
+          </motion.h1>
+          <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
+            Revolutionize your SAP operations with the ultimate 4HANA
+            Transformation Tool
           </p>
-          <p className="text-gray-600">
-            Take control of your digital transformation journey with tools built for speed, agility, and resilience.
-          </p>
-        </motion.section>
+          <motion.div
+            className="flex flex-wrap gap-4 justify-center mt-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+          >
+            <Button className="bg-white text-indigo-900 hover:bg-indigo-50 px-8 py-6 text-lg rounded-full">
+              Get Started
+            </Button>
+            <Button
+              variant="outline"
+              className="border-2 border-white text-white hover:bg-white/10 px-8 py-6 text-lg rounded-full"
+            >
+              Watch Demo
+            </Button>
+          </motion.div>
+        </motion.div>
+      </div>
 
-        {/* Why Choose 4HANA Transformation Tool */}
-        <motion.section className="space-y-8" {...fadeIn}>
+      <div className="flex flex-col w-full max-w-7xl items-center px-4 sm:px-6 lg:px-8 py-24 space-y-32">
+        {/* Why Choose Section with Improved Cards */}
+        <motion.section
+          className="space-y-16 w-full"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+        >
           <h2 className="text-3xl font-bold text-slate-900 text-center">
             Why Choose Our 4HANA Transformation Tool?
           </h2>
@@ -138,9 +168,9 @@ const HANATransformationTool = () => {
         </motion.section>
 
         {/* Key Features Section */}
-        <motion.section className="space-y-8" {...fadeIn}>
-          <h2 className="text-3xl font-bold text-slate-900 text-center">
-            Key Features of the 4HANA Transformation Tool
+        <motion.section className="space-y-16 w-full">
+          <h2 className="text-4xl font-bold text-slate-900 text-center mb-16">
+            Key Features
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -183,7 +213,12 @@ const HANATransformationTool = () => {
         </motion.section>
 
         {/* FAQ Section */}
-        <motion.section className="space-y-8 w-full" {...fadeIn}>
+        <motion.section
+          className="space-y-12 w-full bg-gradient-to-br from-slate-50 to-white p-12 rounded-3xl shadow-lg"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+        >
           <h2 className="text-3xl font-bold text-slate-900 text-center">
             Frequently Asked Questions
           </h2>
@@ -194,7 +229,8 @@ const HANATransformationTool = () => {
           >
             {[
               {
-                question: "How does this tool accelerate the migration process?",
+                question:
+                  "How does this tool accelerate the migration process?",
                 answer:
                   "Our pre-configured templates and automated workflows reduce manual effort, ensuring faster migrations.",
               },
@@ -209,37 +245,50 @@ const HANATransformationTool = () => {
                   "Yes, enterprise-grade security protocols are embedded to protect your sensitive data during and after migration.",
               },
             ].map((faq, index) => (
-              <AccordionItem key={index} className="border-gray-200 shadow-md" value={""}>
-                <AccordionTrigger className="text-lg font-semibold">
+              <AccordionItem
+                key={index}
+                className="border-gray-200 shadow-md"
+                value={`item-${index}`}
+              >
+                <AccordionTrigger className="text-lg font-semibold px-4 hover:no-underline hover:bg-slate-50">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent>{faq.answer}</AccordionContent>
+                <AccordionContent className="px-4 text-gray-600">
+                  {faq.answer}
+                </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
         </motion.section>
 
-        {/* CTA Section */}
+        {/* Modern CTA Section */}
         <motion.section
-          className="text-center space-y-8 bg-gradient-to-br from-white to-indigo-50 rounded-2xl p-12 shadow-lg"
-          {...fadeIn}
+          className="text-center space-y-8 bg-gradient-to-br from-indigo-900 to-purple-900 rounded-3xl p-16 shadow-xl w-full text-white"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
         >
-          <h2 className="text-3xl font-bold text-gray-900">
-            Accelerate Your HANA Journey Today
+          <h2 className="text-4xl font-bold">
+            Ready to Transform Your Enterprise?
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Transform your enterprise with confidence. Start your HANA transformation journey with tools designed for success.
+          <p className="text-xl text-gray-200 max-w-2xl mx-auto">
+            Join the next generation of digital enterprises with our
+            cutting-edge HANA transformation solutions.
           </p>
-          <div className="space-x-4">
-            <Button className="bg-gradient-to-r from-orange-400 to-orange-600 text-white px-6 py-3 shadow-lg">
-              Get Started
+          <div className="flex flex-wrap gap-4 justify-center mt-8">
+            <Button className="bg-white text-indigo-900 hover:bg-indigo-50 px-8 py-6 text-lg rounded-full">
+              Contact US
             </Button>
-            <Button className="bg-gradient-to-r from-indigo-400 to-indigo-600 text-white px-6 py-3 shadow-lg">
-              Request a Demo
+            <Button
+              variant="outline"
+              className="border-2 border-white text-white hover:bg-white/10 px-8 py-6 text-lg rounded-full"
+            >
+              Schedule Consultation
             </Button>
           </div>
         </motion.section>
       </div>
+
       <Footer />
     </div>
   );

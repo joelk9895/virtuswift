@@ -27,32 +27,42 @@ const fadeIn = {
 };
 
 const cardStyles = {
-  primary: "bg-gradient-to-br from-indigo-50 to-indigo-100",
-  secondary: "bg-gradient-to-br from-orange-50 to-orange-100",
+  primary:
+    "bg-gradient-to-br from-indigo-50/90 via-white to-indigo-100/80 backdrop-blur-sm border border-indigo-100/50",
+  secondary:
+    "bg-gradient-to-br from-orange-50/90 via-white to-orange-100/80 backdrop-blur-sm border border-orange-100/50",
   feature:
-    "bg-gradient-to-br from-white to-orange-50 hover:shadow-lg transition-all duration-300",
+    "bg-white/90 hover:bg-gradient-to-br hover:from-orange-50/60 hover:to-white backdrop-blur-sm hover:shadow-xl transition-all duration-300 border border-gray-100/50",
 };
 
 const SAPOnAzure = () => {
   return (
-    <div className="min-w-screen bg-slate-50 flex flex-col items-center">
+    <div className="min-w-screen bg-gradient-to-br from-slate-50 via-white to-slate-50/50 flex flex-col items-center">
       <MegaMenu />
-      <div className="flex flex-col pt-32 w-[60%] items-center px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+      <div className="flex flex-col pt-32 w-full max-w-7xl items-center px-4 sm:px-6 lg:px-8 py-12 space-y-24">
         <motion.section
-          className="text-center space-y-8"
+          className="text-center space-y-10"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 tracking-tight">
             SAP on Azure
           </h1>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            Harness the power of **Azure Cloud** to optimize, modernize, and scale your SAP workloads seamlessly. Experience unparalleled performance and flexibility tailored for your business needs.
-          </p>
-          <p className="text-gray-600">
-            Empower your organization with **future-ready technology** that drives innovation, security, and global scalability.
-          </p>
+          <div className="space-y-6">
+            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Harness the power of{" "}
+              <span className="text-indigo-600 font-semibold">Azure Cloud</span>{" "}
+              to optimize, modernize, and scale your SAP workloads seamlessly.
+            </p>
+            <p className="text-lg text-gray-600">
+              Empower your organization with{" "}
+              <span className="text-orange-600 font-semibold">
+                future-ready technology
+              </span>{" "}
+              that drives innovation.
+            </p>
+          </div>
         </motion.section>
 
         {/* Why Choose SAP on Azure */}
@@ -159,13 +169,13 @@ const SAPOnAzure = () => {
               {
                 title: "Real-Time Insights",
                 content:
-                  "Gain actionable insights with Azure’s analytics and AI tools tailored for SAP systems.",
+                  "Gain actionable insights with Azure&apos;s analytics and AI tools tailored for SAP systems.",
                 icon: <BarChart3 className="w-8 h-8 text-indigo-600 mb-4" />,
               },
               {
                 title: "Optimized TCO",
                 content:
-                  "Reduce total cost of ownership with Azure’s efficient resource management.",
+                  "Reduce total cost of ownership with Azure&apos;s efficient resource management.",
                 icon: (
                   <CircleDollarSign className="w-8 h-8 text-orange-600 mb-4" />
                 ),
@@ -186,7 +196,7 @@ const SAPOnAzure = () => {
 
         {/* FAQ Section */}
         <motion.section className="space-y-8 w-full" {...fadeIn}>
-          <h2 className="text-3xl font-bold text-slate-900 text-center">
+          <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
             Frequently Asked Questions
           </h2>
           <Accordion
@@ -211,11 +221,17 @@ const SAPOnAzure = () => {
                   "Azure uses end-to-end encryption, compliance certifications, and multi-layered security to protect your data.",
               },
             ].map((faq, index) => (
-              <AccordionItem key={index} className="border-gray-200 shadow-md" value={""}>
-                <AccordionTrigger className="text-lg font-semibold">
+              <AccordionItem
+                key={index}
+                value={`item-${index}`}
+                className="border border-gray-200 rounded-lg overflow-hidden bg-white/90 backdrop-blur-sm transition-all duration-300 hover:shadow-md"
+              >
+                <AccordionTrigger className="text-lg font-semibold px-6 py-4 hover:bg-gray-50/80 transition-colors duration-200">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent>{faq.answer}</AccordionContent>
+                <AccordionContent className="px-6 py-4 text-gray-600 bg-white/50">
+                  {faq.answer}
+                </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
@@ -223,20 +239,25 @@ const SAPOnAzure = () => {
 
         {/* CTA Section */}
         <motion.section
-          className="text-center space-y-8 bg-gradient-to-br from-white to-indigo-50 rounded-2xl p-12 shadow-lg"
+          className="text-center space-y-8 bg-gradient-to-br from-white via-indigo-50/30 to-orange-50/30 rounded-2xl p-16 shadow-lg w-full border border-gray-100/50"
           {...fadeIn}
         >
-          <h2 className="text-3xl font-bold text-gray-900">
+          <h2 className="text-4xl font-bold text-gray-900">
             Future-Proof Your SAP with Azure Today
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Optimize your SAP systems with Azure’s robust capabilities. Drive business success with reliable, secure, and scalable solutions.
+          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+            Optimize your SAP systems with Azure&apos;s robust capabilities. Drive
+            business success with reliable, secure, and scalable solutions.
           </p>
           <div className="space-x-4">
-            <Button className="bg-gradient-to-r from-orange-400 to-orange-600 text-white px-6 py-3 shadow-lg">
+            <Button 
+              className="bg-gradient-to-r from-orange-400 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white px-8 py-6 shadow-lg text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            >
               Contact Us
             </Button>
-            <Button className="bg-gradient-to-r from-indigo-400 to-indigo-600 text-white px-6 py-3 shadow-lg">
+            <Button 
+              className="bg-gradient-to-r from-indigo-400 to-indigo-500 hover:from-indigo-500 hover:to-indigo-600 text-white px-8 py-6 shadow-lg text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            >
               Learn More
             </Button>
           </div>

@@ -1,16 +1,17 @@
-"use client";
-import React from "react";
-import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+'use client';
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import {
   Accordion,
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
-} from "@/components/ui/accordion";
-import MegaMenu from "@/app/components/megamenu";
-import Footer from "@/app/components/footer";
+} from '@/components/ui/accordion';
+import MegaMenu from '@/app/components/megamenu';
+import Footer from '@/app/components/footer';
 import {
   Boxes,
   Shield,
@@ -18,45 +19,42 @@ import {
   CircleDollarSign,
   Rocket,
   Globe,
-} from "lucide-react";
+} from 'lucide-react';
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 },
+  transition: { duration: 0.5 },
 };
 
 const cardStyles = {
-  primary: "bg-gradient-to-br from-indigo-50 to-indigo-100 ",
-  secondary: "bg-gradient-to-br from-orange-50 to-orange-100",
-  feature:
-    "bg-gradient-to-br from-white to-orange-50 hover:shadow-lg transition-all duration-300",
+  primary: 'bg-gradient-to-br from-indigo-50 to-indigo-100 border-none',
+  secondary: 'bg-gradient-to-br from-orange-50 to-orange-100 border-none',
+  feature: 'bg-white hover:bg-orange-50 border-none shadow-md hover:shadow-xl transition-all duration-300',
 };
 
 const SAPRISEEnablementSuite = () => {
   return (
-    <div className="min-w-screen bg-slate-50 flex flex-col items-center">
+    <div className='min-h-screen bg-gradient-to-br from-slate-50 to-white'>
       <MegaMenu />
-      <div className="flex flex-col pt-32 w-[60%] items-center px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+      <div className='container mx-auto px-4 lg:px-8 pt-32 pb-16 space-y-20'>
+        {/* Hero Section */}
         <motion.section
-          className="text-center space-y-8"
+          className='text-center space-y-6 max-w-4xl mx-auto'
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight">
+          <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight leading-tight'>
             SAP RISE Enablement Suite
           </h1>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            Accelerate your journey to the **intelligent enterprise** with the SAP RISE Enablement Suite. Simplify, streamline, and scale your business transformation today.
-          </p>
-          <p className="text-gray-600">
-            With tools designed to drive innovation and resilience, we empower your organization to lead in a digital-first world.
+          <p className='text-lg md:text-xl text-gray-600'>
+            Accelerate your journey to the intelligent enterprise with the SAP RISE Enablement Suite. Simplify, streamline, and scale your business transformation today.
           </p>
         </motion.section>
 
-        {/* Why Choose SAP RISE Enablement Suite */}
-        <motion.section className="space-y-8" {...fadeIn}>
+        {/* Why Choose Section */}
+        <motion.section className='space-y-10' {...fadeIn}>
           <h2 className="text-3xl font-bold text-slate-900 text-center">
             Why Choose SAP RISE Enablement Suite?
           </h2>
@@ -138,7 +136,7 @@ const SAPRISEEnablementSuite = () => {
         </motion.section>
 
         {/* Key Features Section */}
-        <motion.section className="space-y-8" {...fadeIn}>
+        <motion.section className='space-y-10' {...fadeIn}>
           <h2 className="text-3xl font-bold text-slate-900 text-center">
             Key Features of SAP RISE Enablement Suite
           </h2>
@@ -182,37 +180,36 @@ const SAPRISEEnablementSuite = () => {
         </motion.section>
 
         {/* FAQ Section */}
-        <motion.section className="space-y-8 w-full" {...fadeIn}>
-          <h2 className="text-3xl font-bold text-slate-900 text-center">
+        <motion.section className='space-y-8 w-full max-w-3xl mx-auto' {...fadeIn}>
+          <h2 className='text-3xl font-bold text-slate-900 text-center'>
             Frequently Asked Questions
           </h2>
-          <Accordion
-            type="single"
-            collapsible
-            className="space-y-4 w-full max-w-3xl mx-auto"
-          >
+          <Accordion type='single' collapsible className='space-y-4'>
             {[
               {
-                question: "How does SAP RISE differ from traditional solutions?",
-                answer:
-                  "SAP RISE is a holistic solution that simplifies cloud migration while providing tailored tools for innovation.",
+                question: 'How does SAP RISE differ from traditional solutions?',
+                answer: 'SAP RISE is a holistic solution that simplifies cloud migration while providing tailored tools for innovation.',
               },
               {
-                question: "Can I migrate my current SAP system to the RISE platform?",
-                answer:
-                  "Yes, the suite includes comprehensive migration services for seamless transitions.",
+                question: 'Can I migrate my current SAP system to the RISE platform?',
+                answer: 'Yes, the suite includes comprehensive migration services for seamless transitions.',
               },
               {
-                question: "What industries can benefit from SAP RISE Enablement Suite?",
-                answer:
-                  "From manufacturing to retail and healthcare, SAP RISE is versatile and serves diverse industries.",
+                question: 'What industries can benefit from SAP RISE Enablement Suite?',
+                answer: 'From manufacturing to retail and healthcare, SAP RISE is versatile and serves diverse industries.',
               },
             ].map((faq, index) => (
-              <AccordionItem key={index} className="border-gray-200 shadow-md" value={""}>
-                <AccordionTrigger className="text-lg font-semibold">
+              <AccordionItem 
+                key={index} 
+                value={`item-${index}`}
+                className='bg-white rounded-lg shadow-sm border-none'
+              >
+                <AccordionTrigger className='px-6 py-4 text-lg font-semibold hover:text-orange-600 hover:no-underline'>
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent>{faq.answer}</AccordionContent>
+                <AccordionContent className='px-6 pb-4 text-gray-600'>
+                  {faq.answer}
+                </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
@@ -220,20 +217,24 @@ const SAPRISEEnablementSuite = () => {
 
         {/* CTA Section */}
         <motion.section
-          className="text-center space-y-8 bg-gradient-to-br from-white to-indigo-50 rounded-2xl p-12 shadow-lg"
+          className='text-center space-y-8 bg-gradient-to-br from-indigo-50 via-white to-orange-50 rounded-2xl p-8 md:p-12 shadow-lg'
           {...fadeIn}
         >
-          <h2 className="text-3xl font-bold text-gray-900">
+          <h2 className='text-3xl font-bold text-gray-900'>
             Elevate Your Business with SAP RISE Enablement Suite
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className='text-gray-600 max-w-2xl mx-auto'>
             Start your intelligent enterprise journey today with SAP RISE. Transform faster, innovate smarter, and scale seamlessly.
           </p>
-          <div className="space-x-4">
-            <Button className="bg-gradient-to-r from-orange-400 to-orange-600 text-white px-6 py-3 shadow-lg">
+          <div className='space-x-4'>
+            <Button 
+              className='bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-6 h-auto text-lg font-semibold hover:from-orange-600 hover:to-orange-700 shadow-md hover:shadow-xl transition-all duration-300'
+            >
               Get in Touch
             </Button>
-            <Button className="bg-gradient-to-r from-indigo-400 to-indigo-600 text-white px-6 py-3 shadow-lg">
+            <Button 
+              className='bg-gradient-to-r from-indigo-500 to-indigo-600 text-white px-8 py-6 h-auto text-lg font-semibold hover:from-indigo-600 hover:to-indigo-700 shadow-md hover:shadow-xl transition-all duration-300'
+            >
               Learn More
             </Button>
           </div>

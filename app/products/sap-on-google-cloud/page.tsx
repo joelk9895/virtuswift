@@ -17,50 +17,48 @@ import {
   BarChart3,
   CircleDollarSign,
   Rocket,
-  Boxes,
 } from "lucide-react";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 },
+  transition: { duration: 0.5 },
 };
 
 const cardStyles = {
-  primary: "bg-gradient-to-br from-indigo-50 to-indigo-100",
-  secondary: "bg-gradient-to-br from-orange-50 to-orange-100",
-  feature:
-    "bg-gradient-to-br from-white to-orange-50 hover:shadow-lg transition-all duration-300",
+  primary: 'bg-gradient-to-br from-indigo-50 via-white to-indigo-100 border-none',
+  secondary: 'bg-gradient-to-br from-orange-50 via-white to-orange-100 border-none',
+  feature: 'bg-white/80 hover:bg-orange-50/80 backdrop-blur-sm border-none shadow-md hover:shadow-xl transition-all duration-300',
 };
 
 const SAPOnGoogleCloud = () => {
   return (
-    <div className="min-w-screen bg-slate-50 flex flex-col items-center">
+    <div className='min-w-screen min-h-screen bg-slate-50/90 flex flex-col items-center'>
       <MegaMenu />
-      <div className="flex flex-col pt-32 w-[60%] items-center px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+      <div className='flex flex-col pt-24 md:pt-32 w-full max-w-7xl items-center px-4 sm:px-6 lg:px-8 py-12 space-y-16'>
         <motion.section
-          className="text-center space-y-8"
+          className='text-center space-y-6 max-w-4xl mx-auto'
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight">
+          <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight leading-tight'>
             SAP on Google Cloud
           </h1>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            Supercharge your SAP workloads with the **power of Google Cloud.** Harness industry-leading tools for innovation, scalability, and intelligent business transformation.
+          <p className='text-lg md:text-xl text-gray-600 max-w-3xl mx-auto'>
+            Supercharge your SAP workloads with the power of Google Cloud. Harness industry-leading tools for innovation, scalability, and intelligent business transformation.
           </p>
-          <p className="text-gray-600">
-            Unlock the **future of ERP systems** with streamlined operations and insights delivered in real-time.
+          <p className='text-gray-600'>
+            Unlock the future of ERP systems with streamlined operations and insights delivered in real-time.
           </p>
         </motion.section>
 
-        {/* Why Choose SAP on Google Cloud */}
-        <motion.section className="space-y-8" {...fadeIn}>
-          <h2 className="text-3xl font-bold text-slate-900 text-center">
+        {/* Why Choose Section */}
+        <motion.section className='space-y-10 w-full' {...fadeIn}>
+          <h2 className='text-3xl font-bold text-slate-900 text-center'>
             Why Choose SAP on Google Cloud?
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {[
               {
                 title: "Intelligent Scaling",
@@ -138,11 +136,11 @@ const SAPOnGoogleCloud = () => {
         </motion.section>
 
         {/* Key Features Section */}
-        <motion.section className="space-y-8" {...fadeIn}>
-          <h2 className="text-3xl font-bold text-slate-900 text-center">
+        <motion.section className='space-y-10 w-full' {...fadeIn}>
+          <h2 className='text-3xl font-bold text-slate-900 text-center'>
             Key Features of SAP on Google Cloud
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
             {[
               {
                 title: "Seamless Deployment",
@@ -183,37 +181,36 @@ const SAPOnGoogleCloud = () => {
         </motion.section>
 
         {/* FAQ Section */}
-        <motion.section className="space-y-8 w-full" {...fadeIn}>
-          <h2 className="text-3xl font-bold text-slate-900 text-center">
+        <motion.section className='space-y-8 w-full max-w-3xl mx-auto' {...fadeIn}>
+          <h2 className='text-3xl font-bold text-slate-900 text-center'>
             Frequently Asked Questions
           </h2>
-          <Accordion
-            type="single"
-            collapsible
-            className="space-y-4 w-full max-w-3xl mx-auto"
-          >
+          <Accordion type='single' collapsible className='space-y-4 w-full'>
             {[
               {
-                question: "Why should I use Google Cloud for SAP?",
-                answer:
-                  "Google Cloud offers intelligent scalability, integrated analytics, and robust security for running SAP applications efficiently.",
+                question: 'Why should I use Google Cloud for SAP?',
+                answer: 'Google Cloud offers intelligent scalability, integrated analytics, and robust security for running SAP applications efficiently.',
               },
               {
-                question: "How secure is SAP on Google Cloud?",
-                answer:
-                  "SAP on Google Cloud employs enterprise-grade encryption and compliance certifications, ensuring top-notch data security.",
+                question: 'How secure is SAP on Google Cloud?',
+                answer: 'SAP on Google Cloud employs enterprise-grade encryption and compliance certifications, ensuring top-notch data security.',
               },
               {
-                question: "Can Google Cloud integrate with my current SAP setup?",
-                answer:
-                  "Yes, Google provides seamless integration and migration tools to ensure a smooth transition.",
+                question: 'Can Google Cloud integrate with my current SAP setup?',
+                answer: 'Yes, Google provides seamless integration and migration tools to ensure a smooth transition.',
               },
             ].map((faq, index) => (
-              <AccordionItem key={index} className="border-gray-200 shadow-md" value={""}>
-                <AccordionTrigger className="text-lg font-semibold">
+              <AccordionItem 
+                key={index} 
+                value={`item-${index}`} 
+                className='bg-white/80 backdrop-blur-sm rounded-lg border border-gray-200/50 shadow-sm'
+              >
+                <AccordionTrigger className='px-4 py-3 text-lg font-semibold hover:no-underline'>
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent>{faq.answer}</AccordionContent>
+                <AccordionContent className='px-4 pb-3 text-gray-600'>
+                  {faq.answer}
+                </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
@@ -221,20 +218,20 @@ const SAPOnGoogleCloud = () => {
 
         {/* CTA Section */}
         <motion.section
-          className="text-center space-y-8 bg-gradient-to-br from-white to-indigo-50 rounded-2xl p-12 shadow-lg"
+          className='text-center space-y-8 bg-gradient-to-br from-white via-indigo-50/50 to-orange-50/50 rounded-2xl p-8 md:p-12 shadow-lg w-full max-w-4xl mx-auto'
           {...fadeIn}
         >
-          <h2 className="text-3xl font-bold text-gray-900">
+          <h2 className='text-3xl font-bold text-gray-900'>
             Future-Proof Your Business with SAP on Google Cloud
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className='text-gray-600 max-w-2xl mx-auto'>
             Experience transformative scalability and intelligent solutions with SAP on Google Cloud. Join the future of cloud-driven innovation.
           </p>
-          <div className="space-x-4">
-            <Button className="bg-gradient-to-r from-orange-400 to-orange-600 text-white px-6 py-3 shadow-lg">
+          <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
+            <Button className='bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-3 shadow-lg w-full sm:w-auto'>
               Contact Us
             </Button>
-            <Button className="bg-gradient-to-r from-indigo-400 to-indigo-600 text-white px-6 py-3 shadow-lg">
+            <Button className='bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 text-white px-6 py-3 shadow-lg w-full sm:w-auto'>
               Get Started
             </Button>
           </div>

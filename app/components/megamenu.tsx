@@ -81,7 +81,7 @@ const navigationData: NavigationMenu[] = [
         items: [
           {
             name: "S/4HANA Migration Accelerator",
-            href: "/products/s4hana-migration",
+            href: "/services/s4hana-migration",
           },
           {
             name: "SAP BW/4HANA Transformation Tools",

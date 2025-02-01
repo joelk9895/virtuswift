@@ -23,32 +23,32 @@ import {
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 },
+  transition: { duration: 0.5 },
 };
 
 const cardStyles = {
-  primary: "bg-gradient-to-br from-indigo-50 to-indigo-100 ",
-  secondary: "bg-gradient-to-br from-orange-50 to-orange-100",
+  primary: "bg-gradient-to-br from-indigo-50 to-indigo-100 border-none",
+  secondary: "bg-gradient-to-br from-orange-50 to-orange-100 border-none",
   feature:
-    "bg-gradient-to-br from-white to-orange-50 hover:shadow-lg transition-all duration-300",
+    "bg-gradient-to-br from-white to-orange-50 hover:shadow-xl transition-all duration-300 border-none",
 };
 
 const VirtualizedITInfrastructure = () => {
   return (
-    <div className="min-w-screen bg-slate-50 flex flex-col items-center">
+    <div className="min-w-screen min-h-screen bg-slate-50 flex flex-col items-center">
       <MegaMenu />
-      <div className="flex flex-col pt-32 w-[60%] items-center px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+      <div className="flex flex-col pt-24 md:pt-32 w-full md:w-[80%] lg:w-[70%] xl:w-[60%] items-center px-4 sm:px-6 lg:px-8 py-8 md:py-12 space-y-12 md:space-y-16">
         <motion.section
-          className="text-center space-y-8"
+          className="text-center space-y-6 md:space-y-8"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 tracking-tight">
             Virtualized IT Infrastructure Modules
           </h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            Unlock operational excellence with **Virtualized IT Infrastructure Modules.** Empower scalability, streamline operations, and reduce costs with cutting-edge virtualization.
+            Unlock operational excellence with Virtualized IT Infrastructure Modules. Empower scalability, streamline operations, and reduce costs with cutting-edge virtualization.
           </p>
           <p className="text-gray-600">
             Accelerate your IT transformation journey with solutions designed to enhance efficiency and deliver unmatched performance.
@@ -56,7 +56,7 @@ const VirtualizedITInfrastructure = () => {
         </motion.section>
 
         {/* Why Choose Virtualized IT Infrastructure Modules */}
-        <motion.section className="space-y-8" {...fadeIn}>
+        <motion.section className="space-y-8 w-full" {...fadeIn}>
           <h2 className="text-3xl font-bold text-slate-900 text-center">
             Why Choose Our Virtualization Solutions?
           </h2>
@@ -138,7 +138,7 @@ const VirtualizedITInfrastructure = () => {
         </motion.section>
 
         {/* Key Features Section */}
-        <motion.section className="space-y-8" {...fadeIn}>
+        <motion.section className="space-y-8 w-full" {...fadeIn}>
           <h2 className="text-3xl font-bold text-slate-900 text-center">
             Key Features of Virtualized IT Modules
           </h2>
@@ -206,14 +206,20 @@ const VirtualizedITInfrastructure = () => {
               {
                 question: "What level of support is provided?",
                 answer:
-                  "We offer 24/7 support, proactive monitoring, and dedicated assistance to ensure your virtual infrastructure runs smoothly.",
+                  "24/7 support with proactive monitoring and dedicated assistance to ensure your virtual infrastructure runs smoothly.",
               },
             ].map((faq, index) => (
-              <AccordionItem key={index} className="border-gray-200 shadow-md" value={""}>
-                <AccordionTrigger className="text-lg font-semibold">
+              <AccordionItem
+                key={index}
+                value={`item-${index}`}
+                className="border rounded-lg bg-white shadow-sm hover:shadow-md transition-all duration-300"
+              >
+                <AccordionTrigger className="px-4 py-3 text-lg font-semibold text-slate-800">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent>{faq.answer}</AccordionContent>
+                <AccordionContent className="px-4 py-3 text-gray-600">
+                  {faq.answer}
+                </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
@@ -221,20 +227,26 @@ const VirtualizedITInfrastructure = () => {
 
         {/* CTA Section */}
         <motion.section
-          className="text-center space-y-8 bg-gradient-to-br from-white to-indigo-50 rounded-2xl p-12 shadow-lg"
+          className="text-center space-y-6 md:space-y-8 bg-gradient-to-br from-white to-indigo-50 rounded-2xl p-8 md:p-12 shadow-lg w-full"
           {...fadeIn}
         >
-          <h2 className="text-3xl font-bold text-gray-900">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
             Revolutionize Your IT Landscape
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Embrace the power of virtualization to elevate your IT operations to the next level. Contact us today to explore custom solutions.
+            Embrace the power of virtualization to elevate your IT operations to the next level.
           </p>
-          <div className="space-x-4">
-            <Button className="bg-gradient-to-r from-orange-400 to-orange-600 text-white px-6 py-3 shadow-lg">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 sm:space-x-4">
+            <Button
+              className="bg-gradient-to-r from-orange-400 to-orange-600 hover:from-orange-500 hover:to-orange-700 text-white px-6 py-3 shadow-lg transition-all duration-300"
+              onClick={() => window.location.href = '/contact'}
+            >
               Contact Us
             </Button>
-            <Button className="bg-gradient-to-r from-indigo-400 to-indigo-600 text-white px-6 py-3 shadow-lg">
+            <Button
+              className="bg-gradient-to-r from-indigo-400 to-indigo-600 hover:from-indigo-500 hover:to-indigo-700 text-white px-6 py-3 shadow-lg transition-all duration-300"
+              onClick={() => window.location.href = '/contact'}
+            >
               Request a Demo
             </Button>
           </div>

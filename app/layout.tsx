@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Blinker } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 
-const blinker = Blinker({
+const jakarta = Plus_Jakarta_Sans({
   weight: "400",
   subsets: ["latin"],
   display: "swap",
 });
+
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -20,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${blinker.className} antialiased`}>{children}</body>
+      <body className={`${jakarta.className} antialiased`}>{children}</body>
     </html>
   );
 }

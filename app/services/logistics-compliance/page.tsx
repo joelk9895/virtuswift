@@ -11,13 +11,13 @@ import {
 } from "@/components/ui/accordion";
 import MegaMenu from "@/app/components/megamenu";
 import Footer from "@/app/components/footer";
-import Link from "next/link";
 import {
-  Boxes,
-  BarChart3,
-  CircleDollarSign,
-  Rocket,
   Globe,
+  Shield,
+  Truck,
+  CircleDollarSign,
+  BarChart3,
+  Rocket,
 } from "lucide-react";
 
 const fadeIn = {
@@ -27,69 +27,72 @@ const fadeIn = {
 };
 
 const cardStyles = {
-  primary: "bg-gradient-to-br from-indigo-50 via-indigo-100 to-indigo-50",
-  secondary: "bg-gradient-to-br from-orange-50 via-orange-100 to-orange-50",
+  primary: "bg-gradient-to-br from-indigo-50 to-indigo-100",
+  secondary: "bg-gradient-to-br from-orange-50 to-orange-100",
   feature:
-    "bg-white hover:bg-orange-50 shadow-sm hover:shadow-xl transition-all duration-300",
+    "bg-gradient-to-br from-white to-orange-50 hover:shadow-lg transition-all duration-300",
 };
 
-const SAPIntegrationForLogisticsModules = () => {
+const LogisticsCompliance = () => {
   return (
-    <div className="min-w-screen min-h-screen bg-slate-50 flex flex-col items-center">
+    <div className="min-w-screen bg-slate-50 flex flex-col items-center">
       <MegaMenu />
-      <div className="flex flex-col pt-32 w-full max-w-7xl items-center px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+      <div className="flex flex-col pt-32 w-[60%] items-center px-4 sm:px-6 lg:px-8 py-12 space-y-16">
         <motion.section
-          className="text-center space-y-8 w-full"
+          className="text-center space-y-8"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight leading-tight">
-            SAP Integration for Logistics Modules
-            <span className="block text-orange-600">(TM, EWM)</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight">
+            Cross-Border Logistics Compliance
           </h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            Unlock the full potential of SAP&apos;s Transportation (TM) and
-            Extended Warehouse Management (EWM) modules with our cutting-edge
-            integration solutions.
+            **Effortlessly Navigate International Logistics** with cutting-edge
+            compliance solutions designed for today&apos;s global supply chains.
+          </p>
+          <p className="text-gray-600">
+            Ensure **regulatory alignment, reduce risks,** and achieve seamless
+            operations across borders with our state-of-the-art compliance
+            tools.
           </p>
         </motion.section>
 
-        {/* Why Choose Section */}
+        {/* Why Choose Logistics Compliance */}
         <motion.section className="space-y-8" {...fadeIn}>
           <h2 className="text-3xl font-bold text-slate-900 text-center">
-            Why Choose Our SAP Integration Solutions?
+            Why Choose Our Compliance Solutions?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "Enhanced Visibility",
+                title: "Global Expertise",
                 content:
-                  "Achieve real-time insights into your supply chain with integrated SAP modules.",
+                  "Access a network of experts to guide your freight through complex customs regulations worldwide.",
                 style: cardStyles.primary,
                 icon: (
-                  <BarChart3
+                  <Globe
                     className="w-8 h-8 text-indigo-600 mb-4"
                     strokeWidth={1.5}
                   />
                 ),
               },
               {
-                title: "Optimized Logistics",
+                title: "Risk Mitigation",
                 content:
-                  "Streamline transportation planning and warehouse processes for faster deliveries.",
+                  "Avoid costly penalties and delays with proactive risk management and real-time regulation updates.",
                 style: cardStyles.secondary,
                 icon: (
-                  <Boxes
+                  <Shield
                     className="w-8 h-8 text-orange-600 mb-4"
                     strokeWidth={1.5}
                   />
                 ),
               },
               {
-                title: "Cost Efficiency",
+                title: "Cost Optimization",
                 content:
-                  "Reduce operational costs by automating manual processes and minimizing errors.",
+                  "Streamline duty payments and leverage tax-saving opportunities tailored to your cross-border logistics.",
                 style: cardStyles.primary,
                 icon: (
                   <CircleDollarSign
@@ -99,12 +102,12 @@ const SAPIntegrationForLogisticsModules = () => {
                 ),
               },
               {
-                title: "Global Scalability",
+                title: "Seamless Integration",
                 content:
-                  "Scale seamlessly to meet global logistics demands with agile integration tools.",
+                  "Effortlessly integrate our solutions with your existing logistics systems for a smooth compliance experience.",
                 style: cardStyles.secondary,
                 icon: (
-                  <Globe
+                  <Rocket
                     className="w-8 h-8 text-orange-600 mb-4"
                     strokeWidth={1.5}
                   />
@@ -140,33 +143,32 @@ const SAPIntegrationForLogisticsModules = () => {
         {/* Key Features Section */}
         <motion.section className="space-y-8" {...fadeIn}>
           <h2 className="text-3xl font-bold text-slate-900 text-center">
-            Key Features of Our Integration Solutions
+            Key Features of Our Compliance Solutions
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "Custom Configurations",
+                title: "Customs Documentation",
                 content:
-                  "Tailor SAP TM and EWM modules to meet your specific logistics needs.",
-                icon: <Boxes className="w-8 h-8 text-indigo-600 mb-4" />,
+                  "Automate preparation and management of customs forms.",
+                icon: <Truck className="w-8 h-8 text-indigo-600 mb-4" />,
               },
               {
-                title: "Real-Time Tracking",
-                content:
-                  "Track shipments and warehouse operations in real-time with advanced dashboards.",
-                icon: <BarChart3 className="w-8 h-8 text-orange-600 mb-4" />,
+                title: "Regulation Updates",
+                content: "Stay compliant with real-time regulatory changes.",
+                icon: <Globe className="w-8 h-8 text-orange-600 mb-4" />,
               },
               {
-                title: "Seamless Integrations",
+                title: "AI-Powered Insights",
                 content:
-                  "Connect effortlessly with third-party platforms and enhance data flow across systems.",
-                icon: <Globe className="w-8 h-8 text-indigo-600 mb-4" />,
+                  "Gain predictive insights into compliance trends and risks.",
+                icon: <BarChart3 className="w-8 h-8 text-indigo-600 mb-4" />,
               },
               {
-                title: "AI-Driven Insights",
+                title: "Audit-Ready Reports",
                 content:
-                  "Use predictive analytics to optimize logistics and improve decision-making.",
-                icon: <Rocket className="w-8 h-8 text-orange-600 mb-4" />,
+                  "Generate comprehensive compliance reports with a single click.",
+                icon: <Shield className="w-8 h-8 text-orange-600 mb-4" />,
               },
             ].map((feature, index) => (
               <Card key={index} className={cardStyles.feature}>
@@ -183,42 +185,42 @@ const SAPIntegrationForLogisticsModules = () => {
         </motion.section>
 
         {/* FAQ Section */}
-        <motion.section
-          className="space-y-8 w-full max-w-4xl mx-auto px-4"
-          {...fadeIn}
-        >
+        <motion.section className="space-y-8 w-full" {...fadeIn}>
           <h2 className="text-3xl font-bold text-slate-900 text-center">
             Frequently Asked Questions
           </h2>
-          <Accordion type="single" collapsible className="space-y-4 w-full">
+          <Accordion
+            type="single"
+            collapsible
+            className="space-y-4 w-full max-w-3xl mx-auto"
+          >
             {[
               {
-                question: "What is the benefit of integrating SAP TM and EWM?",
+                question: "How do these solutions help with customs clearance?",
                 answer:
-                  "Integration ensures seamless coordination between transportation and warehouse operations, improving efficiency and reducing lead times.",
+                  "Our solutions automate customs documentation and provide real-time updates to simplify the clearance process.",
               },
               {
-                question: "Is this solution scalable for global logistics?",
+                question:
+                  "Can I integrate compliance tools with my ERP system?",
                 answer:
-                  "Yes, our integrations are designed to support businesses of all sizes and global operations, adapting to your growing needs.",
+                  "Yes, we offer seamless integration with ERP systems for enhanced efficiency.",
               },
               {
-                question: "Can the tool integrate with other ERP systems?",
+                question: "What regions do you support for compliance?",
                 answer:
-                  "Absolutely. The integration framework is designed to work with third-party ERP solutions for a unified logistics approach.",
+                  "We cover major international trade routes, ensuring compliance across diverse geographies.",
               },
             ].map((faq, index) => (
               <AccordionItem
                 key={index}
-                value={`item-${index}`}
-                className="bg-white rounded-lg border border-gray-200"
+                className="border-gray-200 shadow-md"
+                value={""}
               >
-                <AccordionTrigger className="px-6 py-4 text-lg font-semibold hover:no-underline">
+                <AccordionTrigger className="text-lg font-semibold">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="px-6 pb-4">
-                  {faq.answer}
-                </AccordionContent>
+                <AccordionContent>{faq.answer}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
@@ -226,23 +228,21 @@ const SAPIntegrationForLogisticsModules = () => {
 
         {/* CTA Section */}
         <motion.section
-          className="text-center space-y-8 bg-gradient-to-br from-white via-indigo-50 to-white rounded-2xl p-8 md:p-12 shadow-lg w-full max-w-4xl mx-auto"
+          className="text-center space-y-8 bg-gradient-to-br from-white to-indigo-50 rounded-2xl p-12 shadow-lg"
           {...fadeIn}
         >
           <h2 className="text-3xl font-bold text-gray-900">
-            Revolutionize Your Logistics Operations
+            Simplify Cross-Border Compliance Today
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Seamlessly integrate SAP logistics modules and elevate your supply
-            chain efficiency. Start today for a smarter tomorrow.
+            Gain complete control of your logistics compliance and avoid the
+            risks of international trade with our expert solutions.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link href="/contact">
-              <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-6 h-auto text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-                Contact Us
-              </Button>
-            </Link>
-            <Button className="bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 text-white px-8 py-6 h-auto text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+          <div className="space-x-4">
+            <Button className="bg-gradient-to-r from-orange-400 to-orange-600 text-white px-6 py-3 shadow-lg">
+              Contact Us
+            </Button>
+            <Button className="bg-gradient-to-r from-indigo-400 to-indigo-600 text-white px-6 py-3 shadow-lg">
               Learn More
             </Button>
           </div>
@@ -253,4 +253,4 @@ const SAPIntegrationForLogisticsModules = () => {
   );
 };
 
-export default SAPIntegrationForLogisticsModules;
+export default LogisticsCompliance;

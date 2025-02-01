@@ -22,35 +22,40 @@ import {
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 },
+  transition: { duration: 0.5 },
 };
 
 const cardStyles = {
-  primary: "bg-gradient-to-br from-indigo-50 to-indigo-100",
-  secondary: "bg-gradient-to-br from-orange-50 to-orange-100",
+  primary:
+    "bg-gradient-to-br from-indigo-50 via-white to-indigo-100 border border-indigo-100",
+  secondary:
+    "bg-gradient-to-br from-orange-50 via-white to-orange-100 border border-orange-100",
   feature:
-    "bg-gradient-to-br from-white to-orange-50 hover:shadow-lg transition-all duration-300",
+    "bg-white hover:bg-gradient-to-br hover:from-orange-50 hover:to-white border border-gray-100 hover:border-orange-200 hover:shadow-xl transition-all duration-300",
 };
 
 const AIPoweredDataAnalytics = () => {
   return (
-    <div className="min-w-screen bg-slate-50 flex flex-col items-center">
+    <div className="min-w-screen bg-gradient-to-br from-slate-50 to-white flex flex-col items-center">
       <MegaMenu />
-      <div className="flex flex-col pt-32 w-[60%] items-center px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+      <div className="flex flex-col pt-32 w-full max-w-7xl items-center px-4 sm:px-6 lg:px-8 py-12 space-y-16">
         <motion.section
-          className="text-center space-y-8"
+          className="text-center space-y-8 max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight leading-tight">
             AI-Powered SAP Data Analytics Tools
           </h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            Harness the power of **artificial intelligence** to revolutionize your business decisions. SAP data analytics tools bring unmatched precision, agility, and innovation to the heart of your enterprise.
+            Harness the power of artificial intelligence to revolutionize your
+            business decisions. SAP data analytics tools bring unmatched
+            precision, agility, and innovation to the heart of your enterprise.
           </p>
           <p className="text-gray-600">
-            Empower your organization with **real-time insights** that drive success and growth in today’s data-driven world.
+            Empower your organization with real-time insights that drive success
+            and growth in today&apos;s data-driven world.
           </p>
         </motion.section>
 
@@ -182,15 +187,14 @@ const AIPoweredDataAnalytics = () => {
         </motion.section>
 
         {/* FAQ Section */}
-        <motion.section className="space-y-8 w-full" {...fadeIn}>
+        <motion.section
+          className="space-y-8 w-full max-w-4xl mx-auto"
+          {...fadeIn}
+        >
           <h2 className="text-3xl font-bold text-slate-900 text-center">
             Frequently Asked Questions
           </h2>
-          <Accordion
-            type="single"
-            collapsible
-            className="space-y-4 w-full max-w-3xl mx-auto"
-          >
+          <Accordion type="single" collapsible className="space-y-4 w-full">
             {[
               {
                 question: "What industries can benefit from these tools?",
@@ -208,11 +212,17 @@ const AIPoweredDataAnalytics = () => {
                   "Your data is secured using top-tier encryption, AI-powered risk management, and continuous monitoring.",
               },
             ].map((faq, index) => (
-              <AccordionItem key={index} className="border-gray-200 shadow-md" value={""}>
-                <AccordionTrigger className="text-lg font-semibold">
+              <AccordionItem
+                key={index}
+                value={`item-${index}`}
+                className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow duration-300"
+              >
+                <AccordionTrigger className="px-4 py-3 text-lg font-semibold hover:bg-gray-50">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent>{faq.answer}</AccordionContent>
+                <AccordionContent className="px-4 py-3 text-gray-600">
+                  {faq.answer}
+                </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
@@ -220,20 +230,27 @@ const AIPoweredDataAnalytics = () => {
 
         {/* CTA Section */}
         <motion.section
-          className="text-center space-y-8 bg-gradient-to-br from-white to-indigo-50 rounded-2xl p-12 shadow-lg"
+          className="text-center space-y-8 bg-gradient-to-br from-white via-indigo-50 to-orange-50 rounded-2xl p-8 md:p-12 shadow-lg border border-gray-100 w-full max-w-4xl mx-auto"
           {...fadeIn}
         >
           <h2 className="text-3xl font-bold text-gray-900">
             Supercharge Your Data Analytics Today
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Elevate your business outcomes with AI-powered insights and transformative analytics tools.
+            Elevate your business outcomes with AI-powered insights and
+            transformative analytics tools.
           </p>
-          <div className="space-x-4">
-            <Button className="bg-gradient-to-r from-orange-400 to-orange-600 text-white px-6 py-3 shadow-lg">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button
+              className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-3 shadow-lg w-full sm:w-auto"
+              onClick={() => (window.location.href = "/contact")}
+            >
               Request a Demo
             </Button>
-            <Button className="bg-gradient-to-r from-indigo-400 to-indigo-600 text-white px-6 py-3 shadow-lg">
+            <Button
+              className="bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 text-white px-6 py-3 shadow-lg w-full sm:w-auto"
+              onClick={() => (window.location.href = "/contact")}
+            >
               Get Started
             </Button>
           </div>

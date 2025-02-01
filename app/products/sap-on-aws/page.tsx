@@ -29,23 +29,29 @@ const fadeIn = {
 };
 
 const cardStyles = {
-  primary: "bg-gradient-to-br from-indigo-50 to-indigo-100 ",
-  secondary: "bg-gradient-to-br from-orange-50 to-orange-100",
+  primary:
+    "bg-gradient-to-br from-indigo-50 via-indigo-100 to-white border-indigo-200 hover:border-indigo-300",
+  secondary:
+    "bg-gradient-to-br from-orange-50 via-orange-100 to-white border-orange-200 hover:border-orange-300",
   feature:
-    "bg-gradient-to-br from-white to-orange-50 hover:shadow-lg transition-all duration-300",
+    "bg-gradient-to-br from-white via-slate-50 to-transparent border border-slate-200 hover:border-orange-200 hover:shadow-orange-100/50 hover:shadow-xl transition-all duration-500",
 };
 
 const SAPOnAWS = () => {
   return (
-    <div className="min-w-screen bg-slate-50 flex flex-col items-center">
+    <div className="min-w-screen bg-gradient-to-br from-slate-50 via-white to-orange-50/20 flex flex-col items-center">
       <MegaMenu />
-      <div className="flex flex-col pt-32 w-[60%] items-center px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+      <div className="flex flex-col pt-32 w-[60%] items-center px-4 sm:px-6 lg:px-8 py-12 space-y-16 relative">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-orange-100/20 via-indigo-100/20 to-transparent rounded-3xl blur-3xl"></div>
+
+        {/* Hero Section with enhanced styling */}
         <motion.section
-          className="text-center space-y-8"
+          className="text-center space-y-8 relative"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
+          <div className="absolute inset-0 bg-gradient-to-r from-orange-200/20 to-indigo-200/20 blur-3xl -z-10"></div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight">
             SAP on AWS
           </h1>
@@ -60,7 +66,7 @@ const SAPOnAWS = () => {
         </motion.section>
 
         {/* Why Choose SAP on AWS */}
-        <motion.section className="space-y-8" {...fadeIn}>
+        <motion.section className="space-y-8 w-full" {...fadeIn}>
           <h2 className="text-3xl font-bold text-slate-900 text-center">
             Why Choose SAP on AWS?
           </h2>
@@ -122,12 +128,14 @@ const SAPOnAWS = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card
-                  className={`${card.style} shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 h-full py-5`}
+                  className={`${card.style} border shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 backdrop-blur-sm`}
                 >
-                  <CardHeader className="h-1/2">
-                    <div className="flex flex-col items-center justify-center h-full">
-                      {card.icon}
-                      <CardTitle className="text-slate-800 font-bold text-center">
+                  <CardHeader className="pb-2">
+                    <div className="flex flex-col items-center">
+                      <div className="rounded-2xl p-3 bg-gradient-to-br from-white to-transparent border border-slate-100 shadow-inner">
+                        {card.icon}
+                      </div>
+                      <CardTitle className="text-slate-800 font-bold mt-4">
                         {card.title}
                       </CardTitle>
                     </div>
@@ -142,11 +150,11 @@ const SAPOnAWS = () => {
         </motion.section>
 
         {/* Features Section */}
-        <motion.section className="space-y-8" {...fadeIn}>
+        <motion.section className="space-y-8 w-full" {...fadeIn}>
           <h2 className="text-3xl font-bold text-slate-900 text-center">
             Key Features
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 title: "Automated Deployment",
@@ -154,8 +162,8 @@ const SAPOnAWS = () => {
                   "Pre-configured templates for swift setup and reduced errors.",
                 icon: (
                   <div className="w-24 h-24 mx-auto mb-6 relative group">
-                    <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                    <div className="w-full h-full rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center relative overflow-hidden shadow-lg">
+                    <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-indigo-500/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                    <div className="w-full h-full rounded-2xl bg-gradient-to-br from-orange-500 to-indigo-600 flex items-center justify-center relative overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-500">
                       <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
                       <Boxes
                         className="w-12 h-12 text-white"
@@ -170,8 +178,8 @@ const SAPOnAWS = () => {
                 content: "Built-in redundancy to ensure business continuity.",
                 icon: (
                   <div className="w-24 h-24 mx-auto mb-6 relative group">
-                    <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                    <div className="w-full h-full rounded-2xl bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center relative overflow-hidden shadow-lg">
+                    <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-indigo-500/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                    <div className="w-full h-full rounded-2xl bg-gradient-to-br from-orange-500 to-indigo-600 flex items-center justify-center relative overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-500">
                       <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
                       <Shield
                         className="w-12 h-12 text-white"
@@ -187,8 +195,8 @@ const SAPOnAWS = () => {
                   "Pay only for what you use, with tools to monitor and control spending.",
                 icon: (
                   <div className="w-24 h-24 mx-auto mb-6 relative group">
-                    <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                    <div className="w-full h-full rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center relative overflow-hidden shadow-lg">
+                    <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-indigo-500/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                    <div className="w-full h-full rounded-2xl bg-gradient-to-br from-orange-500 to-indigo-600 flex items-center justify-center relative overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-500">
                       <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
                       <CircleDollarSign
                         className="w-12 h-12 text-white"
@@ -203,8 +211,8 @@ const SAPOnAWS = () => {
                 content: "End-to-end visibility for peak system efficiency.",
                 icon: (
                   <div className="w-24 h-24 mx-auto mb-6 relative group">
-                    <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                    <div className="w-full h-full rounded-2xl bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center relative overflow-hidden shadow-lg">
+                    <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-indigo-500/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                    <div className="w-full h-full rounded-2xl bg-gradient-to-br from-orange-500 to-indigo-600 flex items-center justify-center relative overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-500">
                       <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
                       <BarChart3
                         className="w-12 h-12 text-white"
@@ -215,8 +223,19 @@ const SAPOnAWS = () => {
                 ),
               },
             ].map((feature, index) => (
-              <Card key={index} className={cardStyles.feature}>
-                <div className="mt-10"> {feature.icon}</div>
+              <Card
+                key={index}
+                className={`${cardStyles.feature} group hover:bg-gradient-to-br hover:from-white hover:via-orange-50/50 hover:to-indigo-50/50`}
+              >
+                <div className="mt-8">
+                  <div className="w-24 h-24 mx-auto mb-6 relative group">
+                    <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-indigo-500/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                    <div className="w-full h-full rounded-2xl bg-gradient-to-br from-orange-500 to-indigo-600 flex items-center justify-center relative overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-500">
+                      <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
+                      {feature.icon}
+                    </div>
+                  </div>
+                </div>
                 <CardHeader>
                   <CardTitle className="text-slate-800 text-center font-bold">
                     {feature.title}
@@ -231,7 +250,10 @@ const SAPOnAWS = () => {
         </motion.section>
 
         {/* FAQs Section */}
-        <motion.section className="space-y-8 w-full" {...fadeIn}>
+        <motion.section
+          className="space-y-8 w-full backdrop-blur-sm"
+          {...fadeIn}
+        >
           <h2 className="text-3xl font-bold text-slate-900 text-center">
             Frequently Asked Questions
           </h2>
@@ -317,24 +339,50 @@ const SAPOnAWS = () => {
 
         {/* Call to Action Section */}
         <motion.section
-          className="text-center space-y-8 bg-gradient-to-br from-white to-indigo-50 rounded-2xl p-12 shadow-lg border border-orange-100"
+          className="w-full text-center space-y-8 relative overflow-hidden rounded-3xl"
           {...fadeIn}
         >
-          <h2 className="text-3xl font-bold text-gray-900">
-            Your Journey to Cloud Excellence Starts Here
-          </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            AWS and SAP together empower you to innovate and scale like never
-            before. Don't let outdated infrastructure hold you back—embrace the
-            cloud today.
-          </p>
-          <div className="space-x-4 pt-4">
-            <Button className="bg-gradient-to-r from-orange-400 to-orange-600 hover:from-orange-500 hover:to-orange-700 text-white px-8 py-4 transform hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl">
-              Contact Us
-            </Button>
-            <Button className="bg-gradient-to-r from-indigo-400 to-indigo-600 hover:from-indigo-500 hover:to-indigo-700 text-white px-8 py-4 transform hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl">
-              Request a Demo
-            </Button>
+          <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-orange-500/10 to-purple-500/10 blur-3xl"></div>
+          <div className="relative bg-white/40 backdrop-blur-xl px-8 py-16 rounded-3xl border border-orange-100/20 shadow-xl">
+            <div className="absolute inset-0 bg-gradient-to-br from-orange-100/20 via-indigo-100/20 to-purple-100/20 opacity-60"></div>
+            <div className="relative z-10 max-w-4xl mx-auto">
+              <h2 className="text-4xl font-bold bg-gradient-to-r from-indigo-600 to-orange-600 bg-clip-text text-transparent mb-6">
+                Your Journey to Cloud Excellence Starts Here
+              </h2>
+              <p className="text-gray-600 text-lg max-w-2xl mx-auto mb-10">
+                AWS and SAP together empower you to innovate and scale like
+                never before. Don&apos;t let outdated infrastructure hold you
+                back—embrace the cloud today.
+              </p>
+              <div className="flex items-center justify-center gap-6">
+                <Button className="group relative px-8 py-6 overflow-hidden rounded-xl bg-orange-500 hover:bg-orange-600 transition-all duration-300">
+                  <div className="absolute inset-0 bg-gradient-to-r from-orange-500/50 to-orange-600/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span className="relative text-white text-lg font-semibold">
+                    Contact Us
+                  </span>
+                </Button>
+                <Button className="group relative px-8 py-6 overflow-hidden rounded-xl bg-indigo-500 hover:bg-indigo-600 transition-all duration-300">
+                  <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/50 to-indigo-600/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span className="relative text-white text-lg font-semibold">
+                    Request a Demo
+                  </span>
+                </Button>
+              </div>
+              <div className="mt-12 flex items-center justify-center gap-8">
+                <div className="flex items-center gap-2 text-gray-600">
+                  <Shield className="w-5 h-5" />
+                  <span>Enterprise-grade security</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-600">
+                  <BarChart3 className="w-5 h-5" />
+                  <span>24/7 Support</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-600">
+                  <CircleDollarSign className="w-5 h-5" />
+                  <span>Flexible pricing</span>
+                </div>
+              </div>
+            </div>
           </div>
         </motion.section>
       </div>
