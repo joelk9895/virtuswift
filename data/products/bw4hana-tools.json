@@ -1,0 +1,54 @@
+{
+  "hero": {
+    "title": "4HANA Transformation Tool",
+    "subtitle": "Revolutionize your SAP operations with the ultimate 4HANA Transformation Tool",
+    "ctaPrimary": "Get Started",
+    "ctaSecondary": "Watch Demo"
+  },
+  "whyChoose": {
+    "title": "Why Choose Our 4HANA Transformation Tool?",
+    "features": [
+      {
+        "title": "Faster Deployments",
+        "content": "Accelerate migrations with pre-built configurations, reducing downtime and disruptions.",
+        "style": "bg-gradient-to-br from-indigo-50 to-indigo-100 border-none",
+        "icon": "Rocket"
+      },
+      {
+        "title": "Enhanced Scalability",
+        "content": "Scale effortlessly with solutions designed to adapt to growing enterprise needs.",
+        "style": "bg-gradient-to-br from-orange-50 to-orange-100 border-none",
+        "icon": "Globe"
+      },
+      {
+        "title": "Data-Driven Optimization",
+        "content": "Leverage intelligent insights to optimize performance and streamline operations.",
+        "style": "bg-gradient-to-br from-indigo-50 to-indigo-100 border-none",
+        "icon": "BarChart3"
+      },
+      {
+        "title": "Cost Efficiency",
+        "content": "Maximize ROI with optimized resource management and transparent pricing models.",
+        "style": "bg-gradient-to-br from-orange-50 to-orange-100 border-none",
+        "icon": "CircleDollarSign"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "How does this tool accelerate the migration process?",
+        "answer": "Our pre-configured templates and automated workflows reduce manual effort, ensuring faster migrations."
+      },
+      {
+        "question": "Can it support hybrid cloud environments?",
+        "answer": "Absolutely. The tool is optimized for both on-premises and cloud integrations to suit hybrid environments."
+      },
+      {
+        "question": "Is there support for data security?",
+        "answer": "Yes, enterprise-grade security protocols are embedded to protect your sensitive data during and after migration."
+      }
+    ]
+  }
+}

@@ -1,0 +1,62 @@
+{
+    "hero": {
+      "title": "End-to-End Logistics and Warehouse Automation",
+      "subtitle": "Empower your supply chain with next-generation automation. From warehouses to last-mile delivery, we streamline operations for unparalleled efficiency.",
+      "ctaPrimary": "Contact Us",
+      "ctaSecondary": "Request a Demo"
+    },
+    "whyChoose": {
+      "title": "Why Automate with Us?",
+      "features": [
+        {
+          "title": "Seamless Integration",
+          "content": "Integrate automation tools into your existing workflows without disrupting operations.",
+          "style": "bg-gradient-to-br from-blue-50 to-blue-100",
+          "icon": "Factory"
+        },
+        {
+          "title": "End-to-End Visibility",
+          "content": "Gain real-time insights into every stage of your supply chain for smarter decisions.",
+          "style": "bg-gradient-to-br from-green-50 to-green-100",
+          "icon": "BarChart3"
+        },
+        {
+          "title": "Enhanced Productivity",
+          "content": "Leverage robotics and IoT to reduce manual tasks and improve efficiency across your operations.",
+          "style": "bg-gradient-to-br from-blue-50 to-blue-100",
+          "icon": "Truck"
+        },
+        {
+          "title": "Optimized Costs",
+          "content": "Minimize operational costs with intelligent automation that scales with your business.",
+          "style": "bg-gradient-to-br from-green-50 to-green-100",
+          "icon": "CircleDollarSign"
+        }
+      ]
+    },
+    "keyFeatures": {
+      "title": "Key Features",
+      "features": [
+        {
+          "title": "Smart Warehousing",
+          "content": "Automated picking, packing, and inventory management for faster fulfillment.",
+          "icon": "Boxes"
+        },
+        {
+          "title": "AI-Driven Analytics",
+          "content": "Predict demand and optimize routes with machine learning insights.",
+          "icon": "Shield"
+        },
+        {
+          "title": "Scalable Automation",
+          "content": "Expand capabilities as your business grows with modular solutions.",
+          "icon": "Rocket"
+        },
+        {
+          "title": "24/7 Support",
+          "content": "Round-the-clock support to ensure smooth operations, no matter the time.",
+          "icon": "BarChart3"
+        }
+      ]
+    }
+  }

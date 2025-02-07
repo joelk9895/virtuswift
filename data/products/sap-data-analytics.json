@@ -1,0 +1,80 @@
+{
+    "hero": {
+      "title": "AI-Powered SAP Data Analytics Tools",
+      "subtitle": "Harness the power of artificial intelligence to revolutionize your business decisions.",
+      "ctaPrimary": "Request a Demo",
+      "ctaSecondary": "Get Started"
+    },
+    "whyChoose": {
+      "title": "Why Choose AI-Powered Analytics Tools?",
+      "features": [
+        {
+          "title": "Real-Time Insights",
+          "content": "Access real-time, actionable data to empower smarter and faster business decisions.",
+          "style": "bg-gradient-to-br from-indigo-50 to-indigo-100 border-none",
+          "icon": "BarChart3"
+        },
+        {
+          "title": "Data-Driven Strategy",
+          "content": "Leverage predictive analytics to stay ahead of trends and outpace the competition.",
+          "style": "bg-gradient-to-br from-orange-50 to-orange-100 border-none",
+          "icon": "Globe"
+        },
+        {
+          "title": "Cost Optimization",
+          "content": "Optimize operations and reduce costs with tools designed to maximize ROI on every data insight.",
+          "style": "bg-gradient-to-br from-indigo-50 to-indigo-100 border-none",
+          "icon": "CircleDollarSign"
+        },
+        {
+          "title": "Enhanced Security",
+          "content": "Ensure your data is secure with SAP’s enterprise-grade security protocols and AI-powered risk mitigation.",
+          "style": "bg-gradient-to-br from-orange-50 to-orange-100 border-none",
+          "icon": "Shield"
+        }
+      ]
+    },
+    "keyFeatures": {
+      "title": "Key Features of Our Analytics Tools",
+      "features": [
+        {
+          "title": "Predictive Analytics",
+          "content": "Use machine learning to forecast future trends and performance with precision.",
+          "icon": "Rocket"
+        },
+        {
+          "title": "Custom Dashboards",
+          "content": "Visualize your KPIs with fully customizable and user-friendly dashboards.",
+          "icon": "BarChart3"
+        },
+        {
+          "title": "Data Integration",
+          "content": "Seamlessly integrate data from SAP and other platforms to ensure a unified analytics experience.",
+          "icon": "Globe"
+        },
+        {
+          "title": "Advanced Security",
+          "content": "Keep your data safe with AI-powered breach detection and comprehensive compliance measures.",
+          "icon": "Shield"
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "questions": [
+        {
+          "question": "What industries can benefit from these tools?",
+          "answer": "Our tools are versatile and cater to a variety of sectors including retail, healthcare, manufacturing, and more."
+        },
+        {
+          "question": "Can I integrate non-SAP data with these tools?",
+          "answer": "Yes, our analytics platform supports integration with multiple data sources for a comprehensive view."
+        },
+        {
+          "question": "How secure is my data on these platforms?",
+          "answer": "Your data is secured using top-tier encryption, AI-powered risk management, and continuous monitoring."
+        }
+      ]
+    }
+  }
+  

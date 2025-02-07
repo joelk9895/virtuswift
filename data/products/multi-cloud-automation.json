@@ -1,0 +1,79 @@
+{
+    "hero": {
+      "title": "Multi-Cloud Automation Toolkit",
+      "subtitle": "Supercharge your cloud strategy with seamless orchestration across AWS, Azure, Google Cloud, and private clouds.",
+      "ctaPrimary": "Contact Sales",
+      "ctaSecondary": "Request Demo"
+    },
+    "whyChoose": {
+      "title": "Why Choose Our Multi-Cloud Automation Toolkit?",
+      "features": [
+        {
+          "title": "Simplified Management",
+          "content": "Unify cloud operations with a single interface that consolidates workflows across all platforms.",
+          "style": "bg-gradient-to-br from-indigo-50 to-indigo-100 border-none",
+          "icon": "Boxes"
+        },
+        { 
+          "title": "Optimized Costs",
+          "content": "Identify inefficiencies and manage cloud spend effectively with real-time insights.",
+          "style": "bg-gradient-to-br from-orange-50 to-orange-100 border-none",
+          "icon": "CircleDollarSign"
+        },
+        {
+          "title": "Enhanced Security",
+          "content": "Leverage advanced protocols to protect sensitive data across cloud environments.",
+          "style": "bg-gradient-to-br from-indigo-50 to-indigo-100 border-none",
+          "icon": "Shield"
+        },
+        {
+          "title": "Rapid Deployment",
+          "content": "Launch automation in hours, not weeks, with pre-configured templates for every major cloud platform.",
+          "style": "bg-gradient-to-br from-orange-50 to-orange-100 border-none",
+          "icon": "Rocket"
+        }
+      ]
+    },
+    "keyFeatures": {
+      "title": "Key Features of the Toolkit",
+      "features": [
+        {
+          "title": "AI-Driven Optimization",
+          "content": "Automatically adjust resources to meet dynamic business needs and reduce waste.",
+          "icon": "BarChart3"
+        },
+        {
+          "title": "Seamless Integrations",
+          "content": "Connect your current systems with zero disruptions using robust APIs.",
+          "icon": "Globe"
+        },
+        {
+          "title": "High Availability",
+          "content": "Enjoy uninterrupted operations with built-in redundancy and failover capabilities.",
+          "icon": "Shield"
+        },
+        {
+          "title": "Real-Time Visibility",
+          "content": "Monitor multi-cloud environments with advanced dashboards and instant alerts.",
+          "icon": "Boxes"
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "questions": [
+        {
+          "question": "Can this toolkit handle hybrid environments?",
+          "answer": "Yes, our toolkit seamlessly integrates on-premises systems and cloud environments."
+        },
+        {
+          "question": "Is this tool scalable for enterprise use?",
+          "answer": "Absolutely. The toolkit is designed for enterprises and scales with your business needs."
+        },
+        {
+          "question": "How does it ensure compliance?",
+          "answer": "Built-in compliance modules automatically track and report regulatory requirements."
+        }
+      ]
+    }
+  }

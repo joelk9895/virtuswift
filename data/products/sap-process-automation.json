@@ -1,0 +1,81 @@
+{
+    "hero": {
+      "title": "Business Process Automation for SAP",
+      "subtitle": "Unlock your organization's full potential with cutting-edge BPA tools for SAP.",
+      "ctaPrimary": "Contact Us",
+      "ctaSecondary": "Request a Demo"
+    },
+    "whyChoose": {
+      "title": "Why Choose Our BPA Solutions for SAP?",
+      "features": [
+        {
+          "title": "Streamlined Workflows",
+          "content": "Automate repetitive processes and simplify operations for maximum efficiency.",
+          "style": "bg-gradient-to-br from-indigo-50 to-indigo-100 border-none",
+          "icon": "Boxes"
+        },
+        {
+          "title": "Boost Productivity",
+          "content": "Empower your team to focus on strategic tasks, increasing overall productivity.",
+          "style": "bg-gradient-to-br from-orange-50 to-orange-100 border-none",
+          "icon": "Rocket"
+        },
+        {
+          "title": "Data-Driven Accuracy",
+          "content": "Leverage real-time insights and eliminate manual errors for improved decision-making.",
+          "style": "bg-gradient-to-br from-indigo-50 to-indigo-100 border-none",
+          "icon": "BarChart3"
+        },
+        {
+          "title": "Cost Optimization",
+          "content": "Achieve more with less by automating tasks and streamlining resource utilization.",
+          "style": "bg-gradient-to-br from-orange-50 to-orange-100 border-none",
+          "icon": "CircleDollarSign"
+        }
+      ]
+    },
+    "keyFeatures": {
+      "title": "Key Features of Our BPA Tools",
+      "features": [
+        {
+          "title": "End-to-End Integration",
+          "content": "Connect SAP modules effortlessly for unified, automated processes.",
+          "icon": "Globe"
+        },
+        {
+          "title": "Robust Analytics",
+          "content": "Generate actionable insights with real-time data visualization and reporting.",
+          "icon": "BarChart3"
+        },
+        {
+          "title": "AI-Enhanced Workflow",
+          "content": "Optimize processes with AI-powered recommendations and predictions.",
+          "icon": "Rocket"
+        },
+        {
+          "title": "Compliance Simplified",
+          "content": "Automate compliance tracking and reporting to ensure regulatory adherence.",
+          "icon": "Shield"
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "questions": [
+        {
+          "question": "How does BPA improve SAP operations?",
+          "answer": "Our BPA solution streamlines SAP operations by automating repetitive tasks, reducing manual errors, and improving system efficiency across all SAP modules."
+        },
+        {
+          "question": "Can BPA solutions be customized for my organization?",
+          "answer": "Absolutely! Our BPA tools offer comprehensive customization options to align with your specific business processes and industry requirements."
+        },
+        {
+          "question": "What kind of support is available?",
+          "answer": "We provide 24/7 dedicated support through multiple channels, including technical assistance, training sessions, and system optimization recommendations."
+        }
+      ]
+    }
+  }
+
+  

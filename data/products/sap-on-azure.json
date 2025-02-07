@@ -1,0 +1,79 @@
+{
+    "hero": {
+      "title": "SAP on Azure",
+      "subtitle": "Harness the power of Azure Cloud to optimize, modernize, and scale your SAP workloads seamlessly.",
+      "ctaPrimary": "Contact Us",
+      "ctaSecondary": "Learn More"
+    },
+    "whyChoose": {
+      "title": "Why Choose SAP on Azure?",
+      "features": [
+        {
+          "title": "Unparalleled Scalability",
+          "content": "Scale your SAP applications dynamically to align with changing business demands.",
+          "style": "bg-gradient-to-br from-indigo-50 to-indigo-100 border-none",
+          "icon": "Globe"
+        },
+        {
+          "title": "Cost-Effective Operations",
+          "content": "Optimize costs with Azure’s flexible pricing models and advanced cost-management tools.",
+          "style": "bg-gradient-to-br from-orange-50 to-orange-100 border-none",
+          "icon": "CircleDollarSign"
+        },
+        {
+          "title": "Comprehensive Security",
+          "content": "Ensure data protection and compliance with Azure’s enterprise-grade security infrastructure.",
+          "style": "bg-gradient-to-br from-indigo-50 to-indigo-100 border-none",
+          "icon": "Shield"
+        },
+        {
+          "title": "Future-Ready Innovation",
+          "content": "Leverage AI-powered tools and analytics for smarter decisions and streamlined operations.",
+          "style": "bg-gradient-to-br from-orange-50 to-orange-100 border-none",
+          "icon": "Rocket"
+        }
+      ]
+    },
+    "keyFeatures": {
+      "title": "Key Features of SAP on Azure",
+      "features": [
+        {
+          "title": "Rapid Deployment",
+          "content": "Pre-built templates for faster deployment of SAP solutions in Azure environments.",
+          "icon": "Boxes"
+        },
+        {
+          "title": "Business Continuity",
+          "content": "Achieve high availability with robust disaster recovery features.",
+          "icon": "Shield"
+        },
+        {
+          "title": "Real-Time Insights",
+          "content": "Gain actionable insights with Azure’s analytics and AI tools tailored for SAP systems.",
+          "icon": "BarChart3"
+        },
+        {
+          "title": "Optimized TCO",
+          "content": "Reduce total cost of ownership with Azure’s efficient resource management.",
+          "icon": "CircleDollarSign"
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "questions": [
+        {
+          "question": "Why choose Azure for SAP?",
+          "answer": "Azure provides unparalleled scalability, innovative tools, and enterprise-grade security for hosting SAP applications."
+        },
+        {
+          "question": "What industries benefit from SAP on Azure?",
+          "answer": "Our solutions cater to industries like healthcare, finance, manufacturing, retail, and many more."
+        },
+        {
+          "question": "How secure is SAP on Azure?",
+          "answer": "Azure uses end-to-end encryption, compliance certifications, and multi-layered security to protect your data."
+        }
+      ]
+    }
+  }

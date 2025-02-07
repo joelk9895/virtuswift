@@ -1,0 +1,56 @@
+{
+    "hero": {
+      "title": "Cloud Transformation Solutions",
+      "subtitle": "Unlock new possibilities with game-changing cloud transformation solutions.",
+      "ctaPrimary": "Get Started",
+      "ctaSecondary": "Contact Us"
+    },
+    "whyChoose": {
+      "title": "Why Choose Our Cloud Transformation Solutions?",
+      "features": [
+        {
+          "title": "Accelerate Innovation",
+          "content": "Transform your business processes and deliver services faster with next-level agility and streamlined workflows.",
+          "style": "bg-gradient-to-br from-indigo-50 to-indigo-100 border-none",
+          "icon": "Rocket"
+        },
+        {
+          "title": "Optimize Costs",
+          "content": "Our solutions are designed to help you leverage cloud technology cost-effectively, ensuring value for every investment.",
+          "style": "bg-gradient-to-br from-orange-50 to-orange-100 border-none",
+          "icon": "Banknote"
+        },
+        {
+          "title": "Strengthen Security",
+          "content": "Utilize the latest in enterprise-grade protection to secure your data and maintain trust in an evolving cyber landscape.",
+          "style": "bg-gradient-to-br from-indigo-50 to-indigo-100 border-none",
+          "icon": "Lock"
+        },
+        {
+          "title": "Global Scalability",
+          "content": "Expand with ease using cloud infrastructure that scales with your business growth while ensuring reliability.",
+          "style": "bg-gradient-to-br from-orange-50 to-orange-100 border-none",
+          "icon": "Globe"
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "questions": [
+        {
+          "question": "How do you ensure a seamless migration?",
+          "answer": "We utilize advanced tools and proven methodologies for risk-free transitions, complete with ongoing support and monitoring."
+        },
+        {
+          "question": "Is data security a priority?",
+          "answer": "Yes, we use enterprise-grade encryption, compliance protocols, and robust firewalls to safeguard your sensitive data."
+        },
+        {
+          "question": "What industries do you support?",
+          "answer": "Our cloud solutions cater to a wide array of industries, including finance, healthcare, manufacturing, and more."
+        }
+      ]
+    }
+  }
+
+  

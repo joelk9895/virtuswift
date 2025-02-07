@@ -1,0 +1,55 @@
+{
+    "hero": {
+      "title": "SAP RISE Enablement Suite",
+      "subtitle": "Accelerate your journey to the intelligent enterprise with the SAP RISE Enablement Suite. Simplify, streamline, and scale your business transformation today.",
+      "ctaPrimary": "Get in Touch",
+      "ctaSecondary": "Learn More"
+    },
+    "whyChoose": {
+      "title": "Why Choose SAP RISE Enablement Suite?",
+      "features": [
+        {
+          "title": "Simplified Transformation",
+          "content": "Streamline complex processes with pre-configured, integrated solutions tailored for your business needs.",
+          "style": "bg-gradient-to-br from-indigo-50 to-indigo-100 border-none",
+          "icon": "Rocket"
+        },
+        {
+          "title": "Scalable Solutions",
+          "content": "Grow at your own pace with flexible, scalable tools built to support your expanding operations.",
+          "style": "bg-gradient-to-br from-orange-50 to-orange-100 border-none",
+          "icon": "Globe"
+        },
+        {
+          "title": "Actionable Insights",
+          "content": "Leverage advanced analytics and data-driven decision-making for faster and smarter operations.",
+          "style": "bg-gradient-to-br from-indigo-50 to-indigo-100 border-none",
+          "icon": "BarChart3"
+        },
+        {
+          "title": "Cost Efficiency",
+          "content": "Optimize resources and reduce costs with intelligent solutions that maximize your ROI.",
+          "style": "bg-gradient-to-br from-orange-50 to-orange-100 border-none",
+          "icon": "CircleDollarSign"
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "questions": [
+        {
+          "question": "How does SAP RISE differ from traditional solutions?",
+          "answer": "SAP RISE is a holistic solution that simplifies cloud migration while providing tailored tools for innovation."
+        },
+        {
+          "question": "Can I migrate my current SAP system to the RISE platform?",
+          "answer": "Yes, the suite includes comprehensive migration services for seamless transitions."
+        },
+        {
+          "question": "What industries can benefit from SAP RISE Enablement Suite?",
+          "answer": "From manufacturing to retail and healthcare, SAP RISE is versatile and serves diverse industries."
+        }
+      ]
+    }
+  }
+  

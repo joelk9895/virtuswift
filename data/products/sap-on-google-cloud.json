@@ -1,0 +1,80 @@
+{
+    "hero": {
+      "title": "SAP on Google Cloud",
+      "subtitle": "Supercharge your SAP workloads with the power of Google Cloud. Harness industry-leading tools for innovation, scalability, and intelligent business transformation.",
+      "ctaPrimary": "Contact Us",
+      "ctaSecondary": "Get Started"
+    },
+    "whyChoose": {
+      "title": "Why Choose SAP on Google Cloud?",
+      "features": [
+        {
+          "title": "Intelligent Scaling",
+          "content": "Effortlessly scale SAP workloads with Google’s robust global network and tools.",
+          "style": "bg-gradient-to-br from-indigo-50 to-indigo-100 border-none",
+          "icon": "Globe"
+        },
+        {
+          "title": "Smarter Decision-Making",
+          "content": "Leverage Google’s AI and machine learning to drive real-time business insights.",
+          "style": "bg-gradient-to-br from-orange-50 to-orange-100 border-none",
+          "icon": "BarChart3"
+        },
+        {
+          "title": "Enhanced Cost Efficiency",
+          "content": "Save with Google Cloud’s flexible pricing and intelligent resource optimization.",
+          "style": "bg-gradient-to-br from-indigo-50 to-indigo-100 border-none",
+          "icon": "CircleDollarSign"
+        },
+        {
+          "title": "Fortified Security",
+          "content": "Ensure enterprise-grade security with Google's multilayered protection for mission-critical data.",
+          "style": "bg-gradient-to-br from-orange-50 to-orange-100 border-none",
+          "icon": "Shield"
+        }
+      ]
+    },
+    "keyFeatures": {
+      "title": "Key Features of SAP on Google Cloud",
+      "features": [
+        {
+          "title": "Seamless Deployment",
+          "content": "Deploy SAP applications faster with Google’s pre-built migration tools.",
+          "icon": "Rocket"
+        },
+        {
+          "title": "Real-Time Insights",
+          "content": "Tap into powerful analytics for smarter, data-driven decisions.",
+          "icon": "BarChart3"
+        },
+        {
+          "title": "High Uptime",
+          "content": "Minimize downtime with Google’s global reliability.",
+          "icon": "Shield"
+        },
+        {
+          "title": "Cost Optimization",
+          "content": "Optimize cloud spending with intelligent resource scaling.",
+          "icon": "CircleDollarSign"
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "questions": [
+        {
+          "question": "Why should I use Google Cloud for SAP?",
+          "answer": "Google Cloud offers intelligent scalability, integrated analytics, and robust security for running SAP applications efficiently."
+        },
+        {
+          "question": "How secure is SAP on Google Cloud?",
+          "answer": "SAP on Google Cloud employs enterprise-grade encryption and compliance certifications, ensuring top-notch data security."
+        },
+        {
+          "question": "Can Google Cloud integrate with my current SAP setup?",
+          "answer": "Yes, Google provides seamless integration and migration tools to ensure a smooth transition."
+        }
+      ]
+    }
+  }
+  
