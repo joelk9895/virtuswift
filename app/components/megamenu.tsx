@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { Instrument_Serif } from "next/font/google";
@@ -478,6 +478,8 @@ const navigationData: NavigationMenu[] = [
 const MegaMenu: React.FC = () => {
   const [activeMenu, setActiveMenu] = useState<number | null>(null);
   const [isHovered, setIsHovered] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeMobileSection, setActiveMobileSection] = useState<number | null>(null);
   const menuRef = useRef<HTMLDivElement>(null);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -516,6 +518,17 @@ const MegaMenu: React.FC = () => {
     }
   };
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+    if (isMobileMenuOpen) {
+      setActiveMobileSection(null);
+    }
+  };
+
+  const toggleMobileSection = (index: number) => {
+    setActiveMobileSection(activeMobileSection === index ? null : index);
+  };
+
   return (
     <nav
       ref={menuRef}
@@ -531,7 +544,7 @@ const MegaMenu: React.FC = () => {
         className="mx-auto flex items-center justify-between h-[72px]"
         animate={{
           backgroundColor:
-            isHovered || activeMenu !== null || isScrolled
+            isHovered || activeMenu !== null || isScrolled || isMobileMenuOpen
               ? "rgba(255, 255, 255, 1)"
               : "rgba(255, 255, 255, 0.1)",
           backdropFilter:
@@ -553,8 +566,8 @@ const MegaMenu: React.FC = () => {
           <Logo isHovered={isHovered} isScrolled={isScrolled} />
         </Link>
 
-        {/* Main Navigation */}
-        <div className="flex h-full">
+        {/* Desktop Navigation */}
+        <div className="hidden lg:flex h-full">
           {navigationData.map((menu, index) => (
             <div
               key={index}
@@ -780,9 +793,93 @@ const MegaMenu: React.FC = () => {
           ))}
         </div>
 
-        {/* Action Buttons */}
+        {/* Mobile Hamburger Button */}
+        <button
+          className="lg:hidden px-6 h-full flex items-center"
+          onClick={toggleMobileMenu}
+        >
+          {isMobileMenuOpen ? (
+            <X className={isHovered || isScrolled ? "text-black" : "text-white"} />
+          ) : (
+            <Menu className={isHovered || isScrolled ? "text-black" : "text-white"} />
+          )}
+        </button>
+
+        {/* Mobile Menu Panel */}
+        <motion.div
+          className={`lg:hidden fixed inset-0 bg-white z-50 ${
+            isMobileMenuOpen ? "block" : "hidden"
+          }`}
+          initial={{ x: "100%" }}
+          animate={{ x: isMobileMenuOpen ? "0%" : "100%" }}
+          transition={{ type: "tween", duration: 0.3 }}
+        >
+          <div className="flex flex-col h-full overflow-y-auto">
+            <div className="flex justify-between items-center p-6 border-b">
+              <Logo isHovered={true} isScrolled={true} />
+              <button onClick={toggleMobileMenu}>
+                <X className="text-black" />
+              </button>
+            </div>
+            
+            <div className="flex-1 overflow-y-auto">
+              {navigationData.map((menu, index) => (
+                <div key={index} className="border-b">
+                  <button
+                    onClick={() => toggleMobileSection(index)}
+                    className="w-full p-6 flex justify-between items-center text-black"
+                  >
+                    {menu.title}
+                    <ChevronDown
+                      className={`transition-transform ${
+                        activeMobileSection === index ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                  
+                  {activeMobileSection === index && (
+                    <div className="bg-gray-50 px-6 pb-6">
+                      {menu.columns.map((column, colIndex) => (
+                        <div key={colIndex} className="mb-6">
+                          <h3 className="font-semibold text-gray-900 mb-2">
+                            {column.title}
+                          </h3>
+                          <ul className="space-y-2">
+                            {column.items.map((item, itemIndex) => (
+                              <li key={itemIndex}>
+                                <Link
+                                  href={item.href}
+                                  className="text-gray-600 hover:text-indigo-800"
+                                  onClick={toggleMobileMenu}
+                                >
+                                  {item.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+            
+            <div className="p-6 border-t">
+              <Link
+                href="/signup"
+                className="block w-full py-3 px-4 text-center bg-black text-white rounded-lg"
+                onClick={toggleMobileMenu}
+              >
+                Contact Us
+              </Link>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Desktop Action Buttons */}
         <div
-          className={`flex space-x-4 p-0 h-full items-center border-l transition-colors duration-300 ${
+          className={`hidden lg:flex space-x-4 p-0 h-full items-center border-l transition-colors duration-300 ${
             isHovered || isScrolled || activeMenu != null
               ? "border-grey"
               : "border-[#ffffff30]"

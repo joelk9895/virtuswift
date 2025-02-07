@@ -59,9 +59,9 @@
         }
       ]
     },
-    "faqs": {
+    "faq": {
       "title": "Frequently Asked Questions",
-      "items": [
+      "questions": [
         {
           "question": "Can I migrate my existing SAP system to AWS?",
           "answer": "Absolutely! Our migration experts ensure a seamless transition of your SAP workloads to AWS with minimal downtime.",
