@@ -1,0 +1,85 @@
+{
+  "hero": {
+    "title": "High-Availability SAP Solutions",
+    "subtitle": "Ensure Uninterrupted Business Continuity. Deploy high-availability SAP solutions that guarantee maximum uptime, scalability, and security. Power your enterprise with resilient and failover-ready SAP infrastructures, ensuring performance and stability for mission-critical workloads.",
+    "ctaPrimary": "Get a Free Assessment",
+    "ctaSecondary": "Schedule a Demo"
+  },
+  "whyChoose": {
+    "title": "Why Choose Our SAP High-Availability Solutions?",
+    "features": [
+      {
+        "title": "99.99% Uptime Guaranteed",
+        "content": "Deploy failover architectures with zero-downtime and automatic disaster recovery.",
+        "style": "bg-gradient-to-br from-indigo-50 to-indigo-100",
+        "icon": "Server"
+      },
+      {
+        "title": "Predictive Analytics",
+        "content": "Use real-time performance monitoring to prevent system failures before they occur.",
+        "style": "bg-gradient-to-br from-orange-50 to-orange-100",
+        "icon": "BarChart3"
+      },
+      {
+        "title": "Enterprise-Grade Security",
+        "content": "Protect business-critical SAP applications with end-to-end encryption and intrusion detection.",
+        "style": "bg-gradient-to-br from-indigo-50 to-indigo-100",
+        "icon": "Shield"
+      },
+      {
+        "title": "Multi-Cloud Flexibility",
+        "content": "Run SAP workloads on AWS, Azure, Google Cloud, or hybrid setups with seamless transitions.",
+        "style": "bg-gradient-to-br from-orange-50 to-orange-100",
+        "icon": "Globe"
+      }
+    ]
+  },
+  "keyFeatures": {
+    "title": "Key Features of Our SAP High-Availability Solutions",
+    "features": [
+      {
+        "title": "Automated Failover",
+        "content": "Ensure business continuity with self-healing SAP landscapes that automatically reroute workloads in case of failure.",
+        "icon": "Rocket"
+      },
+      {
+        "title": "Data Replication & Backups",
+        "content": "Deploy real-time synchronous and asynchronous data replication to prevent data loss.",
+        "icon": "Lock"
+      },
+      {
+        "title": "Load Balancing",
+        "content": "Distribute workloads efficiently across multiple nodes to prevent system overload and performance bottlenecks.",
+        "icon": "BarChart3"
+      },
+      {
+        "title": "Hybrid & Multi-Cloud Support",
+        "content": "Migrate and manage SAP landscapes seamlessly across on-premise and cloud environments.",
+        "icon": "Globe"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "How does automated failover work?",
+        "answer": "If a primary SAP instance fails, our system detects and shifts workloads to a backup instance in real time, ensuring minimal disruption."
+      },
+      {
+        "question": "Is security included in high-availability SAP solutions?",
+        "answer": "Yes! Our end-to-end security includes encryption, firewall protection, and compliance-driven access control."
+      },
+      {
+        "question": "Can this work in hybrid or multi-cloud environments?",
+        "answer": "Absolutely. Our SAP high-availability solutions work seamlessly across hybrid, on-premises, and cloud environments."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ensure 99.99% Uptime for Your SAP Systems",
+    "description": "Deploy a robust, failover-ready SAP environment with zero downtime and maximum resilience.",
+    "ctaPrimary": "Get a Free Assessment",
+    "ctaSecondary": "Schedule a Demo"
+  }
+}

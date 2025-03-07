@@ -58,5 +58,23 @@
           "icon": "BarChart3"
         }
       ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "questions": [
+        {
+          "question": "How does end-to-end logistics automation reduce operational costs?",
+          "answer": "By automating manual tasks, you can optimize resource usage, minimize errors, and lower labor expenses."
+        },
+        {
+          "question": "Is it possible to integrate with third-party carriers or fulfillment services?",
+          "answer": "Yes, our solutions are designed to seamlessly adapt to a wide range of third-party services."
+        },
+        {
+          "question": "What level of support is provided?",
+          "answer": "We offer 24/7 technical support and continuous monitoring to maintain operational efficiency."
+        }
+      ]
     }
+    
   }

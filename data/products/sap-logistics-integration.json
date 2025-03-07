@@ -1,0 +1,79 @@
+{
+  "hero": {
+    "title": "SAP Integration for Logistics Modules",
+    "subtitle": "Unlock the full potential of SAP's Transportation (TM) and Extended Warehouse Management (EWM) modules with our cutting-edge integration solutions.",
+    "ctaPrimary": "Contact Us",
+    "ctaSecondary": "Learn More"
+  },
+  "whyChoose": {
+    "title": "Why Choose Our SAP Integration Solutions?",
+    "features": [
+      {
+        "title": "Enhanced Visibility",
+        "content": "Achieve real-time insights into your supply chain with integrated SAP modules.",
+        "style": "bg-gradient-to-br from-indigo-50 via-indigo-100 to-indigo-50",
+        "icon": "BarChart3"
+      },
+      {
+        "title": "Optimized Logistics",
+        "content": "Streamline transportation planning and warehouse processes for faster deliveries.",
+        "style": "bg-gradient-to-br from-orange-50 via-orange-100 to-orange-50",
+        "icon": "Boxes"
+      },
+      {
+        "title": "Cost Efficiency",
+        "content": "Reduce operational costs by automating manual processes and minimizing errors.",
+        "style": "bg-gradient-to-br from-indigo-50 via-indigo-100 to-indigo-50",
+        "icon": "CircleDollarSign"
+      },
+      {
+        "title": "Global Scalability",
+        "content": "Scale seamlessly to meet global logistics demands with agile integration tools.",
+        "style": "bg-gradient-to-br from-orange-50 via-orange-100 to-orange-50",
+        "icon": "Globe"
+      }
+    ]
+  },
+  "keyFeatures": {
+    "title": "Key Features of Our Integration Solutions",
+    "features": [
+      {
+        "title": "Custom Configurations",
+        "content": "Tailor SAP TM and EWM modules to meet your specific logistics needs.",
+        "icon": "Boxes"
+      },
+      {
+        "title": "Real-Time Tracking",
+        "content": "Track shipments and warehouse operations in real-time with advanced dashboards.",
+        "icon": "BarChart3"
+      },
+      {
+        "title": "Seamless Integrations",
+        "content": "Connect effortlessly with third-party platforms and enhance data flow across systems.",
+        "icon": "Globe"
+      },
+      {
+        "title": "AI-Driven Insights",
+        "content": "Use predictive analytics to optimize logistics and improve decision-making.",
+        "icon": "Rocket"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "What is the benefit of integrating SAP TM and EWM?",
+        "answer": "Integration ensures seamless coordination between transportation and warehouse operations, improving efficiency and reducing lead times."
+      },
+      {
+        "question": "Is this solution scalable for global logistics?",
+        "answer": "Yes, our integrations are designed to support businesses of all sizes and global operations, adapting to your growing needs."
+      },
+      {
+        "question": "Can the tool integrate with other ERP systems?",
+        "answer": "Absolutely. The integration framework is designed to work with third-party ERP solutions for a unified logistics approach."
+      }
+    ]
+  }
+}

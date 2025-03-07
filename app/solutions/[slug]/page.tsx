@@ -10,6 +10,9 @@ import {
   Banknote,
   Lock,
   Shield,
+  Users,
+  Star,
+  ThumbsUp,
 } from "lucide-react";
 import {
   Accordion,
@@ -45,13 +48,19 @@ interface Product {
     title: string;
     features: Feature[];
   };
+  keyFeatures: {
+    title: string;
+    features: Feature[];
+  };
   faq: {
     title: string;
     questions: FAQ[];
   };
-  keyFeatures?: {
+  cta?: {
     title: string;
-    features: Feature[];
+    description: string;
+    ctaPrimary: string;
+    ctaSecondary: string;
   };
 }
 
@@ -63,6 +72,9 @@ const icons = {
   Banknote,
   Lock,
   Shield,
+  Users,
+  Star,
+  ThumbsUp,
 };
 
 // Function to get all product slugs
@@ -76,7 +88,7 @@ async function getProductSlugs() {
 
 // Function to get product data
 async function getProduct(slug: string): Promise<Product> {
-  const filePath = path.join(process.cwd(), "data/products", `${slug}.json`);
+  const filePath = path.join(process.cwd(), "data/solutions", `${slug}.json`);
   const data = await fs.readFile(filePath, "utf-8");
   return JSON.parse(data) as Product;
 }
@@ -169,51 +181,49 @@ export default async function Page({ params }: { params: Params }) {
           </div>
         </div>
       </section>
-      {product.keyFeatures && (
-        <section className="py-32 px-6 bg-gray-50 relative">
-          <div className="absolute inset-0 bg-grid-black/[0.02] -z-10" />
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <div className="text-indigo-600 font-medium mb-4">
-                Features
-              </div>
-              <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-indigo-600">
-                {product.keyFeatures.title}
-              </h2>
+      <section className="py-32 px-6 bg-gray-50 relative">
+        <div className="absolute inset-0 bg-grid-black/[0.02] -z-10" />
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="text-indigo-600 font-medium mb-4">
+              Features
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {product.keyFeatures.features.map((feature, index) => {
-                const IconComponent = icons[feature.icon] || Rocket;
-                return (
-                  <div
-                    key={index}
-                    className="opacity-0 animate-fade-in"
-                    style={{ animationDelay: `${index * 100}ms` }}
-                  >
-                    <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-md overflow-hidden">
-                      <CardContent className="p-8">
-                        <div className="flex items-start gap-6">
-                          <div className="p-3 rounded-2xl bg-orange-50 group-hover:bg-orange-100 transition-colors duration-300">
-                            <IconComponent className="w-8 h-8 text-indigo-600" />
-                          </div>
-                          <div>
-                            <h3 className="text-xl font-semibold mb-3">
-                              {feature.title}
-                            </h3>
-                            <p className="text-gray-600 leading-relaxed">
-                              {feature.content}
-                            </p>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                );
-              })}
-            </div>
+            <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-indigo-600">
+              {product.keyFeatures.title}
+            </h2>
           </div>
-        </section>
-      )}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {product.keyFeatures.features.map((feature, index) => {
+              const IconComponent = icons[feature.icon] || Rocket;
+              return (
+                <div
+                  key={index}
+                  className="opacity-0 animate-fade-in"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-md overflow-hidden">
+                    <CardContent className="p-8">
+                      <div className="flex items-start gap-6">
+                        <div className="p-3 rounded-2xl bg-orange-50 group-hover:bg-orange-100 transition-colors duration-300">
+                          <IconComponent className="w-8 h-8 text-indigo-600" />
+                        </div>
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3">
+                            {feature.title}
+                          </h3>
+                          <p className="text-gray-600 leading-relaxed">
+                            {feature.content}
+                          </p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
       <section className="py-32 px-6 relative">
         <div className="absolute inset-0 bg-grid-black/[0.02] -z-10" />
         <div className="max-w-3xl mx-auto">
@@ -241,6 +251,29 @@ export default async function Page({ params }: { params: Params }) {
           </Accordion>
         </div>
       </section>
+      
+      {product.cta && (
+        <section className="py-32 px-6 bg-gradient-to-r from-orange-500 to-indigo-600 relative">
+          <div className="absolute inset-0 bg-grid-white/[0.05] -z-10" />
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              {product.cta.title}
+            </h2>
+            <p className="text-xl text-white/80 mb-10">
+              {product.cta.description}
+            </p>
+            <div className="flex justify-center gap-4">
+              <Button className="bg-white text-indigo-600 hover:bg-gray-100 px-8 py-6 text-lg rounded-xl transition-all duration-200 hover:scale-105">
+                {product.cta.ctaPrimary}
+              </Button>
+              <Button variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-6 text-lg rounded-xl transition-all duration-200">
+                {product.cta.ctaSecondary}
+              </Button>
+            </div>
+          </div>
+        </section>
+      )}
+      
       <Footer />
     </div>
   );
@@ -254,7 +287,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const product = await getProduct(Array.isArray(slug) ? slug[0] : slug);
   return {
-    title: product?.hero?.title || 'Product Page',
-    description: product?.hero?.subtitle || 'Explore our amazing products',
+    title: product?.hero?.title || "Product Page",
+    description: product?.hero?.subtitle || "Explore our amazing products",
   };
 }

@@ -1,0 +1,85 @@
+{
+  "hero": {
+    "title": "Intelligent SAP Migration",
+    "subtitle": "Modernize your SAP landscape with AI-powered migration solutions. Seamlessly transition to the cloud while minimizing downtime and risks.",
+    "ctaPrimary": "Schedule Consultation",
+    "ctaSecondary": "Learn More"
+  },
+  "whyChoose": {
+    "title": "Why Choose Our SAP Migration Solution?",
+    "features": [
+      {
+        "title": "Enterprise Security",
+        "content": "Ensure data protection and compliance throughout the migration process.",
+        "style": "bg-gradient-to-br from-indigo-50 to-indigo-100",
+        "icon": "Shield"
+      },
+      {
+        "title": "Cloud-Agnostic Flexibility",
+        "content": "Seamlessly switch between AWS, Azure, and Google Cloud with multi-cloud compatibility.",
+        "style": "bg-gradient-to-br from-orange-50 to-orange-100",
+        "icon": "Globe"
+      },
+      {
+        "title": "AI-Driven Planning",
+        "content": "Leverage machine learning for optimal migration strategies and risk assessment.",
+        "style": "bg-gradient-to-br from-indigo-50 to-indigo-100",
+        "icon": "Brain"
+      },
+      {
+        "title": "Zero-Downtime Migration",
+        "content": "Keep your business running with minimal disruption during the transition.",
+        "style": "bg-gradient-to-br from-orange-50 to-orange-100",
+        "icon": "Activity"
+      }
+    ]
+  },
+  "keyFeatures": {
+    "title": "Key Features of Our SAP Migration Solution",
+    "features": [
+      {
+        "title": "Automated Assessment",
+        "content": "AI-powered analysis of your current SAP landscape for optimal migration planning.",
+        "icon": "Search"
+      },
+      {
+        "title": "Secure Transfer",
+        "content": "End-to-end encryption and security controls throughout the migration process.",
+        "icon": "Lock"
+      },
+      {
+        "title": "Multi-Cloud Support",
+        "content": "Freedom to choose and switch between major cloud providers.",
+        "icon": "Cloud"
+      },
+      {
+        "title": "Real-time Monitoring",
+        "content": "Track migration progress and system health with advanced analytics.",
+        "icon": "LineChart"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "How long does SAP migration typically take?",
+        "answer": "Migration timelines vary based on complexity, but our AI-driven approach typically reduces traditional timeframes by 40-60%."
+      },
+      {
+        "question": "Can we migrate to any cloud platform?",
+        "answer": "Yes, our solution supports migration to all major cloud providers including AWS, Azure, and Google Cloud."
+      },
+      {
+        "question": "What about data security during migration?",
+        "answer": "We implement enterprise-grade encryption and security controls throughout the entire migration process."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Start Your SAP Migration Journey",
+    "description": "Transform your SAP landscape with our intelligent migration solution.",
+    "ctaPrimary": "Schedule Consultation",
+    "ctaSecondary": "Learn More"
+  }
+}

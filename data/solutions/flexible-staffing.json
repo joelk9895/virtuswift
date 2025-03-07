@@ -1,0 +1,85 @@
+{
+  "hero": {
+    "title": "Flexible Staffing for IT & SAP Projects",
+    "subtitle": "Scale your workforce on demand with expert IT and SAP professionals, ensuring seamless project execution. Access a global network of certified IT and SAP specialists to drive efficiency, accelerate timelines, and control costs.",
+    "ctaPrimary": "Request Talent",
+    "ctaSecondary": "Get Started"
+  },
+  "whyChoose": {
+    "title": "Why Choose Our Flexible IT & SAP Staffing?",
+    "features": [
+      {
+        "title": "On-Demand Expertise",
+        "content": "Hire top-tier IT and SAP professionals whenever you need them, without long-term commitments.",
+        "style": "bg-gradient-to-br from-blue-50 to-blue-100",
+        "icon": "Users"
+      },
+      {
+        "title": "Cost-Effective Scaling",
+        "content": "Eliminate overhead costs by scaling your workforce up or down as project needs evolve.",
+        "style": "bg-gradient-to-br from-green-50 to-green-100",
+        "icon": "BarChart3"
+      },
+      {
+        "title": "Certified SAP & IT Specialists",
+        "content": "Access pre-vetted, highly skilled professionals with expertise in SAP, cloud, cybersecurity, and more.",
+        "style": "bg-gradient-to-br from-blue-50 to-blue-100",
+        "icon": "Briefcase"
+      },
+      {
+        "title": "Seamless Project Integration",
+        "content": "Our professionals integrate effortlessly into your workflows, minimizing disruptions and maximizing productivity.",
+        "style": "bg-gradient-to-br from-green-50 to-green-100",
+        "icon": "Handshake"
+      }
+    ]
+  },
+  "keyFeatures": {
+    "title": "Key Features",
+    "features": [
+      {
+        "title": "Rapid Deployment",
+        "content": "Get skilled professionals onboarded within days, not weeks.",
+        "icon": "Rocket"
+      },
+      {
+        "title": "Global Talent Pool",
+        "content": "Access top IT & SAP experts worldwide for your projects.",
+        "icon": "Globe"
+      },
+      {
+        "title": "100% Compliance",
+        "content": "We handle contracts, payroll, and compliance, so you can focus on delivery.",
+        "icon": "Shield"
+      },
+      {
+        "title": "Flexible Engagement Models",
+        "content": "Choose contract, project-based, or full-time hires as per your needs.",
+        "icon": "Settings"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "How quickly can I onboard IT or SAP professionals?",
+        "answer": "We provide pre-vetted candidates who can start within 48 hours, ensuring zero project delays."
+      },
+      {
+        "question": "Do you offer both remote and on-site staffing?",
+        "answer": "Yes! We offer flexible staffing models for on-site, remote, and hybrid teams based on your needs."
+      },
+      {
+        "question": "What SAP modules do your experts specialize in?",
+        "answer": "Our SAP professionals cover SAP S/4HANA, SAP FICO, SAP MM, SAP SD, SAP HCM, and more."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Build Your IT & SAP Dream Team Today",
+    "description": "Optimize your workforce, reduce costs, and accelerate project success with flexible staffing solutions.",
+    "ctaPrimary": "Request Talent",
+    "ctaSecondary": "Get Started"
+  }
+}

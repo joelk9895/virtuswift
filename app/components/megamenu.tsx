@@ -128,7 +128,7 @@ const navigationData: NavigationMenu[] = [
         items: [
           {
             name: "End-to-End Logistics and Warehouse Automation",
-            href: "/services/logistics-automation",
+            href: "/products/logistics-automation",
           },
           {
             name: "Real-Time Freight Tracking Solutions",
@@ -479,7 +479,9 @@ const MegaMenu: React.FC = () => {
   const [activeMenu, setActiveMenu] = useState<number | null>(null);
   const [isHovered, setIsHovered] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeMobileSection, setActiveMobileSection] = useState<number | null>(null);
+  const [activeMobileSection, setActiveMobileSection] = useState<number | null>(
+    null
+  );
   const menuRef = useRef<HTMLDivElement>(null);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -532,9 +534,9 @@ const MegaMenu: React.FC = () => {
   return (
     <nav
       ref={menuRef}
-      className={`fixed top-0 left-0 w-screen bg-transparent z-50 border-y-[0.5px] transition-colors duration-300 ${
+      className={`fixed top-0 left-0 w-screen bg-transparent z-50  transition-colors duration-300 border-y border-gray-100 ${
         isHovered || isScrolled || activeMenu != null
-          ? "border-grey"
+          ? "border-grey-700"
           : "border-[#ffffff]"
       }`}
       onMouseEnter={() => setIsHovered(true)}
@@ -597,7 +599,7 @@ const MegaMenu: React.FC = () => {
                 {activeMenu === index && (
                   <motion.div
                     layoutId="activeIndicator"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-orange-500"
+                    className="absolute bottom-1 left-[4%] right-0 h-[3px] w-[92%] bg-orange-500"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -659,7 +661,7 @@ const MegaMenu: React.FC = () => {
                           ease: "easeIn",
                         },
                       }}
-                      className="min-w-[80vw] max-w-[80vw] bg-white min-h-[80vh] max-h-fit"
+                      className="min-w-[80vw] max-w-[80vw] bg-white min-h-[80vh] max-h-fit border-t-2 border-gray-400"
                     >
                       <div className="flex gap-8 min-h-[80vh]">
                         {/* Main Content of Mega Menu */}
@@ -799,9 +801,13 @@ const MegaMenu: React.FC = () => {
           onClick={toggleMobileMenu}
         >
           {isMobileMenuOpen ? (
-            <X className={isHovered || isScrolled ? "text-black" : "text-white"} />
+            <X
+              className={isHovered || isScrolled ? "text-black" : "text-white"}
+            />
           ) : (
-            <Menu className={isHovered || isScrolled ? "text-black" : "text-white"} />
+            <Menu
+              className={isHovered || isScrolled ? "text-black" : "text-white"}
+            />
           )}
         </button>
 
@@ -821,7 +827,7 @@ const MegaMenu: React.FC = () => {
                 <X className="text-black" />
               </button>
             </div>
-            
+
             <div className="flex-1 overflow-y-auto">
               {navigationData.map((menu, index) => (
                 <div key={index} className="border-b">
@@ -836,7 +842,7 @@ const MegaMenu: React.FC = () => {
                       }`}
                     />
                   </button>
-                  
+
                   {activeMobileSection === index && (
                     <div className="bg-gray-50 px-6 pb-6">
                       {menu.columns.map((column, colIndex) => (
@@ -864,7 +870,7 @@ const MegaMenu: React.FC = () => {
                 </div>
               ))}
             </div>
-            
+
             <div className="p-6 border-t">
               <Link
                 href="/signup"

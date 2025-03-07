@@ -1,0 +1,85 @@
+{
+  "hero": {
+    "title": "End-to-End Data Center Transformation",
+    "subtitle": "Future-proof your IT landscape with a seamless, high-performance, and cost-efficient data center transformation strategy that aligns with your business needs.",
+    "ctaPrimary": "Get Started",
+    "ctaSecondary": "Request a Consultation"  
+  },
+  "whyChoose": {
+    "title": "Why Choose Our Data Center Transformation?",
+    "features": [
+      {
+        "title": "Optimized Performance",
+        "content": "Leverage cutting-edge technologies to enhance processing power, speed, and data handling efficiency.",
+        "style": "bg-gradient-to-br from-indigo-50 to-indigo-100",
+        "icon": "Server"
+      },
+      {
+        "title": "Cost-Efficient Scaling",
+        "content": "Lower CapEx and OpEx with flexible, pay-as-you-go models and resource optimization.",
+        "style": "bg-gradient-to-br from-orange-50 to-orange-100",
+        "icon": "CircleDollarSign"
+      },
+      {
+        "title": "Unbreakable Security",
+        "content": "Advanced threat protection, compliance management, and zero-trust security models.",
+        "style": "bg-gradient-to-br from-indigo-50 to-indigo-100",
+        "icon": "Shield"
+      },
+      {
+        "title": "Cloud & Hybrid Flexibility",
+        "content": "Seamlessly migrate workloads between on-premise, cloud, and hybrid environments.",
+        "style": "bg-gradient-to-br from-orange-50 to-orange-100",
+        "icon": "Globe"
+      }
+    ]
+  },
+  "keyFeatures": {
+    "title": "Key Features of Data Center Transformation",
+    "features": [
+      {
+        "title": "AI-Driven Automation",
+        "content": "Automate operations, enhance monitoring, and ensure predictive maintenance with AI-driven insights.",
+        "icon": "BarChart3"
+      },
+      {
+        "title": "Multi-Cloud Readiness",
+        "content": "Seamlessly transition to AWS, Azure, or Google Cloud with real-time workload balancing.",
+        "icon": "Cloud"
+      },
+      {
+        "title": "24/7 Uptime & Redundancy",
+        "content": "Maintain business continuity with built-in disaster recovery, redundancy, and failover systems.",
+        "icon": "Rocket"
+      },
+      {
+        "title": "Real-Time Security & Compliance",
+        "content": "Ensure end-to-end encryption, compliance with global regulations, and cyber resilience.",
+        "icon": "Shield"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "How long does a data center transformation take?",
+        "answer": "Project duration depends on the complexity of workloads and infrastructure, but we ensure a step-by-step, non-disruptive transition."
+      },
+      {
+        "question": "Can I integrate legacy systems with new cloud infrastructure?",
+        "answer": "Yes, our hybrid and multi-cloud approach allows for seamless integration of legacy and modern systems."
+      },
+      {
+        "question": "What kind of support do you offer?",
+        "answer": "We provide 24/7 monitoring, proactive maintenance, and a dedicated support team for ongoing operations."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Future-Proof Your IT with Data Center Transformation",
+    "description": "Transform your business with next-generation IT infrastructure that is scalable, secure, and built for innovation.",
+    "ctaPrimary": "Get Started",
+    "ctaSecondary": "Request a Consultation"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "hero": {
+    "title": "Onboarding & Retention Programs",
+    "subtitle": "Engage, retain, and empower your workforce with world-class onboarding and retention strategies. Build a high-performing team with seamless onboarding experiences and proven retention solutions that drive success.",
+    "ctaPrimary": "Get a Free Consultation",
+    "ctaSecondary": "Get Started"
+  },
+  "whyChoose": {
+    "title": "Why Choose Our Onboarding & Retention Programs?",
+    "features": [
+      {
+        "title": "Faster Employee Integration",
+        "content": "Get new hires fully productive in record time with structured onboarding workflows.",
+        "style": "bg-gradient-to-br from-blue-50 to-blue-100",
+        "icon": "Rocket"
+      },
+      {
+        "title": "Higher Retention Rates",
+        "content": "Reduce turnover by enhancing job satisfaction and building long-term engagement.",
+        "style": "bg-gradient-to-br from-green-50 to-green-100",
+        "icon": "HeartHandshake"
+      },
+      {
+        "title": "Data-Driven Workforce Insights",
+        "content": "Leverage advanced analytics to understand trends and proactively retain top talent.",
+        "style": "bg-gradient-to-br from-blue-50 to-blue-100",
+        "icon": "BarChart3"
+      },
+      {
+        "title": "Scalable & Customizable Solutions",
+        "content": "Adapt onboarding and retention programs to your business size and industry needs.",
+        "style": "bg-gradient-to-br from-green-50 to-green-100",
+        "icon": "Globe"
+      }
+    ]
+  },
+  "keyFeatures": {
+    "title": "Key Features",
+    "features": [
+      {
+        "title": "Automated Onboarding",
+        "content": "Streamline HR processes with digital workflows and self-service portals.",
+        "icon": "Users"
+      },
+      {
+        "title": "AI-Powered Employee Engagement",
+        "content": "Personalized training, mentorship, and real-time feedback for continuous improvement.",
+        "icon": "Star"
+      },
+      {
+        "title": "Retention-Boosting Recognition",
+        "content": "Increase loyalty with custom incentives, rewards, and appreciation programs.",
+        "icon": "ThumbsUp"
+      },
+      {
+        "title": "Predictive Analytics & Insights",
+        "content": "Use AI-driven data to anticipate workforce trends and prevent attrition.",
+        "icon": "Shield"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "How does AI improve employee onboarding?",
+        "answer": "AI automates paperwork, facilitates personalized training, and enhances engagement through interactive modules."
+      },
+      {
+        "question": "What makes a successful retention program?",
+        "answer": "A strong mix of mentorship, career growth opportunities, and employee recognition helps drive retention."
+      },
+      {
+        "question": "Can your solutions be tailored to our company size?",
+        "answer": "Yes! Our onboarding and retention programs are customizable for startups, mid-sized businesses, and enterprises."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Create a Workforce That Stays & Thrives",
+    "description": "Improve employee retention, enhance engagement, and drive workforce success with our onboarding and retention solutions.",
+    "ctaPrimary": "Get a Free Consultation",
+    "ctaSecondary": "Get Started"
+  }
+}

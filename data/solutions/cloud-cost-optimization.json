@@ -1,0 +1,79 @@
+{
+  "hero": {
+    "title": "AI-Driven Cloud Cost Optimization",
+    "subtitle": "Cut Cloud Costs, Not Performance. Maximize your cloud investment with AI-powered cost management, predictive analytics, and smart automation.",
+    "ctaPrimary": "Get a Free Cost Assessment",
+    "ctaSecondary": "Schedule a Demo"
+  },
+  "whyChoose": {
+    "title": "Why Optimize with AI?",
+    "features": [
+      {
+        "title": "Maximize Cost Savings",
+        "content": "Eliminate wasteful cloud spend and reduce costs by up to 40% with real-time AI-driven insights.",
+        "style": "bg-gradient-to-br from-indigo-50 to-indigo-100",
+        "icon": "CircleDollarSign"
+      },
+      {
+        "title": "Predictive Scaling",
+        "content": "Optimize resource allocation with AI-powered workload forecasting to ensure you never overpay.",
+        "style": "bg-gradient-to-br from-orange-50 to-orange-100",
+        "icon": "BarChart3"
+      },
+      {
+        "title": "Security & Compliance",
+        "content": "Keep your cloud infrastructure compliant and secure while optimizing cost efficiencies.",
+        "style": "bg-gradient-to-br from-indigo-50 to-indigo-100",
+        "icon": "Shield"
+      },
+      {
+        "title": "Multi-Cloud Ready",
+        "content": "Seamlessly manage costs across AWS, Azure, and Google Cloud from a single AI-powered platform.",
+        "style": "bg-gradient-to-br from-orange-50 to-orange-100",
+        "icon": "Globe"
+      }
+    ]
+  },
+  "keyFeatures": {
+    "title": "Key Features of AI Cloud Cost Optimization",
+    "features": [
+      {
+        "title": "Automated Cost Management",
+        "content": "AI continuously analyzes usage to recommend optimal configurations, ensuring zero over-provisioning.",
+        "icon": "Cpu"
+      },
+      {
+        "title": "Real-Time Usage Insights",
+        "content": "Track your cloud expenses in real-time and prevent cost overruns before they happen.",
+        "icon": "BarChart3"
+      },
+      {
+        "title": "Smart Workload Scheduling",
+        "content": "Dynamically allocate cloud resources based on real-time demand, saving money without performance trade-offs.",
+        "icon": "Rocket"
+      },
+      {
+        "title": "Multi-Cloud Cost Control",
+        "content": "Get a unified dashboard to compare cloud costs across multiple providers and optimize spending efficiently.",
+        "icon": "Cloud"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "How much can AI help reduce cloud costs?",
+        "answer": "Our AI-driven system has helped enterprises save up to 40% on their cloud spend through intelligent optimizations."
+      },
+      {
+        "question": "Can this solution work across multiple cloud platforms?",
+        "answer": "Yes, our solution is fully optimized for AWS, Azure, and Google Cloud, ensuring unified cost control."
+      },
+      {
+        "question": "Will cost optimization affect my cloud performance?",
+        "answer": "No! AI dynamically manages workloads to reduce costs without compromising performance or availability."
+      }
+    ]
+  }
+}

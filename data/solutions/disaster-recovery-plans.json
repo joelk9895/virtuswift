@@ -1,0 +1,85 @@
+{
+  "hero": {
+    "title": "Multi-Cloud Backup & Disaster Recovery",
+    "subtitle": "Fortify your data protection strategy with a resilient, fail-safe backup and disaster recovery plan across AWS, Azure, and Google Cloud. Leverage multi-cloud redundancy and automated failover to ensure business continuity no matter what happens.",
+    "ctaPrimary": "Get a Free Consultation",
+    "ctaSecondary": "Start Your Free Trial"
+  },
+  "whyChoose": {
+    "title": "Why Choose Our Multi-Cloud Backup & Disaster Recovery?",
+    "features": [
+      {
+        "title": "100% Business Continuity",
+        "content": "Never worry about downtime with instant failover systems that keep your critical applications running.",
+        "style": "bg-gradient-to-br from-indigo-50 to-indigo-100",
+        "icon": "Shield"
+      },
+      {
+        "title": "Multi-Cloud Redundancy",
+        "content": "Store backups across multiple cloud providers, ensuring total data resilience with zero vendor lock-in.",
+        "style": "bg-gradient-to-br from-orange-50 to-orange-100",
+        "icon": "Cloud"
+      },
+      {
+        "title": "Cost-Efficient Protection",
+        "content": "Optimize cloud storage with AI-driven backup scheduling, cutting costs without compromising security.",
+        "style": "bg-gradient-to-br from-indigo-50 to-indigo-100",
+        "icon": "CircleDollarSign"
+      },
+      {
+        "title": "Rapid Disaster Recovery",
+        "content": "Recover entire systems within minutes, no matter the scale or severity of the failure.",
+        "style": "bg-gradient-to-br from-orange-50 to-orange-100",
+        "icon": "Rocket"
+      }
+    ]
+  },
+  "keyFeatures": {
+    "title": "Key Features of Our Disaster Recovery Solution",
+    "features": [
+      {
+        "title": "Automated Backups",
+        "content": "Schedule AI-powered backups that adjust dynamically based on system activity and risk assessment.",
+        "icon": "Database"
+      },
+      {
+        "title": "Instant Recovery",
+        "content": "Recover lost data and full applications in seconds using cloud snapshots and virtualized environments.",
+        "icon": "Lock"
+      },
+      {
+        "title": "Multi-Cloud Storage",
+        "content": "Split backups across AWS, Azure, and Google Cloud for complete disaster-proofing.",
+        "icon": "Globe"
+      },
+      {
+        "title": "AI-Powered Analytics",
+        "content": "Get real-time insights into vulnerabilities, inefficiencies, and compliance status across your backup infrastructure.",
+        "icon": "BarChart3"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "How fast is disaster recovery?",
+        "answer": "With automated failover and real-time backup syncing, recovery times range from seconds to a few minutes, depending on infrastructure size."
+      },
+      {
+        "question": "Can I integrate this with my existing cloud setup?",
+        "answer": "Yes, our solution supports hybrid and multi-cloud environments, allowing seamless integration into your current system."
+      },
+      {
+        "question": "Is this solution secure?",
+        "answer": "Absolutely. We use end-to-end encryption, role-based access, and AI-driven threat detection to keep backups safe."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Secure Your Business with Multi-Cloud Backup",
+    "description": "Prevent data loss and downtime with a powerful, intelligent, and cost-effective cloud disaster recovery solution.",
+    "ctaPrimary": "Get a Free Consultation",
+    "ctaSecondary": "Start Your Free Trial"
+  }
+}
